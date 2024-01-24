@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRViewController" customModule="ooAutos_I_s__Ortag_ı" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="2nU-lg-UBg" id="0Hk-0P-Fze"/>
+                <outlet property="qrLabel" destination="34Q-1f-d25" id="asD-ny-hjb"/>
+                <outlet property="qrView" destination="g5a-VG-SHY" id="nXf-b7-Uek"/>
+                <outlet property="titleLabel" destination="Jwy-J9-LuS" id="G91-HK-Bzk"/>
+                <outlet property="view" destination="iN0-l3-epB" id="cNM-57-AyL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR KOD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwy-J9-LuS" customClass="AppHereLabel" customModule="AppHereComponents">
+                    <rect key="frame" x="16" y="40" width="63" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Title-White"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-lg-UBg">
+                    <rect key="frame" x="16" y="97" width="407" height="715"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-VG-SHY">
+                            <rect key="frame" x="83.5" y="166" width="240" height="240"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="g5a-VG-SHY" secondAttribute="height" multiplier="1:1" id="7NV-Uj-U1T"/>
+                                <constraint firstAttribute="height" constant="240" id="Jem-Dl-i0G"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34Q-1f-d25" customClass="AppHereLabel" customModule="AppHereComponents">
+                            <rect key="frame" x="182.5" y="587" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Title-Black"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9137254901960784" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="g5a-VG-SHY" firstAttribute="centerY" secondItem="2nU-lg-UBg" secondAttribute="centerY" multiplier="0.8" id="LhL-fu-ygm"/>
+                        <constraint firstAttribute="bottom" secondItem="34Q-1f-d25" secondAttribute="bottom" constant="107" id="aSh-kH-k64"/>
+                        <constraint firstItem="34Q-1f-d25" firstAttribute="centerX" secondItem="2nU-lg-UBg" secondAttribute="centerX" id="mLD-DL-ygG"/>
+                        <constraint firstItem="g5a-VG-SHY" firstAttribute="centerX" secondItem="2nU-lg-UBg" secondAttribute="centerX" id="r0H-di-Uwt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2nU-lg-UBg" secondAttribute="trailing" constant="16" id="3M6-Hp-d7m"/>
+                <constraint firstItem="2nU-lg-UBg" firstAttribute="top" secondItem="Jwy-J9-LuS" secondAttribute="bottom" constant="36" id="8d1-8p-ugx"/>
+                <constraint firstItem="Jwy-J9-LuS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="FR6-6h-cST"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2nU-lg-UBg" secondAttribute="bottom" constant="40" id="dJN-o4-DEb"/>
+                <constraint firstItem="Jwy-J9-LuS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dhN-kK-2LL"/>
+                <constraint firstItem="2nU-lg-UBg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="jZ2-b8-tYq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-32.8125" y="20.070422535211268"/>
+        </view>
+    </objects>
+</document>

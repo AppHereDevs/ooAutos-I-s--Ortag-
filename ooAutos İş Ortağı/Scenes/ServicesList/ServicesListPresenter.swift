@@ -1,0 +1,20 @@
+//
+//  ServicesListPresenter.swift
+//  ooAutos İş Ortağı
+//
+//  Created by Muhammed Sevük on 15.12.2023.
+//  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
+//
+
+import UIKit
+
+protocol ServicesListPresentationLogic {
+}
+
+class ServicesListPresenter: ServicesListPresentationLogic {
+
+    // MARK: - Properties
+    
+    weak var viewController: ServicesListDisplayLogic?
+
+}

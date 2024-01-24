@@ -1,0 +1,385 @@
+{
+    "themes": {
+        "components": [
+            {
+                "key": "AppHereLabel-Title-White",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Bold",
+                "fontSize": 20
+            },
+            {
+                "key": "AppHereLabel-Title-Black",
+                "textColor": "#000000",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Bold",
+                "fontSize": 20
+            },
+            {
+                "key": "AppHereLabel-Comments-Title",
+                "textColor": "#315370",
+                "backgroundColor": "FFFFFF",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 20
+            },
+
+            {
+                "key": "AppHereLabel-Comments-TitleSmall",
+                "textColor": "#315370",
+                "backgroundColor": "FFFFFF",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 18
+            },
+            {
+                "key": "AppHereLabel-Login-AppHereInformationView-InformationText",
+                "textColor": "#A7DA9F",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Regular",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereLabel-Login-Error",
+                "textColor": "#FAA3DC",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 12
+            },
+            {
+                "key": "AppHereLabel-Login-AppHereInputView-Phone",
+                "textColor": "#000000",
+                "backgroundColor": "#FFFFFF",
+                "fontName": "Slate-Bold",
+                "fontSize": 16,
+                "minimumFontSize": 12
+            },
+            {
+                "key": "AppHereLabel-Login-AppHereInputView-Title",
+                "textColor": "#FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereLabel-PaymentSummary-AppHereInputView-Title",
+                "textColor": "#FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 18
+            },
+            {
+                "key": "AppHereLabel-PaymentSummary-AppHereInputView-Field",
+                "textColor": "#315370",
+                "backgroundColor": "#FFFFFF",
+                "fontName": "Slate-Bold",
+                "fontSize": 18,
+                "minimumFontSize": 12
+            },
+            {
+                "key": "AppHereLabel-Login-AppHereInputView-Phone",
+                "textColor": "#000000",
+                "backgroundColor": "#FFFFFF",
+                "fontName": "Slate-Bold",
+                "fontSize": 16,
+                "minimumFontSize": 12,
+                "cornerRadius": 5
+            },
+            {
+                "key": "AppHereLabel-Profiles",
+                "textColor": "#1F8BA5",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 23
+            },
+            {
+                "key": "AppHereLabel-Campaigns-Title",
+                "textColor": "#315370",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 12
+            },
+            {
+                "key": "AppHereLabel-CampaignsDetail-Title",
+                "textColor": "#1C7636",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 20
+            },
+            {
+                "key": "AppHereLabel-CampaignsDetail-StartDate",
+                "textColor": "#315370",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereLabel-CampaignsDetail-ValidForWeekend",
+                "textColor": "#1C7636",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 12
+            },
+            {
+                "key": "AppHereLabel-CampaignsDetail-EndDate",
+                "textColor": "#FF0000",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereLabel-PopupView-Subtitle",
+                "textColor": "#1F8BA5",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 15
+            },
+            {
+                "key": "AppHereLabel-PopupView-Title",
+                "textColor": "#1F8BA5",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 20
+            },
+            {
+                "key": "AppHereInformationView-Login",
+                "firstLabelThemeKey": "AppHereLabel-Title-White",
+                "secondLabelThemeKey": "AppHereLabel-Login-AppHereInformationView-InformationText",
+                "horizontalInset": 16
+            },
+            {
+                "key": "AppHereInputView-Login",
+                "backgroundColor": "#00000000",
+                "cornerRadius": 5,
+                "horizontalInset": 16,
+                "titleLabelThemeKey": "AppHereLabel-Login-AppHereInputView-Title",
+                "phoneLabelThemeKey": "AppHereLabel-Login-AppHereInputView-Phone",
+                "inputTextFieldThemeKey": "AppHereLabel-Login-AppHereInputView-Phone",
+                "errorLabelThemeKey": "AppHereLabel-Login-Error"
+            },
+            {
+                "key": "AppHereInputView-PaymentSummary",
+                "backgroundColor": "#00000000",
+                "cornerRadius": 5,
+                "horizontalInset": 16,
+                "titleLabelThemeKey": "AppHereLabel-PaymentSummary-AppHereInputView-Title",
+                "inputTextFieldThemeKey": "AppHereLabel-PaymentSummary-AppHereInputView-Field",
+                "errorLabelThemeKey": "AppHereLabel-Login-Error"
+            },
+            {
+                "key": "AppHereCheckboxView-TermsAndConditions",
+                "backgroundColor": "#00000000",
+                "informationLabelThemeKey": "AppHereLabel-TermsAndConditions",
+                "checkBoxButtonThemeKey": "AppHereButton-ClearBackground",
+                "horizontalInset": 16,
+                "stackViewSpacing": 8
+            },
+            {
+                "key": "AppHereLabel-Slate-Regular-Clear-Background",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 14
+            },
+            {
+                "key": "AppHereLabel-TermsAndConditions",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 12
+            },
+            {
+                "key": "AppHereLabel-Campaigns",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Regular",
+                "fontSize": 22
+            },
+            {
+                "key": "AppHereLabel-OtherServices",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Light",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereLabel-AlertDescription",
+                "textColor": "#315370",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Regular",
+                "fontSize": 18
+            },
+            {
+                "key": "AppHereLabel-AlertTitle",
+                "textColor": "#315370",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 20
+            },
+            
+            {
+                "key": "AppHereLabel-InputAlertTitle",
+                "textColor": "#0CBFDC",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 17
+            },
+            
+            {
+                "key": "AppHereLabel-InputAlertDescription",
+                "textColor": "#000000",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Medium",
+                "fontSize": 12
+            },
+            {
+                "key": "AppHereLabel-QRInformation",
+                "textColor": "#ffffff",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Medium",
+                "fontSize": 12
+            },
+            {
+                "key": "AppHereLabel-Campaign-Prize",
+                "textColor": "#315370",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 28
+            },
+            {
+                "key": "AppHereLabel-Turqouise",
+                "textColor": "#2CBADC",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 18
+            },
+            {
+                "key": "AppHereLabel-PickerTitle",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-CondensedBold",
+                "fontSize": 15
+            },
+
+            {
+                "key": "AppHerePickerInputView-RegisterVehicle",
+                "backgroundColor": "#00000000",
+                "titleLabelThemeKey": "AppHereLabel-Login-AppHereInputView-Title",
+                "inputTextFieldThemeKey": "AppHereLabel-Login-AppHereInputView-Phone",
+                "horizontalInset": 16,
+                "errorLabelThemeKey": "AppHereLabel-Login-Error"
+            },
+            {
+                "key": "AppHerePickerInputView-Comments",
+                "backgroundColor": "#00000000",
+                "titleLabelThemeKey": "AppHereLabel-PickerTitle",
+                "inputTextFieldThemeKey": "AppHereLabel-Comments-TitleSmall",
+                "horizontalInset": 16,
+                "errorLabelThemeKey": "AppHereLabel-Login-Error"
+            },
+            
+            {
+                "key": "AppHereButton-ClearBackground",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Bold",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereButton-Login",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#0CBFDC",
+                "fontName": "Slate-Bold",
+                "fontSize": 16
+            },
+            {
+                "key": "AppHereButton-ForgotPassword",
+                "textColor": "#2CBADC",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Medium",
+                "fontSize": 14
+            },
+            {
+                "key": "AppHereButton-Register",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#00000000",
+                "fontName": "Slate-Medium",
+                "fontSize": 14
+            },
+            {
+                "key": "AppHereButton-MyVehicles",
+                "textColor": "#315370",
+                "backgroundColor": "#FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 25
+            },
+            {
+                "key": "AppHereButton-BuyPackage",
+                "textColor": "#B84D97",
+                "backgroundColor": "#FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 25
+            },
+            {
+                "key": "AppHereButton-Buy",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#3FAE5F",
+                "fontName": "Slate-CondensedBold",
+                "cornerRadius": 10,
+                "fontSize": 14
+            },
+            {
+                "key": "AppHereButton-Confirm",
+                "textColor": "#FFFFFF",
+                "backgroundColor": "#FF3FAE5F",
+                "fontName": "Slate-CondensedBold",
+                "cornerRadius": 10,
+                "fontSize": 14
+            },
+            
+            {
+                 "key": "AppHereButton-Confirms",
+                 "textColor": "#FFFFFF",
+                 "backgroundColor": "#FF3FAE5F",
+                 "fontName": "Slate-Bold",
+                 "cornerRadius": 10,
+                 "fontSize": 16
+             },
+            
+             {
+                 "key": "AppHereButton-Cancel",
+                 "textColor": "#FFFFFF",
+                 "backgroundColor": "#FFD91111",
+                 "fontName": "Slate-Bold",
+                 "cornerRadius": 10,
+                 "fontSize": 14
+             },
+             {
+                 "key": "AppHereButton-Cancels",
+                 "textColor": "#FFFFFF",
+                 "backgroundColor": "#FFD91111",
+                 "fontName": "Slate-Bold",
+                 "cornerRadius": 10,
+                 "fontSize": 17
+             },
+            
+            {
+                "key": "AppHereOTPField-Default",
+                "fontName": "Slate-Bold",
+                "textColor": "#000000",
+                "backgroundColor": "#FFFFFF",
+                "filledBackgroundColor": "#FFFFFF",
+                "fontSize": 20
+            },
+            {
+                "key": "ApphereVerticalBannerView",
+                "bannerViewBackgroundColor": "#D9FFFFFF",
+                "titleLabelThemeKey": "AppHereLabel-Campaigns-Title",
+                "cornerRadius": 16
+            },
+            {
+                "key": "AppHereTextView-CampaignsDetail",
+                "textColor": "#315370",
+                "backgroundColor": "#00FFFFFF",
+                "placeHolderTextColor": "#315370",
+                "fontName": "Slate-Medium",
+                "fontSize": 15
+            }
+        ]
+    }
+}
