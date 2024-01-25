@@ -67,6 +67,7 @@
 		CA52493F2B61872F00CF054A /* RestoreServiceProviderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA52493E2B61872F00CF054A /* RestoreServiceProviderRequest.swift */; };
 		CA5249412B61AA1200CF054A /* UIViewController+LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5249402B61AA1200CF054A /* UIViewController+LoadingIndicator.swift */; };
 		CA5249432B61AEED00CF054A /* ConsumptionDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5249422B61AEED00CF054A /* ConsumptionDetailsRequest.swift */; };
+		CAC4AF3B2B62E68A00ABD9A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC4AF3A2B62E68A00ABD9A1 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		CA52493E2B61872F00CF054A /* RestoreServiceProviderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreServiceProviderRequest.swift; sourceTree = "<group>"; };
 		CA5249402B61AA1200CF054A /* UIViewController+LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingIndicator.swift"; sourceTree = "<group>"; };
 		CA5249422B61AEED00CF054A /* ConsumptionDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionDetailsRequest.swift; sourceTree = "<group>"; };
+		CAC4AF3A2B62E68A00ABD9A1 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 				CA3A506A2B2CC19100241B3D /* ProfileModels.swift */,
 				CA3A506B2B2CC19100241B3D /* ProfileViewController.swift */,
 				CA3A506C2B2CC19100241B3D /* ProfileInteractor.swift */,
+				CAC4AF3A2B62E68A00ABD9A1 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				CA3A503A2B2A502400241B3D /* TabBar.storyboard in Resources */,
 				CA3A50742B2CD02B00241B3D /* QRViewController.xib in Resources */,
+				CAC4AF3B2B62E68A00ABD9A1 /* ProfileViewController.xib in Resources */,
 				CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */,
 				CA5249392B60444400CF054A /* MainPageViewController.xib in Resources */,
 				CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */,

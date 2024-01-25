@@ -9,6 +9,7 @@
 import UIKit
 
 protocol ProfileBusinessLogic: AnyObject {
+    func getProfileInfo()
 }
 
 protocol ProfileDataStore {
@@ -20,5 +21,20 @@ class ProfileInteractor: ProfileBusinessLogic, ProfileDataStore {
 
     var worker: ProfileWorkerLogic?
     var presenter: ProfilePresentationLogic?
-
+    
+    func getProfileInfo() {
+        worker?.getProfileInformation(completion: { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case let .success(response):
+                print(response)
+                presenter?.presentData(response: response.decodedResponse.details)
+            case let .failure(error):
+                print(error.localizedDescription)
+                if error.requestDetails()?.statusCode == 401 {
+                    presenter?.presentLogin()
+                }
+            }
+        })
+    }
 }

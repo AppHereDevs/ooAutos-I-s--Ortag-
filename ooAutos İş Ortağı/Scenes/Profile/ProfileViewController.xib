@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="ooAutos_I_s__Ortag_ı" customModuleProvider="target">
+            <connections>
+                <outlet property="adress" destination="nMW-uY-qQO" id="TzX-if-e4f"/>
+                <outlet property="email" destination="ATY-a2-57g" id="KDU-y8-tIm"/>
+                <outlet property="ibanAccountName" destination="iHe-ik-Hzk" id="O8b-l3-vRu"/>
+                <outlet property="ibanNo" destination="FP4-lP-Slr" id="m64-I7-09M"/>
+                <outlet property="mobileNumber" destination="SVk-HR-5Z9" id="1nE-IQ-JhY"/>
+                <outlet property="name" destination="qZC-hc-0Ys" id="OOL-Fc-13t"/>
+                <outlet property="phoneNumber" destination="OvM-zJ-d2v" id="6xX-aT-ODV"/>
+                <outlet property="scrollView" destination="dgy-CO-IdO" id="M7M-Km-jLS"/>
+                <outlet property="typeDesc" destination="XxU-WW-axL" id="Yle-4Y-Zg5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="HF7-wd-uvz"/>
+                <outlet property="workingHours" destination="nmy-k9-E9F" id="IHf-be-txK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="1245"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-CO-IdO">
+                    <rect key="frame" x="0.0" y="20" width="414" height="1225"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFİL BİLGİLERİM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-uB-6ag" customClass="AppHereLabel" customModule="AppHereComponents">
+                            <rect key="frame" x="16" y="15.999999999999998" width="382" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Login-AppHereInformationView-Title"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AO1-Br-BHK">
+                            <rect key="frame" x="0.0" y="68.333333333333371" width="414" height="1100"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZC-hc-0Ys" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="122.33333333333333"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxU-WW-axL" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="122.33333333333331" width="414" height="122"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMW-uY-qQO" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="244.3333333333334" width="414" height="122.33333333333334"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvM-zJ-d2v" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="366.66666666666669" width="414" height="122.33333333333331"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVk-HR-5Z9" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="489" width="414" height="122"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATY-a2-57g" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="611" width="414" height="122.33333333333337"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-lP-Slr" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="733.33333333333326" width="414" height="122.33333333333337"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-ik-Hzk" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="855.66666666666663" width="414" height="122"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-k9-E9F" customClass="AppHereInputView" customModule="AppHereComponents">
+                                    <rect key="frame" x="0.0" y="977.66666666666663" width="414" height="122.33333333333337"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereInputView-Login"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1100" id="gKC-IY-3so"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-3R-8hs" customClass="AppHereButton" customModule="AppHereComponents">
+                            <rect key="frame" x="16" y="1176.3333333333333" width="382" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="WbV-q0-XBB"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Oturumu Kapat"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereButton-Buy"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signOut:" destination="-1" eventType="touchUpInside" id="W99-xh-QzG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lzj-3R-8hs" secondAttribute="bottom" constant="18.670000000000002" id="0sR-aJ-saF"/>
+                        <constraint firstItem="JfK-uB-6ag" firstAttribute="top" secondItem="dgy-CO-IdO" secondAttribute="top" constant="16" id="3Yr-do-vcR"/>
+                        <constraint firstItem="lzj-3R-8hs" firstAttribute="centerX" secondItem="dgy-CO-IdO" secondAttribute="centerX" id="7NY-Fu-AlN"/>
+                        <constraint firstAttribute="trailing" secondItem="JfK-uB-6ag" secondAttribute="trailing" constant="16" id="86A-R7-cFS"/>
+                        <constraint firstItem="lzj-3R-8hs" firstAttribute="top" secondItem="AO1-Br-BHK" secondAttribute="bottom" constant="8" id="Y3I-Ik-Cwa"/>
+                        <constraint firstItem="JfK-uB-6ag" firstAttribute="leading" secondItem="dgy-CO-IdO" secondAttribute="leading" constant="16" id="baE-zb-jNP"/>
+                        <constraint firstAttribute="trailing" secondItem="AO1-Br-BHK" secondAttribute="trailing" id="hyn-Bi-5RA"/>
+                        <constraint firstItem="AO1-Br-BHK" firstAttribute="top" secondItem="JfK-uB-6ag" secondAttribute="bottom" constant="32" id="jvM-3c-3RO"/>
+                        <constraint firstAttribute="trailing" secondItem="lzj-3R-8hs" secondAttribute="trailing" constant="16" id="oS1-Jg-ypc"/>
+                        <constraint firstItem="AO1-Br-BHK" firstAttribute="leading" secondItem="dgy-CO-IdO" secondAttribute="leading" id="p8D-UM-qGy"/>
+                        <constraint firstItem="lzj-3R-8hs" firstAttribute="leading" secondItem="dgy-CO-IdO" secondAttribute="leading" constant="16" id="vvc-Tg-d9Y"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dgy-CO-IdO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="S3A-Cv-K9p"/>
+                <constraint firstItem="dgy-CO-IdO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ufn-vl-SFQ"/>
+                <constraint firstItem="dgy-CO-IdO" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gQo-9l-3MQ"/>
+                <constraint firstItem="dgy-CO-IdO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="wSm-BN-WSu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="189.85507246376812" y="222.96195652173915"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

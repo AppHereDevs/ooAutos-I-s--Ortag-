@@ -6,8 +6,9 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
+import CoreModule
 
 protocol ProfileWorkerLogic {
-
+    func getProfileInformation( completion: @escaping (Result<SuccessResult<QRModels.ServiceProviderInformation.Response>, NetworkError>) -> Void
+    )
 }
