@@ -113,10 +113,6 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
         }
     }
     
-    func displayConsumptionDetail() {
-        
-    }
-    
     @IBAction func switchValueChanged(_ sender: Any) {
         if !isActiveSwitch.isOn {
             interactor?.suspendServiceProvider()

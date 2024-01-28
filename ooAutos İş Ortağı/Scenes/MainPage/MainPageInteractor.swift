@@ -24,10 +24,8 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
     
     var worker: MainPageWorkerLogic?
     var presenter: MainPagePresentationLogic?
-    
-    
+
     func getProviderInformation() {
-        
         worker?.getProviderInfo(completion: { [weak self] result in
             guard let self else { return }
             switch result {
@@ -89,7 +87,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
         worker?.suspendProvider(completion: { [weak self] result in
             guard let self else { return }
             switch result {
-            case let .success(_):
+            case .success:
                 presenter?.presentProviderStatus(with: false)
             case let .failure(error):
                 print(error.localizedDescription)
@@ -105,7 +103,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
         worker?.restoreProvider(completion: { [weak self] result in
             guard let self else { return }
             switch result {
-            case let .success(_):
+            case .success:
                 presenter?.presentProviderStatus(with: true)
             case let .failure(error):
                 print(error.localizedDescription)
