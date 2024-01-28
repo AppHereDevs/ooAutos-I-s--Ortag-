@@ -79,7 +79,8 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
     }
     
     func displayLogin() {
-        self.restartFromLogin()
+        hideLoadingIndicator(loadingIndicator: loadingIndicator)
+        restartFromLogin()
     }
     
     func displayUserInfo(providerViewModel: MainPageModels.ProviderViewModel) {

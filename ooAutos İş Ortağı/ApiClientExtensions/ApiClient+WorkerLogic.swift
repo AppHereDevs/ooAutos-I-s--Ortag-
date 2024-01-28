@@ -49,7 +49,9 @@ extension ApiClient: MainPageWorkerLogic {
 }
 
 extension ApiClient: ServicesListWorkerLogic {
-    
+    func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<ServicesListModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
+
+    }
 }
 
 extension ApiClient: QRWorkerLogic {

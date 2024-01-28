@@ -9,4 +9,19 @@
 import UIKit
 
 enum ServicesListModels {
+    enum ProviderConsumptionDetail {
+        struct Response: Decodable {
+            let statusCode: Int
+            let message: String
+            let count: Int
+            let details: [ConsumptionDetails]
+        }
+
+        struct ConsumptionDetails: Decodable {
+            let plateNumber: String?
+            let consumedAt: String?
+            let price: Float?
+            let serviceName: String?
+        }
+    }
 }

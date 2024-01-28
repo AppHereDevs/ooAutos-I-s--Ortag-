@@ -7,9 +7,7 @@
 
 import UIKit
 extension UIViewController {
-    
     func showLoadingIndicator(loadingIndicator: UIActivityIndicatorView) {
-        
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             loadingIndicator.center = self.view.center

@@ -9,12 +9,13 @@
 import UIKit
 
 protocol ServicesListDisplayLogic: AnyObject {
+    func displayConsumptionHistory(consumptionDetails: [ConsumptionDetail])
 }
 
 class ServicesListViewController: UIViewController, ServicesListDisplayLogic {
 
     // MARK: - Properties
-    var router: (NSObjectProtocol & ServicesListRoutingLogic & ServicesListDataPassing)?
+    var router: ServicesListRoutingLogic?
     var interactor: ServicesListBusinessLogic?
     private var worker: ServicesListWorkerLogic?
 
@@ -32,24 +33,6 @@ class ServicesListViewController: UIViewController, ServicesListDisplayLogic {
     convenience init(worker: ServicesListWorkerLogic) {
         self.init()
         self.worker = worker
-        setup()
-    }
-
-    // MARK: - Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = ServicesListInteractor()
-        let presenter = ServicesListPresenter()
-        let router = ServicesListRouter()
-
-        viewController.router = router
-        viewController.interactor = interactor
-        interactor.presenter = presenter
-        interactor.worker = worker
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
     }
 
     // MARK: - View Lifecycle
@@ -57,5 +40,11 @@ class ServicesListViewController: UIViewController, ServicesListDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundImage(imageName: "background")
+
+        interactor?.getConsumptionDetail(startDate: nil, endDate: nil)
+    }
+
+    func displayConsumptionHistory(consumptionDetails: [ConsumptionDetail]) {
+        
     }
 }

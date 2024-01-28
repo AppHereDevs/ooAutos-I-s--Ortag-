@@ -11,16 +11,11 @@ import UIKit
 protocol ServicesListRoutingLogic {
 }
 
-protocol ServicesListDataPassing {
-    var dataStore: ServicesListDataStore? { get }
-}
-
-class ServicesListRouter: NSObject, ServicesListRoutingLogic, ServicesListDataPassing {
+class ServicesListRouter: NSObject, ServicesListRoutingLogic {
     
     // MARK: - Properties
     
     weak var viewController: ServicesListViewController?
-    var dataStore: ServicesListDataStore?
     
     // MARK: - Routing
     

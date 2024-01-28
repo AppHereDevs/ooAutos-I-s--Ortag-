@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */; };
 		CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */; };
 		CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */; };
 		CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */; };
@@ -70,7 +71,19 @@
 		CAC4AF3B2B62E68A00ABD9A1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC4AF3A2B62E68A00ABD9A1 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		93E4B7102B66D2D3001E4C37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA3A4FCB2B2A1C4E00241B3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA3A4FD22B2A1C4E00241B3D;
+			remoteInfo = "ooAutos İş Ortağı";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListComposer.swift; sourceTree = "<group>"; };
+		93E4B70C2B66D2D3001E4C37 /* ooAutos İş OrtağıTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ooAutos İş OrtağıTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ooAutos İş Ortağı.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +153,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		93E4B7092B66D2D3001E4C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA3A4FD02B2A1C4E00241B3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,10 +172,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93E4B7042B66C743001E4C37 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		93E4B7072B66CEBF001E4C37 /* ServicesListPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A504F2B2CBFB400241B3D /* ServicesListPresenter.swift */,
+				CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */,
+			);
+			path = ServicesListPresentation;
+			sourceTree = "<group>";
+		};
+		93E4B70D2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */ = {
+			isa = PBXGroup;
+			children = (
+				93E4B7152B66D2D9001E4C37 /* ServicesListTests */,
+			);
+			path = "ooAutos İş OrtağıTests";
+			sourceTree = "<group>";
+		};
+		93E4B7152B66D2D9001E4C37 /* ServicesListTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServicesListTests;
+			sourceTree = "<group>";
+		};
+		93E4B7182B66D3CC001E4C37 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		CA3A4FCA2B2A1C4E00241B3D = {
 			isa = PBXGroup;
 			children = (
 				CA3A4FD52B2A1C4E00241B3D /* ooAutos İş Ortağı */,
+				93E4B70D2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */,
 				CA3A4FD42B2A1C4E00241B3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */,
+				93E4B70C2B66D2D3001E4C37 /* ooAutos İş OrtağıTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,13 +313,13 @@
 		CA3A502C2B2A4B3600241B3D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CA3A4FEF2B2A24BD00241B3D /* Splash */,
+				CA3A50062B2A28E700241B3D /* Login */,
 				CA3A50422B2CBDEE00241B3D /* Profile */,
 				CA3A50412B2CBDE600241B3D /* QR */,
-				CA3A50402B2CBDC800241B3D /* ServicesList */,
 				CA3A503F2B2CBBBF00241B3D /* MainPage */,
+				CA3A50402B2CBDC800241B3D /* ServicesList */,
 				CA3A502D2B2A4BCA00241B3D /* TabBar */,
-				CA3A50062B2A28E700241B3D /* Login */,
-				CA3A4FEF2B2A24BD00241B3D /* Splash */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -298,12 +360,12 @@
 		CA3A50402B2CBDC800241B3D /* ServicesList */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A504F2B2CBFB400241B3D /* ServicesListPresenter.swift */,
+				93E4B7042B66C743001E4C37 /* Composer */,
+				93E4B7072B66CEBF001E4C37 /* ServicesListPresentation */,
+				93E4B7182B66D3CC001E4C37 /* UI */,
 				CA3A50502B2CBFB400241B3D /* ServicesListWorker.swift */,
 				CA3A50512B2CBFB400241B3D /* ServicesListRouter.swift */,
 				CA3A50522B2CBFB400241B3D /* ServicesListModels.swift */,
-				CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */,
-				CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */,
 			);
 			path = ServicesList;
 			sourceTree = "<group>";
@@ -339,6 +401,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		93E4B70B2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E4B7122B66D2D3001E4C37 /* Build configuration list for PBXNativeTarget "ooAutos İş OrtağıTests" */;
+			buildPhases = (
+				93E4B7082B66D2D3001E4C37 /* Sources */,
+				93E4B7092B66D2D3001E4C37 /* Frameworks */,
+				93E4B70A2B66D2D3001E4C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E4B7112B66D2D3001E4C37 /* PBXTargetDependency */,
+			);
+			name = "ooAutos İş OrtağıTests";
+			productName = "ooAutos İş OrtağıTests";
+			productReference = 93E4B70C2B66D2D3001E4C37 /* ooAutos İş OrtağıTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CA3A4FD22B2A1C4E00241B3D /* ooAutos İş Ortağı */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA3A4FE72B2A1C4F00241B3D /* Build configuration list for PBXNativeTarget "ooAutos İş Ortağı" */;
@@ -367,9 +447,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					93E4B70B2B66D2D3001E4C37 = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
+						TestTargetID = CA3A4FD22B2A1C4E00241B3D;
+					};
 					CA3A4FD22B2A1C4E00241B3D = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -393,11 +478,19 @@
 			projectRoot = "";
 			targets = (
 				CA3A4FD22B2A1C4E00241B3D /* ooAutos İş Ortağı */,
+				93E4B70B2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		93E4B70A2B66D2D3001E4C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA3A4FD12B2A1C4E00241B3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +509,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		93E4B7082B66D2D3001E4C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA3A4FCF2B2A1C4E00241B3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,6 +557,7 @@
 				CA3A50012B2A257100241B3D /* SplashWorker.swift in Sources */,
 				CA3A50642B2CC0B900241B3D /* QRModels.swift in Sources */,
 				CA3A50042B2A257100241B3D /* SplashViewController.swift in Sources */,
+				93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */,
 				CA3A50592B2CBFB400241B3D /* ServicesListViewController.swift in Sources */,
 				CA3A502F2B2A4BE200241B3D /* TabBarController.swift in Sources */,
 				CA3A506E2B2CC19100241B3D /* ProfileWorker.swift in Sources */,
@@ -476,6 +577,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		93E4B7112B66D2D3001E4C37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA3A4FD22B2A1C4E00241B3D /* ooAutos İş Ortağı */;
+			targetProxy = 93E4B7102B66D2D3001E4C37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -488,6 +597,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		93E4B7132B66D2D3001E4C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ardonat.ooAutos-I-s--Ortag--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ooAutos İş OrtağıTests/ServicesListTests/ooAutos İş OrtağıTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ooAutos İş Ortağı.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ooAutos İş Ortağı";
+			};
+			name = Debug;
+		};
+		93E4B7142B66D2D3001E4C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ardonat.ooAutos-I-s--Ortag--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ooAutos İş OrtağıTests/ServicesListTests/ooAutos İş OrtağıTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ooAutos İş Ortağı.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ooAutos İş Ortağı";
+			};
+			name = Release;
+		};
 		CA3A4FE52B2A1C4F00241B3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -659,6 +822,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		93E4B7122B66D2D3001E4C37 /* Build configuration list for PBXNativeTarget "ooAutos İş OrtağıTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E4B7132B66D2D3001E4C37 /* Debug */,
+				93E4B7142B66D2D3001E4C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA3A4FCE2B2A1C4E00241B3D /* Build configuration list for PBXProject "ooAutos İş Ortağı" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
