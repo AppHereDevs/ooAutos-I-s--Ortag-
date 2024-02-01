@@ -11,17 +11,35 @@ final class ServicesListUIComposer {
     private init() {}
 
     static func servicesListComposedWith(servicesListWorker: ServicesListWorkerLogic) -> ServicesListViewController {
-        let servicesListController = ServicesListViewController()
         let interactor = ServicesListInteractor()
         let presenter = ServicesListPresenter()
         let router = ServicesListRouter()
 
+        let servicesListController = ServicesListViewController(interactor: interactor)
+        let consumptionViewAdapter = ConsumptionViewAdapter(controller: servicesListController)
+
         servicesListController.router = router
-        servicesListController.interactor = interactor
         interactor.presenter = presenter
         interactor.worker = servicesListWorker
-        presenter.viewController = servicesListController
+        presenter.consumptionView = consumptionViewAdapter
         router.viewController = servicesListController
         return servicesListController
+    }
+}
+
+
+private final class ConsumptionViewAdapter: ConsumptionView {
+    private let controller: ServicesListViewController
+
+    init(controller: ServicesListViewController) {
+        self.controller = controller
+    }
+
+    func displayConsumptionHistory(consumptionDetails: [ConsumptionDetail]) {
+        DispatchQueue.main.async {
+            self.controller.tableModel = consumptionDetails.map {
+                ConsumptionDetailCellController(model: $0)
+            }
+        }
     }
 }

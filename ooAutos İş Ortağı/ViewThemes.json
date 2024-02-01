@@ -379,6 +379,20 @@
                 "placeHolderTextColor": "#315370",
                 "fontName": "Slate-Medium",
                 "fontSize": 15
+            },
+            {
+                "key": "AppHereLabel-regular-black-18px",
+                "textColor": "#000000",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 18
+            },
+            {
+                "key": "AppHereLabel-regular-black-14px",
+                "textColor": "#000000",
+                "backgroundColor": "#00FFFFFF",
+                "fontName": "Slate-Regular",
+                "fontSize": 14
             }
         ]
     }

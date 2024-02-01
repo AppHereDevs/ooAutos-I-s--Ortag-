@@ -49,8 +49,10 @@ extension ApiClient: MainPageWorkerLogic {
 }
 
 extension ApiClient: ServicesListWorkerLogic {
-    func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<ServicesListModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
-
+    public func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<ServicesListModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
+        let request = ConsumptionDetailsRequest(request: .consumptionDetail(startDate: startDate, endDate: endDate),
+                                                 apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
+        self.request(request, completion: completion)
     }
 }
 

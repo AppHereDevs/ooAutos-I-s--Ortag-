@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConsumptionDetailCell" rowHeight="251" id="wPp-76-6Lk" customClass="ConsumptionDetailCell" customModule="ooAutos_I_s__Ortag_ı" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="87"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wPp-76-6Lk" id="WhK-zd-Xkb">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vg-7J-t1I" customClass="AppHereLabel" customModule="AppHereComponents">
+                        <rect key="frame" x="16.000000000000004" y="15.999999999999998" width="41.333333333333343" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-18px"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-78-JHS" customClass="AppHereLabel" customModule="AppHereComponents">
+                        <rect key="frame" x="335.66666666666669" y="15.999999999999998" width="41.333333333333314" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-18px"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5RW-vH-Xxw">
+                        <rect key="frame" x="16" y="50.666666666666664" width="361" height="20.333333333333336"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdg-ik-MfL" customClass="AppHereLabel" customModule="AppHereComponents">
+                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-14px"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twt-xF-XiC" customClass="AppHereLabel" customModule="AppHereComponents">
+                                <rect key="frame" x="160" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-14px"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-JA-H8p" customClass="AppHereLabel" customModule="AppHereComponents">
+                                <rect key="frame" x="319.66666666666669" y="0.0" width="41.333333333333314" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-14px"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7Vg-7J-t1I" firstAttribute="top" secondItem="WhK-zd-Xkb" secondAttribute="top" constant="16" id="4ro-Ri-Xu7"/>
+                    <constraint firstAttribute="trailing" secondItem="jQa-78-JHS" secondAttribute="trailing" constant="16" id="7NU-4L-4b8"/>
+                    <constraint firstItem="5RW-vH-Xxw" firstAttribute="leading" secondItem="WhK-zd-Xkb" secondAttribute="leading" constant="16" id="94S-HH-mZX"/>
+                    <constraint firstAttribute="bottom" secondItem="5RW-vH-Xxw" secondAttribute="bottom" constant="16" id="JgQ-7I-Gec"/>
+                    <constraint firstAttribute="trailing" secondItem="5RW-vH-Xxw" secondAttribute="trailing" constant="16" id="Vf0-Jv-P1V"/>
+                    <constraint firstItem="jQa-78-JHS" firstAttribute="top" secondItem="WhK-zd-Xkb" secondAttribute="top" constant="16" id="Y9l-u4-N9Y"/>
+                    <constraint firstItem="7Vg-7J-t1I" firstAttribute="leading" secondItem="WhK-zd-Xkb" secondAttribute="leading" constant="16" id="ofm-WM-Z9z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="jQa-78-JHS" id="mfR-jS-w7i"/>
+                <outlet property="plateNumberLabel" destination="7Vg-7J-t1I" id="EJS-Xv-7Zu"/>
+                <outlet property="priceLabel" destination="Twt-xF-XiC" id="GcE-9F-4ea"/>
+                <outlet property="serviceNameLabel" destination="zdg-ik-MfL" id="X8s-IX-upq"/>
+                <outlet property="timeLabel" destination="HC0-JA-H8p" id="sFP-5D-4Uf"/>
+            </connections>
+            <point key="canvasLocation" x="-892.36641221374043" y="-189.78873239436621"/>
+        </tableViewCell>
+    </objects>
+</document>

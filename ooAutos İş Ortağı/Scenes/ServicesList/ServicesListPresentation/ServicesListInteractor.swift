@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ServicesListBusinessLogic: AnyObject {
+public protocol ServicesListBusinessLogic: AnyObject {
     func getConsumptionDetail(startDate: String?, endDate: String?)
 }
 

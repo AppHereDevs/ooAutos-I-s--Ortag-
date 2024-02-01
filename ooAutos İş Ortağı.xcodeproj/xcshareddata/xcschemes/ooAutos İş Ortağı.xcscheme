@@ -34,7 +34,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93E4B70B2B66D2D3001E4C37"
+               BlueprintIdentifier = "933CC8BA2B66E5E400FC9418"
                BuildableName = "ooAutos I&#x307;s&#x327; Ortag&#x306;&#x131;Tests.xctest"
                BlueprintName = "ooAutos I&#x307;s&#x327; Ortag&#x306;&#x131;Tests"
                ReferencedContainer = "container:ooAutos I&#x307;s&#x327; Ortag&#x306;&#x131;.xcodeproj">

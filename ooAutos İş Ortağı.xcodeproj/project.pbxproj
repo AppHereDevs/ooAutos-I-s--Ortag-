@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9305169D2B6AEA5C00F652FC /* ConsumptionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9305169C2B6AEA5C00F652FC /* ConsumptionDetailCell.xib */; };
+		931242352B6951BA00889B60 /* ServicesCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931242342B6951BA00889B60 /* ServicesCellController.swift */; };
+		931242372B6954BD00889B60 /* ConsumptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */; };
+		937AE8F22B6942CC001E9AC6 /* ServicesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */; };
 		93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */; };
 		CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */; };
 		CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */; };
@@ -72,7 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		93E4B7102B66D2D3001E4C37 /* PBXContainerItemProxy */ = {
+		933CC8BF2B66E5E400FC9418 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA3A4FCB2B2A1C4E00241B3D /* Project object */;
 			proxyType = 1;
@@ -82,8 +86,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9305169C2B6AEA5C00F652FC /* ConsumptionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsumptionDetailCell.xib; sourceTree = "<group>"; };
+		931242342B6951BA00889B60 /* ServicesCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCellController.swift; sourceTree = "<group>"; };
+		931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionDetailCell.swift; sourceTree = "<group>"; };
+		933CC8BB2B66E5E400FC9418 /* ooAutos İş OrtağıTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ooAutos İş OrtağıTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesListViewController.xib; sourceTree = "<group>"; };
 		93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListComposer.swift; sourceTree = "<group>"; };
-		93E4B70C2B66D2D3001E4C37 /* ooAutos İş OrtağıTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ooAutos İş OrtağıTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ooAutos İş Ortağı.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,7 +161,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93E4B7092B66D2D3001E4C37 /* Frameworks */ = {
+		933CC8B82B66E5E400FC9418 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -172,6 +180,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9305169B2B6AEA3700F652FC /* ConsumptionDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */,
+				9305169C2B6AEA5C00F652FC /* ConsumptionDetailCell.xib */,
+			);
+			path = ConsumptionDetailCell;
+			sourceTree = "<group>";
+		};
 		93E4B7042B66C743001E4C37 /* Composer */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,25 +206,13 @@
 			path = ServicesListPresentation;
 			sourceTree = "<group>";
 		};
-		93E4B70D2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */ = {
-			isa = PBXGroup;
-			children = (
-				93E4B7152B66D2D9001E4C37 /* ServicesListTests */,
-			);
-			path = "ooAutos İş OrtağıTests";
-			sourceTree = "<group>";
-		};
-		93E4B7152B66D2D9001E4C37 /* ServicesListTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ServicesListTests;
-			sourceTree = "<group>";
-		};
 		93E4B7182B66D3CC001E4C37 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9305169B2B6AEA3700F652FC /* ConsumptionDetailCell */,
 				CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */,
+				937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */,
+				931242342B6951BA00889B60 /* ServicesCellController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -216,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				CA3A4FD52B2A1C4E00241B3D /* ooAutos İş Ortağı */,
-				93E4B70D2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */,
 				CA3A4FD42B2A1C4E00241B3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -225,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */,
-				93E4B70C2B66D2D3001E4C37 /* ooAutos İş OrtağıTests.xctest */,
+				933CC8BB2B66E5E400FC9418 /* ooAutos İş OrtağıTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -401,22 +405,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93E4B70B2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */ = {
+		933CC8BA2B66E5E400FC9418 /* ooAutos İş OrtağıTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93E4B7122B66D2D3001E4C37 /* Build configuration list for PBXNativeTarget "ooAutos İş OrtağıTests" */;
+			buildConfigurationList = 933CC8C12B66E5E400FC9418 /* Build configuration list for PBXNativeTarget "ooAutos İş OrtağıTests" */;
 			buildPhases = (
-				93E4B7082B66D2D3001E4C37 /* Sources */,
-				93E4B7092B66D2D3001E4C37 /* Frameworks */,
-				93E4B70A2B66D2D3001E4C37 /* Resources */,
+				933CC8B72B66E5E400FC9418 /* Sources */,
+				933CC8B82B66E5E400FC9418 /* Frameworks */,
+				933CC8B92B66E5E400FC9418 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				93E4B7112B66D2D3001E4C37 /* PBXTargetDependency */,
+				933CC8C02B66E5E400FC9418 /* PBXTargetDependency */,
 			);
 			name = "ooAutos İş OrtağıTests";
 			productName = "ooAutos İş OrtağıTests";
-			productReference = 93E4B70C2B66D2D3001E4C37 /* ooAutos İş OrtağıTests.xctest */;
+			productReference = 933CC8BB2B66E5E400FC9418 /* ooAutos İş OrtağıTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CA3A4FD22B2A1C4E00241B3D /* ooAutos İş Ortağı */ = {
@@ -450,9 +454,8 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					93E4B70B2B66D2D3001E4C37 = {
+					933CC8BA2B66E5E400FC9418 = {
 						CreatedOnToolsVersion = 15.0.1;
-						LastSwiftMigration = 1500;
 						TestTargetID = CA3A4FD22B2A1C4E00241B3D;
 					};
 					CA3A4FD22B2A1C4E00241B3D = {
@@ -478,13 +481,13 @@
 			projectRoot = "";
 			targets = (
 				CA3A4FD22B2A1C4E00241B3D /* ooAutos İş Ortağı */,
-				93E4B70B2B66D2D3001E4C37 /* ooAutos İş OrtağıTests */,
+				933CC8BA2B66E5E400FC9418 /* ooAutos İş OrtağıTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93E4B70A2B66D2D3001E4C37 /* Resources */ = {
+		933CC8B92B66E5E400FC9418 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,17 +502,19 @@
 				CA3A50742B2CD02B00241B3D /* QRViewController.xib in Resources */,
 				CAC4AF3B2B62E68A00ABD9A1 /* ProfileViewController.xib in Resources */,
 				CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */,
+				9305169D2B6AEA5C00F652FC /* ConsumptionDetailCell.xib in Resources */,
 				CA5249392B60444400CF054A /* MainPageViewController.xib in Resources */,
 				CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */,
 				CA3A50172B2A2C7D00241B3D /* LoginViewController.xib in Resources */,
 				CA3A50192B2A2E4200241B3D /* ViewThemes.json in Resources */,
+				937AE8F22B6942CC001E9AC6 /* ServicesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		93E4B7082B66D2D3001E4C37 /* Sources */ = {
+		933CC8B72B66E5E400FC9418 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,8 +539,10 @@
 				CA3A50762B2CD91800241B3D /* ServiceProviderInfoRequest.swift in Sources */,
 				CA52493F2B61872F00CF054A /* RestoreServiceProviderRequest.swift in Sources */,
 				CA3A50562B2CBFB400241B3D /* ServicesListWorker.swift in Sources */,
+				931242372B6954BD00889B60 /* ConsumptionDetailCell.swift in Sources */,
 				CA3A50492B2CBE0700241B3D /* MainPagePresenter.swift in Sources */,
 				CA3A50242B2A434000241B3D /* ApiClient+WorkerLogic.swift in Sources */,
+				931242352B6951BA00889B60 /* ServicesCellController.swift in Sources */,
 				CA52493B2B606F6B00CF054A /* ConsumptionInfoRequest.swift in Sources */,
 				CA3A502B2B2A470300241B3D /* UserDefaultsManager.swift in Sources */,
 				CA3A50652B2CC0B900241B3D /* QRViewController.swift in Sources */,
@@ -578,10 +585,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		93E4B7112B66D2D3001E4C37 /* PBXTargetDependency */ = {
+		933CC8C02B66E5E400FC9418 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA3A4FD22B2A1C4E00241B3D /* ooAutos İş Ortağı */;
-			targetProxy = 93E4B7102B66D2D3001E4C37 /* PBXContainerItemProxy */;
+			targetProxy = 933CC8BF2B66E5E400FC9418 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -597,14 +604,14 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		93E4B7132B66D2D3001E4C37 /* Debug */ = {
+		933CC8C22B66E5E400FC9418 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9AB5H938F;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -613,26 +620,22 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ardonat.ooAutos-I-s--Ortag--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "ooAutos İş OrtağıTests/ServicesListTests/ooAutos İş OrtağıTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ooAutos İş Ortağı.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ooAutos İş Ortağı";
 			};
 			name = Debug;
 		};
-		93E4B7142B66D2D3001E4C37 /* Release */ = {
+		933CC8C32B66E5E400FC9418 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9AB5H938F;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -641,12 +644,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ardonat.ooAutos-I-s--Ortag--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = macosx;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "ooAutos İş OrtağıTests/ServicesListTests/ooAutos İş OrtağıTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ooAutos İş Ortağı.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ooAutos İş Ortağı";
 			};
 			name = Release;
@@ -822,11 +822,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93E4B7122B66D2D3001E4C37 /* Build configuration list for PBXNativeTarget "ooAutos İş OrtağıTests" */ = {
+		933CC8C12B66E5E400FC9418 /* Build configuration list for PBXNativeTarget "ooAutos İş OrtağıTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93E4B7132B66D2D3001E4C37 /* Debug */,
-				93E4B7142B66D2D3001E4C37 /* Release */,
+				933CC8C22B66E5E400FC9418 /* Debug */,
+				933CC8C32B66E5E400FC9418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

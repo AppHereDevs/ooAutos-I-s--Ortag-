@@ -8,16 +8,16 @@
 
 import UIKit
 
-enum ServicesListModels {
-    enum ProviderConsumptionDetail {
-        struct Response: Decodable {
+public enum ServicesListModels {
+    public enum ProviderConsumptionDetail {
+        public struct Response: Decodable {
             let statusCode: Int
             let message: String
             let count: Int
             let details: [ConsumptionDetails]
         }
 
-        struct ConsumptionDetails: Decodable {
+        public struct ConsumptionDetails: Decodable {
             let plateNumber: String?
             let consumedAt: String?
             let price: Float?

@@ -22,8 +22,9 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
     var router: (NSObjectProtocol & MainPageRoutingLogic & MainPageDataPassing)?
     var interactor: MainPageBusinessLogic?
     private var worker: MainPageWorkerLogic?
-    private var loadingIndicator = UIActivityIndicatorView()
     
+    private let loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+
     @IBOutlet private weak var scoreLabel: UILabel!
     @IBOutlet private weak var serviceProviderNameLabel: UILabel!
     @IBOutlet private weak var yearlyCountLabel: UILabel!
@@ -71,6 +72,11 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loadingIndicator.color = .white
+        loadingIndicator.center = view.center
+        view.addSubview(loadingIndicator)
+
         setupBackgroundImage(imageName: "background")
         showLoadingIndicator(loadingIndicator: loadingIndicator)
         interactor?.getProviderInformation()

@@ -49,7 +49,7 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     func setVc() {
         let mainPage = MainPageViewController(worker: ApiClient.shared)
         let qrPage = QRViewController(worker: ApiClient.shared)
-        let servicesList = ServicesListViewController(worker: ApiClient.shared)
+        let servicesList = ServicesListUIComposer.servicesListComposedWith(servicesListWorker: ApiClient.shared)
         let profile = ProfileViewController(worker: ApiClient.shared)
         viewControllers = [mainPage, qrPage, servicesList, profile]
     }
