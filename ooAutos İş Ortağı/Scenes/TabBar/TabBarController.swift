@@ -23,7 +23,7 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
             tabBarItem2.title = "Hizmet Listesi"
             tabBarItem2.selectedImage = UIImage(named: "servicesList")
         }
-        
+
         if let tabBarItem1 = tabBar.items?[1] {
             tabBarItem1.image = UIImage(named: "qrLogo")
             tabBarItem1.title = "QR"

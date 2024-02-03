@@ -22,7 +22,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-18px"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Black-18px-Regular"/>
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-78-JHS" customClass="AppHereLabel" customModule="AppHereComponents">
@@ -31,7 +31,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-18px"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Black-18px-Regular"/>
                         </userDefinedRuntimeAttributes>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5RW-vH-Xxw">
@@ -43,7 +43,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-14px"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Black-14px-Regular"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twt-xF-XiC" customClass="AppHereLabel" customModule="AppHereComponents">
@@ -52,7 +52,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-14px"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Black-14px-Regular"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC0-JA-H8p" customClass="AppHereLabel" customModule="AppHereComponents">
@@ -61,7 +61,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-regular-black-14px"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Black-14px-Regular"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>

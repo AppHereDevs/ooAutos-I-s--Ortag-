@@ -6,8 +6,8 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
 import AppHereComponents
+import UIKit
 
 protocol LoginPresentationLogic {
     func presentInitialUI()
@@ -15,10 +15,10 @@ protocol LoginPresentationLogic {
 }
 
 class LoginPresenter: LoginPresentationLogic {
-
     // MARK: - Properties
+
     weak var viewController: LoginDisplayLogic?
-    
+
     func presentInitialUI() {
         let viewModel = Login.ViewModel(
             informationViewModel: AppHereInformationViewModel(
@@ -52,7 +52,7 @@ class LoginPresenter: LoginPresentationLogic {
         )
         viewController?.displayInitialState(viewModel: viewModel)
     }
-    
+
     func presentMainPage() {
         viewController?.navigateToMainPage()
     }

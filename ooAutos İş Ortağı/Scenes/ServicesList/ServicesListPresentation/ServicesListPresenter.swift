@@ -18,24 +18,33 @@ public struct ConsumptionDetail {
 
 protocol ServicesListPresentationLogic {
     func presentConsumptionDetail(consumptionDetails: [ServicesListModels.ProviderConsumptionDetail.ConsumptionDetails])
+    func presentLogin()
 }
 
 protocol ConsumptionView: AnyObject {
     func displayConsumptionHistory(consumptionDetails: [ConsumptionDetail])
 }
 
-class ServicesListPresenter: ServicesListPresentationLogic {
+protocol LoginDisplayer: AnyObject {
+    func displaylogin()
+}
 
+class ServicesListPresenter: ServicesListPresentationLogic {
     // MARK: - Properties
-    
+
     var consumptionView: ConsumptionView?
+    var loginDisplayer: LoginDisplayer?
+
+    func presentLogin() {
+        loginDisplayer?.displaylogin()
+    }
 
     func presentConsumptionDetail(consumptionDetails: [ServicesListModels.ProviderConsumptionDetail.ConsumptionDetails]) {
         let presentableConsumptionDetails = consumptionDetails.map { ConsumptionDetail(plateNumber: $0.plateNumber ?? "-",
                                                                                        consumeDate: prepareConsumeDateToDisplay(dateString: $0.consumedAt).consumeDate,
                                                                                        consumeTime: prepareConsumeDateToDisplay(dateString: $0.consumedAt).consumeTime,
                                                                                        price: preparePriceToDisplay(price: $0.price),
-                                                                                       serviceName: $0.serviceName ?? "-")}
+                                                                                       serviceName: $0.serviceName ?? "-") }
 
         consumptionView?.displayConsumptionHistory(consumptionDetails: presentableConsumptionDetails)
     }

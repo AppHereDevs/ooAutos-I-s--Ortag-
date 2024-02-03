@@ -6,21 +6,44 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+import AppHereComponents
+import Foundation
+import SwiftMessages
 import UIKit
 
 public final class ServicesListViewController: UIViewController {
     // MARK: - Properties
-    var router: ServicesListRoutingLogic?
-    private var  interactor: ServicesListBusinessLogic?
 
-    @IBOutlet weak var tableView: UITableView!
-    
+    var router: ServicesListRoutingLogic?
+    private var interactor: ServicesListBusinessLogic?
+
+    @IBOutlet private var informationLabel: AppHereLabel!
+    @IBOutlet private var tableView: UITableView!
     private let loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+
+    private static let dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "dd/MM/yyyy"
+        return df
+    }()
+
+    private static let userCalendar = Calendar(identifier: .gregorian)
+
+    private static let minimumDateComponents = DateComponents(timeZone: TimeZone(abbreviation: "TR"), year: 2023, month: 1, day: 1)
+    private static let minimumDate: Date = userCalendar.date(from: minimumDateComponents)!
+    private static let minimumDateString = dateFormatter.string(from: ServicesListViewController.minimumDate)
+
+    private static let today: Date = .now
+    private static let todayDateString = dateFormatter.string(from: ServicesListViewController.today)
 
     var tableModel = [ConsumptionDetailCellController]() {
         didSet {
-            tableView.reloadData()
             hideLoadingIndicator(loadingIndicator: loadingIndicator)
+            tableView.reloadData()
+
+            if tableModel.isEmpty {
+                informationLabel.text = "Görüntülenecek kaydınız bulunmamaktadır."
+            }
         }
     }
 
@@ -30,11 +53,11 @@ public final class ServicesListViewController: UIViewController {
     required init?(coder _: NSCoder) {
         fatalError()
     }
-    
+
     init() {
         super.init(nibName: nil, bundle: .main)
     }
-    
+
     public convenience init(interactor: ServicesListBusinessLogic) {
         self.init()
         self.interactor = interactor
@@ -42,8 +65,9 @@ public final class ServicesListViewController: UIViewController {
 
     // MARK: - View Lifecycle
 
-    public override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ConsumptionDetailCell", bundle: nil), forCellReuseIdentifier: "ConsumptionDetailCell")
@@ -55,15 +79,44 @@ public final class ServicesListViewController: UIViewController {
         setupBackgroundImage(imageName: "background")
     }
 
-    public override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        informationLabel.text = "\(ServicesListViewController.minimumDateString) ve \(ServicesListViewController.todayDateString) tarihleri arasındaki kullanımlar"
 
         interactor?.getConsumptionDetail(startDate: nil, endDate: nil)
         showLoadingIndicator(loadingIndicator: loadingIndicator)
     }
 
-    @IBAction func filterButtonPressed(_ sender: Any) {
+    @IBAction func filterButtonPressed(_: Any) {
+        let view: DateFilterView = try! SwiftMessages.viewFromNib()
 
+        view.applyFilterButtonAction = { [weak self] startDate, endDate in
+            SwiftMessages.hide()
+
+            guard let self else { return }
+            informationLabel.text = "\(startDate) ve \(endDate) tarihleri arasındaki kullanımlar"
+            interactor?.getConsumptionDetail(startDate: startDate, endDate: endDate)
+        }
+
+        view.clearFilterButtonAction = { [weak self] in
+            SwiftMessages.hide()
+
+            guard let self else { return }
+            informationLabel.text = "\(ServicesListViewController.minimumDateString) ve \(ServicesListViewController.todayDateString) tarihleri arasındaki kullanımlar"
+            interactor?.getConsumptionDetail(startDate: nil, endDate: nil)
+        }
+
+        SwiftMessages.show(config: filterConfig, view: view)
+    }
+
+    var filterConfig: SwiftMessages.Config {
+        var config = SwiftMessages.defaultConfig
+        config.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        config.duration = .forever
+        config.presentationStyle = .center
+        config.dimMode = .gray(interactive: false)
+        return config
     }
 }
 
@@ -79,7 +132,7 @@ extension ServicesListViewController: UITableViewDelegate, UITableViewDataSource
         return tableModel[indexPath.row]
     }
 
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return 87
     }
 
@@ -101,5 +154,12 @@ extension ServicesListViewController: UITableViewDelegate, UITableViewDataSource
 
     public func numberOfSections(in _: UITableView) -> Int {
         return tableModel.count
+    }
+}
+
+extension ServicesListViewController: LoginDisplayer {
+    func displaylogin() {
+        hideLoadingIndicator(loadingIndicator: loadingIndicator)
+        restartFromLogin()
     }
 }

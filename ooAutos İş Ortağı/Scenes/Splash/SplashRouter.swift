@@ -6,8 +6,8 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
 import ApiClient
+import UIKit
 
 protocol SplashRoutingLogic {
     func routeToLogin()
@@ -19,21 +19,20 @@ protocol SplashDataPassing {
 }
 
 class SplashRouter: NSObject, SplashRoutingLogic, SplashDataPassing {
-
     // MARK: - Properties
 
     weak var viewController: SplashViewController?
     var dataStore: SplashDataStore?
 
     // MARK: - Routing
+
     func routeToLogin() {
         let loginViewController = LoginViewController(worker: ApiClient.shared)
         viewController?.navigationController?.viewControllers = [loginViewController]
     }
-    
+
     func routeToMainPage() {
         let mainViewController = CustomTabBarController.instantiate()
         viewController?.navigationController?.viewControllers = [mainViewController]
     }
-
 }

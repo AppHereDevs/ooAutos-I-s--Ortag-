@@ -6,8 +6,8 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
 import AppHereComponents
+import UIKit
 
 protocol ProfileDisplayLogic: AnyObject {
     func displayLogin()
@@ -15,35 +15,34 @@ protocol ProfileDisplayLogic: AnyObject {
 }
 
 class ProfileViewController: UIViewController, ProfileDisplayLogic {
-
     // MARK: - Properties
-    
-    @IBOutlet weak var name: AppHereInputView!
-    @IBOutlet weak var typeDesc: AppHereInputView!
-    @IBOutlet weak var adress: AppHereInputView!
-    @IBOutlet weak var phoneNumber: AppHereInputView!
-    @IBOutlet weak var mobileNumber: AppHereInputView!
-    @IBOutlet weak var email: AppHereInputView!
-    @IBOutlet weak var ibanNo: AppHereInputView!
-    @IBOutlet weak var ibanAccountName: AppHereInputView!
-    @IBOutlet weak var workingHours: AppHereInputView!
-    @IBOutlet weak var scrollView: UIScrollView!
-    
+
+    @IBOutlet var name: AppHereInputView!
+    @IBOutlet var typeDesc: AppHereInputView!
+    @IBOutlet var adress: AppHereInputView!
+    @IBOutlet var phoneNumber: AppHereInputView!
+    @IBOutlet var mobileNumber: AppHereInputView!
+    @IBOutlet var email: AppHereInputView!
+    @IBOutlet var ibanNo: AppHereInputView!
+    @IBOutlet var ibanAccountName: AppHereInputView!
+    @IBOutlet var workingHours: AppHereInputView!
+    @IBOutlet var scrollView: UIScrollView!
+
     var router: (NSObjectProtocol & ProfileRoutingLogic & ProfileDataPassing)?
     var interactor: ProfileBusinessLogic?
     private var worker: ProfileWorkerLogic?
 
     // MARK: - Object lifecycle
-    
+
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError()
     }
-    
+
     init() {
         super.init(nibName: nil, bundle: .main)
     }
-    
+
     convenience init(worker: ProfileWorkerLogic) {
         self.init()
         self.worker = worker
@@ -74,7 +73,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
         setupBackgroundImage(imageName: "background")
         interactor?.getProfileInfo()
     }
-    
+
     func displayPersonalInfo(viewModel: ProfileModels.ViewModel) {
         DispatchQueue.main.async {
             self.name.viewModel = AppHereInputViewModel(
@@ -85,7 +84,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.name.inputTextField.text = viewModel.name
             self.name.isUserInteractionEnabled = false
-            
+
             self.typeDesc.viewModel = AppHereInputViewModel(
                 title: "TİPİ",
                 placeholder: "",
@@ -94,7 +93,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.typeDesc.inputTextField.text = viewModel.typeDesc
             self.typeDesc.isUserInteractionEnabled = false
-            
+
             self.adress.viewModel = AppHereInputViewModel(
                 title: "ADRES",
                 placeholder: "",
@@ -103,7 +102,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.adress.inputTextField.text = viewModel.address
             self.adress.isUserInteractionEnabled = false
-            
+
             self.phoneNumber.viewModel = AppHereInputViewModel(
                 title: "TELEFON NUMARASI",
                 placeholder: "",
@@ -112,7 +111,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.phoneNumber.inputTextField.text = viewModel.telephoneNo
             self.phoneNumber.isUserInteractionEnabled = false
-            
+
             self.mobileNumber.viewModel = AppHereInputViewModel(
                 title: "MOBİL NUMARASI",
                 placeholder: "",
@@ -121,7 +120,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.mobileNumber.inputTextField.text = viewModel.mobileNo
             self.mobileNumber.isUserInteractionEnabled = false
-            
+
             self.email.viewModel = AppHereInputViewModel(
                 title: "EMAİL",
                 placeholder: "",
@@ -130,7 +129,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.email.inputTextField.text = viewModel.email
             self.email.isUserInteractionEnabled = false
-            
+
             self.ibanNo.viewModel = AppHereInputViewModel(
                 title: "IBAN NO",
                 placeholder: "",
@@ -139,7 +138,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.ibanNo.inputTextField.text = viewModel.ibanNo
             self.ibanNo.isUserInteractionEnabled = false
-            
+
             self.ibanAccountName.viewModel = AppHereInputViewModel(
                 title: "HESAP BİLGİSİ",
                 placeholder: "",
@@ -148,7 +147,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.ibanAccountName.inputTextField.text = viewModel.ibanName
             self.ibanAccountName.isUserInteractionEnabled = false
-            
+
             self.workingHours.viewModel = AppHereInputViewModel(
                 title: "ÇALIŞMA BİLGİSİ",
                 placeholder: "",
@@ -159,13 +158,12 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             self.workingHours.isUserInteractionEnabled = false
         }
     }
-    
-    @IBAction func signOut(_ sender: Any) {
-        self.restartFromLogin()
+
+    @IBAction func signOut(_: Any) {
+        restartFromLogin()
     }
-    
+
     func displayLogin() {
-        self.restartFromLogin()
+        restartFromLogin()
     }
-    
 }

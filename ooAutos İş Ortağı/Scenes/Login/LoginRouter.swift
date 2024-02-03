@@ -18,12 +18,11 @@ protocol LoginDataPassing {
 }
 
 class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing {
-
     // MARK: - Properties
 
     weak var viewController: LoginViewController?
     var dataStore: LoginDataStore?
-    
+
     func routeToMainPage() {
         let mainViewController = CustomTabBarController.instantiate()
         viewController?.navigationController?.viewControllers = [mainViewController]
@@ -33,5 +32,4 @@ class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing {
         let loginViewController = LoginViewController()
         viewController?.navigationController?.viewControllers = [loginViewController]
     }
-
 }

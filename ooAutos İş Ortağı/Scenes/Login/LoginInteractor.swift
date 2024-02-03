@@ -16,12 +16,11 @@ protocol LoginBusinessLogic: AnyObject {
 protocol LoginDataStore {}
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore {
-
     // MARK: - Properties
 
     var worker: LoginWorkerLogic?
     var presenter: LoginPresentationLogic?
-    
+
     func viewDidLoad() {
         presenter?.presentInitialUI()
     }
@@ -45,5 +44,4 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
             }
         }
     }
-
 }

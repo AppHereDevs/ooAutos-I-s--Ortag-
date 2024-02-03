@@ -8,11 +8,10 @@
 
 import UIKit
 
-protocol SplashPresentationLogic { }
+protocol SplashPresentationLogic {}
 
 class SplashPresenter: SplashPresentationLogic {
-
     // MARK: - Properties
-    weak var viewController: SplashDisplayLogic?
 
+    weak var viewController: SplashDisplayLogic?
 }

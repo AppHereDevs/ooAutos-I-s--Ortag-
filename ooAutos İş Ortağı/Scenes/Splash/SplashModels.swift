@@ -8,5 +8,4 @@
 
 import UIKit
 
-enum SplashModels {
-}
+enum SplashModels {}

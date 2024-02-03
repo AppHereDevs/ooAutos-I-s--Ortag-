@@ -15,32 +15,32 @@ extension ApiClient: LoginWorkerLogic {
 }
 
 extension ApiClient: MainPageWorkerLogic {
-    
     func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
         let request = ConsumptionDetailsRequest(request: .consumptionDetail(startDate: startDate, endDate: endDate),
-                                                 apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
+                                                apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
         self.request(request, completion: completion)
     }
-    
+
     func restoreProvider(completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.SuspendProvider.Response>, CoreModule.NetworkError>) -> Void) {
         let request = RestoreServiceProviderRequest(request: .restoreService,
-                                                 apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.prod))
+                                                    apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.prod))
         self.request(request, completion: completion)
     }
-    
+
     func suspendProvider(completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.SuspendProvider.Response>, CoreModule.NetworkError>) -> Void) {
         let request = SuspendServiceProviderRequest(request: .suspendService,
-                                                 apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.prod))
+                                                    apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.prod))
         self.request(request, completion: completion)
     }
-    
+
     func getConsumptionInfo(kind: String,
-                            completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.ConsumptionInformation.Response>, CoreModule.NetworkError>) -> Void) {
+                            completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.ConsumptionInformation.Response>, CoreModule.NetworkError>) -> Void)
+    {
         let request = ConsumptionInfoRequest(request: .getConsumptionInfo(kind: kind),
-                                                 apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
+                                             apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
         self.request(request, completion: completion)
     }
-    
+
     func getProviderInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
         let request = ServiceProviderInfoRequest(request: .getInfo,
                                                  apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
@@ -51,7 +51,7 @@ extension ApiClient: MainPageWorkerLogic {
 extension ApiClient: ServicesListWorkerLogic {
     public func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<ServicesListModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
         let request = ConsumptionDetailsRequest(request: .consumptionDetail(startDate: startDate, endDate: endDate),
-                                                 apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
+                                                apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
         self.request(request, completion: completion)
     }
 }
@@ -62,7 +62,6 @@ extension ApiClient: QRWorkerLogic {
                                                  apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
         self.request(request, completion: completion)
     }
-    
 }
 
 extension ApiClient: ProfileWorkerLogic {

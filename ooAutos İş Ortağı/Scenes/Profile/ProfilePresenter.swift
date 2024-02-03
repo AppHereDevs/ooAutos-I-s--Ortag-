@@ -14,14 +14,14 @@ protocol ProfilePresentationLogic {
 }
 
 class ProfilePresenter: ProfilePresentationLogic {
-
     // MARK: - Properties
+
     weak var viewController: ProfileDisplayLogic?
-    
+
     func presentLogin() {
         viewController?.displayLogin()
     }
-    
+
     func presentData(response: QRModels.ServiceProviderInformation.ServiceProviderDetails) {
         let viewModel = ProfileModels.ViewModel(name: response.name ?? "",
                                                 typeDesc: response.typeDescription ?? "",

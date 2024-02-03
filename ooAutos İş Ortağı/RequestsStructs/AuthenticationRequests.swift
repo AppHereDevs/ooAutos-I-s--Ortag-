@@ -12,7 +12,7 @@ public struct AuthenticationRequests: Request {
         self.request = request
         self.apiEnvironment = apiEnvironment
     }
-    
+
     public var path: String {
         switch request {
         case .authenticate:

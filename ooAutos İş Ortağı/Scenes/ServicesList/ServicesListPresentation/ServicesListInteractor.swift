@@ -13,7 +13,6 @@ public protocol ServicesListBusinessLogic: AnyObject {
 }
 
 class ServicesListInteractor: ServicesListBusinessLogic {
-
     // MARK: - Properties
 
     var worker: ServicesListWorkerLogic?
@@ -27,9 +26,8 @@ class ServicesListInteractor: ServicesListBusinessLogic {
                 presenter?.presentConsumptionDetail(consumptionDetails: response.decodedResponse.details)
             case let .failure(error):
                 if error.requestDetails()?.statusCode == 401 {
-                    // presenter?.presentLogin()
+                    presenter?.presentLogin()
                 }
-                break
             }
         })
     }

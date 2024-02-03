@@ -12,7 +12,7 @@ public struct RestoreServiceProviderRequest: Request {
         self.request = request
         self.apiEnvironment = apiEnvironment
     }
-    
+
     public var path: String {
         switch request {
         case .restoreService:
@@ -34,10 +34,10 @@ public struct RestoreServiceProviderRequest: Request {
     public var bodyParameters: Parameters? {
         switch request {
         case .restoreService:
-           return nil
+            return nil
         }
     }
-    
+
     public var httpHeaders: HTTPHeaders? {
         switch request {
         case .restoreService:
@@ -48,5 +48,3 @@ public struct RestoreServiceProviderRequest: Request {
         }
     }
 }
-
-

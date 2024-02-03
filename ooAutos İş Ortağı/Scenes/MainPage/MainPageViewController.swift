@@ -17,48 +17,49 @@ protocol MainPageDisplayLogic: AnyObject {
 }
 
 class MainPageViewController: UIViewController, MainPageDisplayLogic {
-    
     // MARK: - Properties
+
     var router: (NSObjectProtocol & MainPageRoutingLogic & MainPageDataPassing)?
     var interactor: MainPageBusinessLogic?
     private var worker: MainPageWorkerLogic?
-    
+
     private let loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
-    @IBOutlet private weak var scoreLabel: UILabel!
-    @IBOutlet private weak var serviceProviderNameLabel: UILabel!
-    @IBOutlet private weak var yearlyCountLabel: UILabel!
-    @IBOutlet private weak var monthlyCountLabel: UILabel!
-    @IBOutlet private weak var dailyCountLabel: UILabel!
-    @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var timeLabel: UILabel!
-    @IBOutlet private weak var plateLabel: UILabel!
-    @IBOutlet private weak var isActiveSwitch: UISwitch!
+    @IBOutlet private var scoreLabel: UILabel!
+    @IBOutlet private var serviceProviderNameLabel: UILabel!
+    @IBOutlet private var yearlyCountLabel: UILabel!
+    @IBOutlet private var monthlyCountLabel: UILabel!
+    @IBOutlet private var dailyCountLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
+    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private var plateLabel: UILabel!
+    @IBOutlet private var isActiveSwitch: UISwitch!
+
     // MARK: - Object lifecycle
-    
+
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError()
     }
-    
+
     init() {
         super.init(nibName: nil, bundle: .main)
     }
-    
+
     convenience init(worker: MainPageWorkerLogic) {
         self.init()
         self.worker = worker
         setup()
     }
-    
+
     // MARK: - Setup
-    
+
     private func setup() {
         let viewController = self
         let interactor = MainPageInteractor()
         let presenter = MainPagePresenter()
         let router = MainPageRouter()
-        
+
         viewController.router = router
         viewController.interactor = interactor
         interactor.presenter = presenter
@@ -67,9 +68,9 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: - View Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,12 +84,12 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
         interactor?.getConsumptionInformation()
         interactor?.getConsumptionDetail(startDate: nil, endDate: nil)
     }
-    
+
     func displayLogin() {
         hideLoadingIndicator(loadingIndicator: loadingIndicator)
         restartFromLogin()
     }
-    
+
     func displayUserInfo(providerViewModel: MainPageModels.ProviderViewModel) {
         DispatchQueue.main.async {
             self.scoreLabel.text = providerViewModel.rating
@@ -97,7 +98,7 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
             self.hideLoadingIndicator(loadingIndicator: self.loadingIndicator)
         }
     }
-    
+
     func displayConsumption(consumptionViewModel: MainPageModels.ConsumptionCountViewModel) {
         DispatchQueue.main.async {
             self.dailyCountLabel.text = String(consumptionViewModel.daily)
@@ -105,7 +106,7 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
             self.yearlyCountLabel.text = String(consumptionViewModel.yearly)
         }
     }
-    
+
     func displayConsumptionDetail(consumptionDetailViewModel: MainPageModels.ConsumptionDetailViewModel) {
         DispatchQueue.main.async {
             self.plateLabel.text = consumptionDetailViewModel.plate
@@ -113,14 +114,14 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
             self.dateLabel.text = consumptionDetailViewModel.date
         }
     }
-    
+
     func displayProviderStatus(with status: Bool) {
         DispatchQueue.main.async {
             self.isActiveSwitch.isOn = status
         }
     }
-    
-    @IBAction func switchValueChanged(_ sender: Any) {
+
+    @IBAction func switchValueChanged(_: Any) {
         if !isActiveSwitch.isOn {
             interactor?.suspendServiceProvider()
         } else {

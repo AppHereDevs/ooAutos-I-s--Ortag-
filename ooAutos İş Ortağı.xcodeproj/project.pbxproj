@@ -11,7 +11,14 @@
 		931242352B6951BA00889B60 /* ServicesCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931242342B6951BA00889B60 /* ServicesCellController.swift */; };
 		931242372B6954BD00889B60 /* ConsumptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */; };
 		937AE8F22B6942CC001E9AC6 /* ServicesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */; };
+		93DF45E72B6EA71F00C295D7 /* Slate-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501B2B2A334700241B3D /* Slate-Bold.ttf */; };
+		93DF45E82B6EA72300C295D7 /* Slate-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501D2B2A334700241B3D /* Slate-Light.ttf */; };
+		93DF45E92B6EA72500C295D7 /* Slate-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501E2B2A334700241B3D /* Slate-Medium.ttf */; };
+		93DF45EA2B6EA72800C295D7 /* Slate-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501C2B2A334700241B3D /* Slate-Regular.ttf */; };
 		93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */; };
+		93F643DC2B6C4D2C002F3CB2 /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */; };
+		93F643DF2B6C4E3D002F3CB2 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 93F643DE2B6C4E3D002F3CB2 /* SwiftMessages */; };
+		93F643E32B6C593D002F3CB2 /* DateFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F643E22B6C593D002F3CB2 /* DateFilterView.xib */; };
 		CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */; };
 		CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */; };
 		CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */; };
@@ -92,6 +99,8 @@
 		933CC8BB2B66E5E400FC9418 /* ooAutos İş OrtağıTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ooAutos İş OrtağıTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesListViewController.xib; sourceTree = "<group>"; };
 		93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListComposer.swift; sourceTree = "<group>"; };
+		93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
+		93F643E22B6C593D002F3CB2 /* DateFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateFilterView.xib; sourceTree = "<group>"; };
 		CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ooAutos İş Ortağı.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,11 +121,10 @@
 		CA3A500C2B2A28FE00241B3D /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		CA3A50162B2A2C7D00241B3D /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CA3A50182B2A2E4200241B3D /* ViewThemes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ViewThemes.json; sourceTree = "<group>"; };
-		CA3A501B2B2A334700241B3D /* SlateBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SlateBold.ttf; sourceTree = "<group>"; };
-		CA3A501C2B2A334700241B3D /* SlateRg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SlateRg.ttf; sourceTree = "<group>"; };
-		CA3A501D2B2A334700241B3D /* SlateLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SlateLight.ttf; sourceTree = "<group>"; };
-		CA3A501E2B2A334700241B3D /* SlateMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SlateMedium.ttf; sourceTree = "<group>"; };
-		CA3A501F2B2A334700241B3D /* SlateBoldCn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SlateBoldCn.ttf; sourceTree = "<group>"; };
+		CA3A501B2B2A334700241B3D /* Slate-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Slate-Bold.ttf"; sourceTree = "<group>"; };
+		CA3A501C2B2A334700241B3D /* Slate-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Slate-Regular.ttf"; sourceTree = "<group>"; };
+		CA3A501D2B2A334700241B3D /* Slate-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Slate-Light.ttf"; sourceTree = "<group>"; };
+		CA3A501E2B2A334700241B3D /* Slate-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Slate-Medium.ttf"; sourceTree = "<group>"; };
 		CA3A50202B2A340500241B3D /* OnTapKeyboardHideable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapKeyboardHideable.swift; sourceTree = "<group>"; };
 		CA3A50232B2A434000241B3D /* ApiClient+WorkerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+WorkerLogic.swift"; sourceTree = "<group>"; };
 		CA3A50262B2A440100241B3D /* AuthenticationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequests.swift; sourceTree = "<group>"; };
@@ -173,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3A50152B2A2C3000241B3D /* AppHereComponents in Frameworks */,
+				93F643DF2B6C4E3D002F3CB2 /* SwiftMessages in Frameworks */,
 				CA3A4FEC2B2A1EC600241B3D /* ApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,8 +192,8 @@
 		9305169B2B6AEA3700F652FC /* ConsumptionDetailCell */ = {
 			isa = PBXGroup;
 			children = (
-				931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */,
 				9305169C2B6AEA5C00F652FC /* ConsumptionDetailCell.xib */,
+				931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */,
 			);
 			path = ConsumptionDetailCell;
 			sourceTree = "<group>";
@@ -209,12 +218,22 @@
 		93E4B7182B66D3CC001E4C37 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				93F643DA2B6C4D20002F3CB2 /* DateFilter */,
 				9305169B2B6AEA3700F652FC /* ConsumptionDetailCell */,
-				CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */,
 				937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */,
+				CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */,
 				931242342B6951BA00889B60 /* ServicesCellController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		93F643DA2B6C4D20002F3CB2 /* DateFilter */ = {
+			isa = PBXGroup;
+			children = (
+				93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */,
+				93F643E22B6C593D002F3CB2 /* DateFilterView.xib */,
+			);
+			path = DateFilter;
 			sourceTree = "<group>";
 		};
 		CA3A4FCA2B2A1C4E00241B3D = {
@@ -284,11 +303,10 @@
 		CA3A501A2B2A332E00241B3D /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A501B2B2A334700241B3D /* SlateBold.ttf */,
-				CA3A501F2B2A334700241B3D /* SlateBoldCn.ttf */,
-				CA3A501D2B2A334700241B3D /* SlateLight.ttf */,
-				CA3A501E2B2A334700241B3D /* SlateMedium.ttf */,
-				CA3A501C2B2A334700241B3D /* SlateRg.ttf */,
+				CA3A501B2B2A334700241B3D /* Slate-Bold.ttf */,
+				CA3A501D2B2A334700241B3D /* Slate-Light.ttf */,
+				CA3A501E2B2A334700241B3D /* Slate-Medium.ttf */,
+				CA3A501C2B2A334700241B3D /* Slate-Regular.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -318,12 +336,12 @@
 			isa = PBXGroup;
 			children = (
 				CA3A4FEF2B2A24BD00241B3D /* Splash */,
-				CA3A50062B2A28E700241B3D /* Login */,
-				CA3A50422B2CBDEE00241B3D /* Profile */,
-				CA3A50412B2CBDE600241B3D /* QR */,
-				CA3A503F2B2CBBBF00241B3D /* MainPage */,
-				CA3A50402B2CBDC800241B3D /* ServicesList */,
 				CA3A502D2B2A4BCA00241B3D /* TabBar */,
+				CA3A50062B2A28E700241B3D /* Login */,
+				CA3A503F2B2CBBBF00241B3D /* MainPage */,
+				CA3A50412B2CBDE600241B3D /* QR */,
+				CA3A50402B2CBDC800241B3D /* ServicesList */,
+				CA3A50422B2CBDEE00241B3D /* Profile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -365,8 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				93E4B7042B66C743001E4C37 /* Composer */,
-				93E4B7072B66CEBF001E4C37 /* ServicesListPresentation */,
 				93E4B7182B66D3CC001E4C37 /* UI */,
+				93E4B7072B66CEBF001E4C37 /* ServicesListPresentation */,
 				CA3A50502B2CBFB400241B3D /* ServicesListWorker.swift */,
 				CA3A50512B2CBFB400241B3D /* ServicesListRouter.swift */,
 				CA3A50522B2CBFB400241B3D /* ServicesListModels.swift */,
@@ -439,6 +457,7 @@
 			packageProductDependencies = (
 				CA3A4FEB2B2A1EC600241B3D /* ApiClient */,
 				CA3A50142B2A2C3000241B3D /* AppHereComponents */,
+				93F643DE2B6C4E3D002F3CB2 /* SwiftMessages */,
 			);
 			productName = "ooAutos İş Ortağı";
 			productReference = CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */;
@@ -475,6 +494,7 @@
 			packageReferences = (
 				CA3A4FEA2B2A1EC600241B3D /* XCRemoteSwiftPackageReference "ApiClient" */,
 				CA3A50132B2A2C3000241B3D /* XCRemoteSwiftPackageReference "iOSAppHereComponents" */,
+				93F643DD2B6C4E3D002F3CB2 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = CA3A4FD42B2A1C4E00241B3D /* Products */;
 			projectDirPath = "";
@@ -499,13 +519,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3A503A2B2A502400241B3D /* TabBar.storyboard in Resources */,
+				93DF45E92B6EA72500C295D7 /* Slate-Medium.ttf in Resources */,
 				CA3A50742B2CD02B00241B3D /* QRViewController.xib in Resources */,
 				CAC4AF3B2B62E68A00ABD9A1 /* ProfileViewController.xib in Resources */,
 				CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */,
+				93DF45E82B6EA72300C295D7 /* Slate-Light.ttf in Resources */,
 				9305169D2B6AEA5C00F652FC /* ConsumptionDetailCell.xib in Resources */,
 				CA5249392B60444400CF054A /* MainPageViewController.xib in Resources */,
 				CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */,
+				93F643E32B6C593D002F3CB2 /* DateFilterView.xib in Resources */,
 				CA3A50172B2A2C7D00241B3D /* LoginViewController.xib in Resources */,
+				93DF45E72B6EA71F00C295D7 /* Slate-Bold.ttf in Resources */,
+				93DF45EA2B6EA72800C295D7 /* Slate-Regular.ttf in Resources */,
 				CA3A50192B2A2E4200241B3D /* ViewThemes.json in Resources */,
 				937AE8F22B6942CC001E9AC6 /* ServicesListViewController.xib in Resources */,
 			);
@@ -558,6 +583,7 @@
 				CA3A500D2B2A28FE00241B3D /* LoginPresenter.swift in Sources */,
 				CA3A50572B2CBFB400241B3D /* ServicesListRouter.swift in Sources */,
 				CA3A505A2B2CBFB400241B3D /* ServicesListInteractor.swift in Sources */,
+				93F643DC2B6C4D2C002F3CB2 /* DateFilterView.swift in Sources */,
 				CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */,
 				CA52493D2B6174AC00CF054A /* SuspendServiceProviderRequest.swift in Sources */,
 				CA3A500E2B2A28FE00241B3D /* LoginWorker.swift in Sources */,
@@ -852,6 +878,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		93F643DD2B6C4E3D002F3CB2 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.0.4;
+			};
+		};
 		CA3A4FEA2B2A1EC600241B3D /* XCRemoteSwiftPackageReference "ApiClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
@@ -871,6 +905,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		93F643DE2B6C4E3D002F3CB2 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93F643DD2B6C4E3D002F3CB2 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
 		CA3A4FEB2B2A1EC600241B3D /* ApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CA3A4FEA2B2A1EC600241B3D /* XCRemoteSwiftPackageReference "ApiClient" */;

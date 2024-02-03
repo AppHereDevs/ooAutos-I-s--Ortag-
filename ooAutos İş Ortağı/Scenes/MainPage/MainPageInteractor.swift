@@ -19,9 +19,8 @@ protocol MainPageBusinessLogic: AnyObject {
 protocol MainPageDataStore {}
 
 class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
-    
     // MARK: - Properties
-    
+
     var worker: MainPageWorkerLogic?
     var presenter: MainPagePresentationLogic?
 
@@ -40,7 +39,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
             }
         })
     }
-    
+
     func getConsumptionInformation() {
         var viewModel = MainPageModels.ConsumptionCountViewModel(daily: 0, monthly: 0, yearly: 0)
         worker?.getConsumptionInfo(kind: "Daily", completion: { [weak self] result in
@@ -58,7 +57,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
                             switch result {
                             case let .success(response):
                                 viewModel.yearly = response.decodedResponse.details.totalConsumptionCount ?? 0
-                                
+
                             case let .failure(error):
                                 print(error.localizedDescription)
                                 if error.requestDetails()?.statusCode == 401 {
@@ -82,7 +81,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
         })
         presenter?.presentConsumptions(viewModel: viewModel)
     }
-    
+
     func suspendServiceProvider() {
         worker?.suspendProvider(completion: { [weak self] result in
             guard let self else { return }
@@ -98,7 +97,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
             }
         })
     }
-    
+
     func restoreServiceProvider() {
         worker?.restoreProvider(completion: { [weak self] result in
             guard let self else { return }
@@ -114,7 +113,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
             }
         })
     }
-    
+
     func getConsumptionDetail(startDate: String?, endDate: String?) {
         worker?.getConsumptionDetail(startDate: startDate, endDate: endDate, completion: { [weak self] result in
             guard let self else { return }
@@ -123,7 +122,7 @@ class MainPageInteractor: MainPageBusinessLogic, MainPageDataStore {
                 if let firstItem = response.decodedResponse.details.first {
                     presenter?.presentConsumptionDetail(response: firstItem)
                 }
-                
+
             case let .failure(error):
                 print(error.localizedDescription)
                 presenter?.presentProviderStatus(with: false)

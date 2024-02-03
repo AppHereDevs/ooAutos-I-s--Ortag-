@@ -6,8 +6,8 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
 import AppHereComponents
+import UIKit
 
 protocol QRDisplayLogic: AnyObject {
     func displayQRCode(image: UIImage, stringQR: String)
@@ -15,26 +15,28 @@ protocol QRDisplayLogic: AnyObject {
 }
 
 class QRViewController: UIViewController, QRDisplayLogic {
+    @IBOutlet private var qrLabel: AppHereLabel!
+    @IBOutlet private var qrView: UIImageView!
+    @IBOutlet private var backView: UIView!
+    @IBOutlet private var titleLabel: AppHereLabel!
 
-    @IBOutlet private weak var qrLabel: AppHereLabel!
-    @IBOutlet private weak var qrView: UIImageView!
-    @IBOutlet private weak var backView: UIView!
-    @IBOutlet private weak var titleLabel: AppHereLabel!
     // MARK: - Properties
+
     var router: (NSObjectProtocol & QRRoutingLogic & QRDataPassing)?
     var interactor: QRBusinessLogic?
     private var worker: QRWorkerLogic?
+
     // MARK: - Object lifecycle
 
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError()
     }
-    
+
     init() {
         super.init(nibName: nil, bundle: .main)
     }
-    
+
     convenience init(worker: QRWorkerLogic) {
         self.init()
         self.worker = worker
@@ -65,15 +67,15 @@ class QRViewController: UIViewController, QRDisplayLogic {
         setupBackgroundImage(imageName: "background")
         interactor?.getQRInformation()
     }
-    
+
     func displayQRCode(image: UIImage, stringQR: String) {
         DispatchQueue.main.async {
             self.qrView.image = image
             self.qrLabel.text = stringQR.uppercased()
         }
     }
-    
+
     func displayLogin() {
-        self.restartFromLogin()
+        restartFromLogin()
     }
 }

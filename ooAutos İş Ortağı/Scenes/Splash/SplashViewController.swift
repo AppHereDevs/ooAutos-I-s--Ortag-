@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol SplashDisplayLogic: AnyObject { }
+protocol SplashDisplayLogic: AnyObject {}
 
 class SplashViewController: UIViewController, SplashDisplayLogic {
-
     // MARK: - Properties
+
     var router: (NSObjectProtocol & SplashRoutingLogic & SplashDataPassing)?
     var interactor: SplashBusinessLogic?
 
@@ -51,30 +51,27 @@ class SplashViewController: UIViewController, SplashDisplayLogic {
         setupBackgroundImage(imageName: "background")
         setupCenterIcon()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            
             if UserDefaultsManager.shared.loginStatus {
                 debugPrint("JWTToken \(UserDefaultsManager.shared.jwtToken.valueOrEmpty)")
                 self.router?.routeToMainPage()
-                
+
             } else {
                 self.router?.routeToLogin()
             }
-            
         }
     }
-    
+
     private func setupCenterIcon() {
         let imageView = UIImageView(image: UIImage(named: "splashLogo"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
-        let aspectRatio = NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: imageView, attribute: .height, multiplier: 15.0/8.0, constant: 0)
+        let aspectRatio = NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: imageView, attribute: .height, multiplier: 15.0 / 8.0, constant: 0)
         NSLayoutConstraint.activate([
-                    imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                    imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                    imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.57),
-                    aspectRatio
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.57),
+            aspectRatio,
         ])
     }
-
 }

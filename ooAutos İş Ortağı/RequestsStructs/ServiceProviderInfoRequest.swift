@@ -12,7 +12,7 @@ public struct ServiceProviderInfoRequest: Request {
         self.request = request
         self.apiEnvironment = apiEnvironment
     }
-    
+
     public var path: String {
         switch request {
         case .getInfo:
@@ -34,10 +34,10 @@ public struct ServiceProviderInfoRequest: Request {
     public var bodyParameters: Parameters? {
         switch request {
         case .getInfo:
-           return nil
+            return nil
         }
     }
-    
+
     public var httpHeaders: HTTPHeaders? {
         switch request {
         case .getInfo:
@@ -48,5 +48,3 @@ public struct ServiceProviderInfoRequest: Request {
         }
     }
 }
-
-

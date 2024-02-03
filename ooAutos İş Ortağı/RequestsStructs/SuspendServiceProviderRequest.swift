@@ -12,7 +12,7 @@ public struct SuspendServiceProviderRequest: Request {
         self.request = request
         self.apiEnvironment = apiEnvironment
     }
-    
+
     public var path: String {
         switch request {
         case .suspendService:
@@ -34,10 +34,10 @@ public struct SuspendServiceProviderRequest: Request {
     public var bodyParameters: Parameters? {
         switch request {
         case .suspendService:
-           return nil
+            return nil
         }
     }
-    
+
     public var httpHeaders: HTTPHeaders? {
         switch request {
         case .suspendService:
@@ -48,5 +48,3 @@ public struct SuspendServiceProviderRequest: Request {
         }
     }
 }
-
-

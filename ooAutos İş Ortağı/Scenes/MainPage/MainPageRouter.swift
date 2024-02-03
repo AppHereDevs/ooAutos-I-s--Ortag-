@@ -15,7 +15,6 @@ protocol MainPageDataPassing {
 }
 
 class MainPageRouter: NSObject, MainPageRoutingLogic, MainPageDataPassing {
-
     // MARK: - Properties
 
     weak var viewController: MainPageViewController?

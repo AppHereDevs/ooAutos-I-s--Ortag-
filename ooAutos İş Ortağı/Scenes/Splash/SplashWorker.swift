@@ -8,4 +8,4 @@
 
 import UIKit
 
-class SplashWorker { }
+class SplashWorker {}

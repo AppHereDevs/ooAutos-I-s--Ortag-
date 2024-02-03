@@ -17,6 +17,7 @@ enum Login {
         let registerButtonTitle: String
         let forgotPasswordButtonTitle: String
     }
+
     enum AuthenticateUseCase {
         struct Request {
             let phoneNumber: String

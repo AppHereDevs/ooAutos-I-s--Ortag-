@@ -1,12 +1,12 @@
-import UIKit
 import AppHereComponents
+import UIKit
 
 public final class ConsumptionDetailCell: UITableViewCell {
-    @IBOutlet weak var plateNumberLabel: AppHereLabel!
-    @IBOutlet weak var dateLabel: AppHereLabel!
-    @IBOutlet weak var serviceNameLabel: AppHereLabel!
-    @IBOutlet weak var priceLabel: AppHereLabel!
-    @IBOutlet weak var timeLabel: AppHereLabel!
+    @IBOutlet var plateNumberLabel: AppHereLabel!
+    @IBOutlet var dateLabel: AppHereLabel!
+    @IBOutlet var serviceNameLabel: AppHereLabel!
+    @IBOutlet var priceLabel: AppHereLabel!
+    @IBOutlet var timeLabel: AppHereLabel!
 
     func display(model: ConsumptionDetail) {
         plateNumberLabel.text = model.plateNumber

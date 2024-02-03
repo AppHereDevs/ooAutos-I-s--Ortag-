@@ -12,12 +12,12 @@ public struct ConsumptionDetailsRequest: Request {
         self.request = request
         self.apiEnvironment = apiEnvironment
     }
-    
+
     public var path: String {
         switch request {
-        case .consumptionDetail(let startDate, let endDate):
+        case let .consumptionDetail(startDate, endDate):
             if let startDate, let endDate {
-                return "sp/consumption-details/All/\(startDate)/\(endDate)/"
+                return "sp/consumption-details/Custom/\(startDate)/\(endDate)/"
             } else {
                 return "sp/consumption-details/All/"
             }
@@ -38,10 +38,10 @@ public struct ConsumptionDetailsRequest: Request {
     public var bodyParameters: Parameters? {
         switch request {
         case .consumptionDetail:
-           return nil
+            return nil
         }
     }
-    
+
     public var httpHeaders: HTTPHeaders? {
         switch request {
         case .consumptionDetail:
@@ -52,5 +52,3 @@ public struct ConsumptionDetailsRequest: Request {
         }
     }
 }
-
-

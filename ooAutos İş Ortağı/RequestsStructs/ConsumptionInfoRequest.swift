@@ -12,10 +12,10 @@ public struct ConsumptionInfoRequest: Request {
         self.request = request
         self.apiEnvironment = apiEnvironment
     }
-    
+
     public var path: String {
         switch request {
-        case .getConsumptionInfo(let kind):
+        case let .getConsumptionInfo(kind):
             return "sp/consumption-summary/\(kind)"
         }
     }
@@ -34,10 +34,10 @@ public struct ConsumptionInfoRequest: Request {
     public var bodyParameters: Parameters? {
         switch request {
         case .getConsumptionInfo:
-           return nil
+            return nil
         }
     }
-    
+
     public var httpHeaders: HTTPHeaders? {
         switch request {
         case .getConsumptionInfo:
@@ -48,5 +48,3 @@ public struct ConsumptionInfoRequest: Request {
         }
     }
 }
-
-

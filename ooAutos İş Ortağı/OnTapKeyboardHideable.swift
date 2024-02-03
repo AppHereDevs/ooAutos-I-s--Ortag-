@@ -26,4 +26,3 @@ extension OnTapKeyboardHideable where Self: UIViewController {
 extension UIViewController {
     @objc func hideKeyboard() { view.endEditing(true) }
 }
-

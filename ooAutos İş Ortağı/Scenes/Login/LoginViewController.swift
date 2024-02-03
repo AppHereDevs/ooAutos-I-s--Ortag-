@@ -6,8 +6,8 @@
 //  Copyright © 2023 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
 import AppHereComponents
+import UIKit
 
 protocol LoginDisplayLogic: AnyObject {
     func displayInitialState(viewModel: Login.ViewModel)
@@ -15,33 +15,32 @@ protocol LoginDisplayLogic: AnyObject {
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHideable {
-
     // MARK: - Properties
-    
+
     var userInputtables: [UserInputtable] = []
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var informationView: AppHereInformationView!
-    @IBOutlet weak var phoneNumberInputView: AppHereInputView!
-    @IBOutlet weak var passwordInputView: AppHereInputView!
-    @IBOutlet weak var continueButton: AppHereButton!
-    @IBOutlet weak var continueButtonHeight: NSLayoutConstraint!
-    
+
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var informationView: AppHereInformationView!
+    @IBOutlet var phoneNumberInputView: AppHereInputView!
+    @IBOutlet var passwordInputView: AppHereInputView!
+    @IBOutlet var continueButton: AppHereButton!
+    @IBOutlet var continueButtonHeight: NSLayoutConstraint!
+
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
     var interactor: LoginBusinessLogic?
     private var worker: LoginWorkerLogic?
 
     // MARK: - Object lifecycle
-    
+
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError()
     }
-    
+
     init() {
         super.init(nibName: nil, bundle: .main)
     }
-    
+
     convenience init(worker: LoginWorkerLogic) {
         self.init()
         self.worker = worker
@@ -71,7 +70,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
         super.viewDidLoad()
         passwordInputView.inputTextField.isSecureTextEntry = true
         setupBackgroundImage(imageName: "background")
-        
+
         setupHideKeyboardOnTapRecognizer()
         setupKeyboardHandlers()
         setupViewControllerConfiguration()
@@ -81,26 +80,23 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
         }
         interactor?.viewDidLoad()
     }
-    
+
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         continueButtonHeight.constant = 50 + view.safeAreaInsets.bottom
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    
     /// Setup view configuration values.
     private func setupViewControllerConfiguration() {
         userInputtables.append(contentsOf: [phoneNumberInputView, passwordInputView])
     }
 
-    
-    
     private func setupKeyboardHandlers() {
         NotificationCenter.default.addObserver(
             self,
@@ -115,6 +111,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
             object: nil
         )
     }
+
     // MARK: - Keyboard functionality
 
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -131,8 +128,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
         let contentInset = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
     }
-    
-    
+
     func displayInitialState(viewModel: Login.ViewModel) {
         informationView.viewModel = viewModel.informationViewModel
         phoneNumberInputView.viewModel = viewModel.phoneNumberInputViewModel
@@ -140,8 +136,8 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
         passwordInputView.inputTextField.enablePasswordToggle()
         continueButton.setTitle(viewModel.continueButtonTitle, for: .normal)
     }
-    
-    @IBAction func continueButtonPressed(_ sender: Any) {
+
+    @IBAction func continueButtonPressed(_: Any) {
         checkUserInputs { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.interactor?.authenticate(
@@ -150,7 +146,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
             )
         }
     }
-    
+
     // MARK: LoginDisplayLogic
 
     func navigateToMainPage() {
@@ -158,7 +154,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
             self.router?.routeToMainPage()
         }
     }
-    
+
     func checkUserInputs(completion: () -> Void) {
         var shouldProceed = true
 
@@ -174,5 +170,4 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
         guard shouldProceed else { return }
         completion()
     }
-
 }

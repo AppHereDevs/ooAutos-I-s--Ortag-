@@ -16,4 +16,3 @@ extension UIViewController {
         view.insertSubview(backgroundImage, at: 0)
     }
 }
-

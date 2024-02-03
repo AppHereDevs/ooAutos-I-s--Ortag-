@@ -17,34 +17,32 @@ protocol MainPagePresentationLogic {
 }
 
 class MainPagePresenter: MainPagePresentationLogic {
-    
     // MARK: - Properties
-    
+
     weak var viewController: MainPageDisplayLogic?
-    
+
     func presentLogin() {
         viewController?.displayLogin()
     }
-    
+
     func presentUserInfo(response: QRModels.ServiceProviderInformation.ServiceProviderDetails) {
         let providerViewModel = MainPageModels.ProviderViewModel(name: response.name ?? "",
                                                                  isOpenNow: response.isOpenNow ?? false,
                                                                  rating: "\(response.rating ?? 0.0) ★")
         viewController?.displayUserInfo(providerViewModel: providerViewModel)
-        
     }
-    
+
     func presentConsumptions(viewModel: MainPageModels.ConsumptionCountViewModel) {
         viewController?.displayConsumption(consumptionViewModel: viewModel)
     }
-    
+
     func presentProviderStatus(with status: Bool) {
         viewController?.displayProviderStatus(with: status)
     }
-    
+
     func presentConsumptionDetail(response: MainPageModels.ProviderConsumptionDetail.ConsumptionDetails) {
-        var formattedDate: String = ""
-        var formattedTime: String = ""
+        var formattedDate = ""
+        var formattedTime = ""
         if let dateString = response.consumedAt {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"

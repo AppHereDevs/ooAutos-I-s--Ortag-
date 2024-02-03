@@ -5,26 +5,26 @@
 //  Created by Muhammed Sevük on 13.12.2023.
 //
 
-import UIKit
-import class AppHereComponents.AppHereThemeManager
 import ApiClient
+import class AppHereComponents.AppHereThemeManager
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private lazy var navigationController = UINavigationController()
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         guard window != nil else { return false }
-        
+
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().backgroundColor = .clear
-        
+
         AppHereThemeManager.setup(themesJSONFileName: "ViewThemes")
-        
+
         ApiClient.setup()
 
         UITextView.appearance().backgroundColor = .white
@@ -32,10 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        
+
         // Override point for customization after application launch.
         startAppFlow()
-        
+
         return true
     }
 
@@ -44,4 +44,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.pushViewController(splashViewController, animated: true)
     }
 }
-

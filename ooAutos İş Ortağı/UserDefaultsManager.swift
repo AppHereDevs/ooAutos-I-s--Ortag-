@@ -9,10 +9,9 @@ class UserDefaultsManager {
 
     @UserDefault(key: "phoneNumber")
     var phoneNumber: String?
-    
+
     @UserDefault(key: "loginStatus")
     var loginStatus: Bool = false
-
 
     func resetData() {
         jwtToken = nil

@@ -12,19 +12,15 @@ protocol QRBusinessLogic: AnyObject {
     func getQRInformation()
 }
 
-protocol QRDataStore {
-}
+protocol QRDataStore {}
 
 class QRInteractor: QRBusinessLogic, QRDataStore {
-
     // MARK: - Properties
 
     var worker: QRWorkerLogic?
     var presenter: QRPresentationLogic?
-    
-    
+
     func getQRInformation() {
-        
         worker?.getInfo(completion: { [weak self] result in
             guard let self else { return }
             switch result {
@@ -39,7 +35,7 @@ class QRInteractor: QRBusinessLogic, QRDataStore {
             }
         })
     }
-    
+
     private func generateQRCode(from text: String?) {
         if let text {
             presenter?.generateQRCode(from: text)

@@ -26,6 +26,15 @@
       }
     },
     {
+      "identity" : "swiftmessages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftKickMobile/SwiftMessages.git",
+      "state" : {
+        "revision" : "c5026484ff555db961ec549162e4026b017aa6c5",
+        "version" : "9.0.4"
+      }
+    },
+    {
       "identity" : "validator",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/adamwaite/Validator.git",

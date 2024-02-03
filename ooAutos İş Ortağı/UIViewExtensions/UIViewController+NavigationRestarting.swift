@@ -13,9 +13,7 @@ extension UIViewController: NavigationRestarting {
         }
     }
 
-    func restartFromViewController(_ viewController: UIViewController) {
-        
-        self.navigationController?.viewControllers = [LoginViewController(worker: ApiClient.shared)]
-        
+    func restartFromViewController(_: UIViewController) {
+        navigationController?.viewControllers = [LoginViewController(worker: ApiClient.shared)]
     }
 }
