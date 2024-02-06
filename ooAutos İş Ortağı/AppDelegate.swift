@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ooAutos İş Ortağı
-//
-//  Created by Muhammed Sevük on 13.12.2023.
-//
-
 import ApiClient
 import class AppHereComponents.AppHereThemeManager
 import UIKit

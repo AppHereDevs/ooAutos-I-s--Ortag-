@@ -1,7 +1,7 @@
-import Foundation
 import CoreModule
+import Foundation
 
-final class MainQueueDispatchOperator<T> { // Decorator
+final class MainQueueDispatchOperator<T> {
     private let decoratee: T
 
     init(decoratee: T) {

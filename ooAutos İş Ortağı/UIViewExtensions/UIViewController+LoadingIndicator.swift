@@ -1,10 +1,3 @@
-//
-//  UIViewController+LoadingIndicator.swift
-//  ooAutos İş Ortağı
-//
-//  Created by Muhammed Sevük on 24.01.2024.
-//
-
 import UIKit
 extension UIViewController {
     func showLoadingIndicator(loadingIndicator: UIActivityIndicatorView) {

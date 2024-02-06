@@ -1,10 +1,3 @@
-//
-//  ServicesListComposer.swift
-//  ooAutos İş Ortağı
-//
-//  Created by Arda Onat on 28/01/2024.
-//
-
 import CoreModule
 import Foundation
 

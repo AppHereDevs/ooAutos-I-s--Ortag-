@@ -8,8 +8,8 @@ protocol NavigationRestarting: AnyObject {
 extension UIViewController: NavigationRestarting {
     func restartFromLogin() {
         DispatchQueue.main.async {
-            self.navigationController?.viewControllers = 
-            [LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared)]
+            self.navigationController?.viewControllers =
+                [LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared)]
             UserDefaultsManager.shared.resetData()
         }
     }
