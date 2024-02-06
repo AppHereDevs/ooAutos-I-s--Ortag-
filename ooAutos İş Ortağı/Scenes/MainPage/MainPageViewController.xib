@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -271,7 +272,6 @@
                         <constraint firstItem="xpw-wp-XFp" firstAttribute="top" secondItem="gqq-qX-5CV" secondAttribute="top" id="hvn-s3-3Z1"/>
                         <constraint firstItem="xpw-wp-XFp" firstAttribute="leading" secondItem="gqq-qX-5CV" secondAttribute="leading" id="hwP-bA-doI"/>
                         <constraint firstAttribute="bottom" secondItem="Ejj-a2-uVq" secondAttribute="bottom" constant="8" id="hyV-Gb-6j2"/>
-                        <constraint firstItem="xpw-wp-XFp" firstAttribute="width" secondItem="gqq-qX-5CV" secondAttribute="width" multiplier="0.3" id="ifD-Zh-XK5"/>
                         <constraint firstItem="Ejj-a2-uVq" firstAttribute="top" secondItem="gqq-qX-5CV" secondAttribute="top" constant="8" id="jnr-2r-udq"/>
                         <constraint firstItem="GHb-z2-94Z" firstAttribute="leading" secondItem="Ejj-a2-uVq" secondAttribute="trailing" constant="7.6699999999999999" id="mWB-XZ-lnd"/>
                         <constraint firstItem="L6j-ID-UCJ" firstAttribute="top" secondItem="gqq-qX-5CV" secondAttribute="top" id="pfO-MB-uUc"/>
