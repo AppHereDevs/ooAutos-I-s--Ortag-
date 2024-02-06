@@ -52,9 +52,11 @@ class ServicesListPresenter: ServicesListPresentationLogic {
     private func prepareConsumeDateToDisplay(dateString: String?) -> (consumeDate: String, consumeTime: String) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+        dateFormatter.locale = Locale(identifier: "TR")
 
         if let dateString, let date = dateFormatter.date(from: dateString) {
             let newDateFormatter = DateFormatter()
+            newDateFormatter.locale = Locale(identifier: "TR")
 
             newDateFormatter.dateFormat = "dd/MM/yyyy"
             let formattedDate = newDateFormatter.string(from: date)

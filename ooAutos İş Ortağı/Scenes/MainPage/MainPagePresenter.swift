@@ -45,10 +45,12 @@ class MainPagePresenter: MainPagePresentationLogic {
         var formattedTime = ""
         if let dateString = response.consumedAt {
             let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "TR")
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 
             if let date = dateFormatter.date(from: dateString) {
                 let newDateFormatter = DateFormatter()
+                newDateFormatter.locale = Locale(identifier: "TR")
                 newDateFormatter.dateFormat = "dd/MM/yyyy"
                 formattedDate = newDateFormatter.string(from: date)
                 newDateFormatter.dateFormat = "HH:mm"

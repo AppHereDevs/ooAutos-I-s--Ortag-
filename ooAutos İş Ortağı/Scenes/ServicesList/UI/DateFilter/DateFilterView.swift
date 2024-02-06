@@ -68,6 +68,7 @@ class DateFilterView: MessageView, UITextFieldDelegate {
     @objc private func startDateSelectionComplete() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
+        formatter.locale = Locale(identifier: "TR")
         startDateTextField.text = formatter.string(from: startDatePicker.date)
         endEditing(true)
 
@@ -135,6 +136,7 @@ class DateFilterView: MessageView, UITextFieldDelegate {
     @objc private func endDateSelectionComplete() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
+        formatter.locale = Locale(identifier: "TR")
         endDateTextField.text = formatter.string(from: endDatePicker.date)
         endEditing(true)
 

@@ -23,6 +23,7 @@ public final class ServicesListViewController: UIViewController {
 
     private static let dateFormatter: DateFormatter = {
         let df = DateFormatter()
+        df.locale = Locale(identifier: "TR")
         df.dateFormat = "dd/MM/yyyy"
         return df
     }()
