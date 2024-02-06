@@ -289,6 +289,8 @@
 		CA3A4FD52B2A1C4E00241B3D /* ooAutos İş Ortağı */ = {
 			isa = PBXGroup;
 			children = (
+				CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */,
+				93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */,
 				93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */,
 				93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */,
 				CA3A50302B2A4C7600241B3D /* UIViewExtensions */,
@@ -303,8 +305,6 @@
 				CA3A50182B2A2E4200241B3D /* ViewThemes.json */,
 				CA3A50202B2A340500241B3D /* OnTapKeyboardHideable.swift */,
 				CA3A50282B2A452A00241B3D /* ooAutosNetworkEnvironment.swift */,
-				CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */,
-				93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */,
 			);
 			path = "ooAutos İş Ortağı";
 			sourceTree = "<group>";
@@ -404,11 +404,11 @@
 		CA3A503F2B2CBBBF00241B3D /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				CA3A50472B2CBE0700241B3D /* MainPageViewController.swift */,
 				CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */,
 				CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */,
 				CA3A50452B2CBE0700241B3D /* MainPageRouter.swift */,
 				CA3A50462B2CBE0700241B3D /* MainPageModels.swift */,
-				CA3A50472B2CBE0700241B3D /* MainPageViewController.swift */,
 				CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */,
 				CA5249382B60444400CF054A /* MainPageViewController.xib */,
 			);
