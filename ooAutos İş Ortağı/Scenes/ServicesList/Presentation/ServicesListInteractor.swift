@@ -21,13 +21,8 @@ class ServicesListInteractor: ServicesListBusinessLogic {
     func getConsumptionDetail(startDate: String?, endDate: String?) {
         worker?.getConsumptionDetail(startDate: startDate, endDate: endDate, completion: { [weak self] result in
             guard let self else { return }
-            switch result {
-            case let .success(response):
+            if case let .success(response) = result {
                 presenter?.presentConsumptionDetail(consumptionDetails: response.decodedResponse.details)
-            case let .failure(error):
-                if error.requestDetails()?.statusCode == 401 {
-                    presenter?.presentLogin()
-                }
             }
         })
     }

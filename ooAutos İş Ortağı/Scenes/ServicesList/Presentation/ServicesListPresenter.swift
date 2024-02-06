@@ -18,7 +18,6 @@ public struct ConsumptionDetail {
 
 protocol ServicesListPresentationLogic {
     func presentConsumptionDetail(consumptionDetails: [ServicesListModels.ProviderConsumptionDetail.ConsumptionDetails])
-    func presentLogin()
 }
 
 protocol ConsumptionView: AnyObject {

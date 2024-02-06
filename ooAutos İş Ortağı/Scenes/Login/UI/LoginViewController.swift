@@ -27,8 +27,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
     @IBOutlet var continueButtonHeight: NSLayoutConstraint!
 
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
-    var interactor: LoginBusinessLogic?
-    private var worker: LoginWorkerLogic?
+    private var interactor: LoginBusinessLogic?
 
     // MARK: - Object lifecycle
 
@@ -41,27 +40,9 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
         super.init(nibName: nil, bundle: .main)
     }
 
-    convenience init(worker: LoginWorkerLogic) {
+    convenience init(interactor: LoginBusinessLogic) {
         self.init()
-        self.worker = worker
-        setup()
-    }
-
-    // MARK: - Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = LoginInteractor()
-        let presenter = LoginPresenter()
-        let router = LoginRouter()
-
-        viewController.router = router
-        viewController.interactor = interactor
-        interactor.presenter = presenter
-        interactor.worker = worker
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
+        self.interactor = interactor
     }
 
     // MARK: - View Lifecycle
@@ -150,9 +131,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
     // MARK: LoginDisplayLogic
 
     func navigateToMainPage() {
-        DispatchQueue.main.async {
-            self.router?.routeToMainPage()
-        }
+        router?.routeToMainPage()
     }
 
     func checkUserInputs(completion: () -> Void) {

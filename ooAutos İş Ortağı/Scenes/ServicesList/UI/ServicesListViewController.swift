@@ -59,7 +59,7 @@ public final class ServicesListViewController: UIViewController {
         super.init(nibName: nil, bundle: .main)
     }
 
-    public convenience init(interactor: ServicesListBusinessLogic) {
+    convenience init(interactor: ServicesListBusinessLogic) {
         self.init()
         self.interactor = interactor
     }

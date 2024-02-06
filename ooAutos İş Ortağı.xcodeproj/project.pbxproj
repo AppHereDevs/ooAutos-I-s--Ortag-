@@ -19,6 +19,10 @@
 		93F643DC2B6C4D2C002F3CB2 /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */; };
 		93F643DF2B6C4E3D002F3CB2 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 93F643DE2B6C4E3D002F3CB2 /* SwiftMessages */; };
 		93F643E32B6C593D002F3CB2 /* DateFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F643E22B6C593D002F3CB2 /* DateFilterView.xib */; };
+		93FC976F2B7277BF00016C72 /* ooAutosErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */; };
+		93FC97712B72785900016C72 /* UIKitErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */; };
+		93FC97732B727D1B00016C72 /* MainQueueDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */; };
+		93FC97752B72855700016C72 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97742B72855700016C72 /* LoginUIComposer.swift */; };
 		CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */; };
 		CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */; };
 		CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */; };
@@ -101,6 +105,10 @@
 		93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListComposer.swift; sourceTree = "<group>"; };
 		93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 		93F643E22B6C593D002F3CB2 /* DateFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateFilterView.xib; sourceTree = "<group>"; };
+		93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ooAutosErrorHandler.swift; sourceTree = "<group>"; };
+		93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitErrorPresenter.swift; sourceTree = "<group>"; };
+		93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatcher.swift; sourceTree = "<group>"; };
+		93FC97742B72855700016C72 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ooAutos İş Ortağı.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,13 +214,13 @@
 			path = Composer;
 			sourceTree = "<group>";
 		};
-		93E4B7072B66CEBF001E4C37 /* ServicesListPresentation */ = {
+		93E4B7072B66CEBF001E4C37 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				CA3A504F2B2CBFB400241B3D /* ServicesListPresenter.swift */,
 				CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */,
 			);
-			path = ServicesListPresentation;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		93E4B7182B66D3CC001E4C37 /* UI */ = {
@@ -236,6 +244,31 @@
 			path = DateFilter;
 			sourceTree = "<group>";
 		};
+		93FC97762B72858300016C72 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				93FC97742B72855700016C72 /* LoginUIComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		93FC97772B72859100016C72 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A500B2B2A28FE00241B3D /* LoginViewController.swift */,
+				CA3A50162B2A2C7D00241B3D /* LoginViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		93FC97782B7285B000016C72 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A50072B2A28FE00241B3D /* LoginPresenter.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		CA3A4FCA2B2A1C4E00241B3D = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +289,8 @@
 		CA3A4FD52B2A1C4E00241B3D /* ooAutos İş Ortağı */ = {
 			isa = PBXGroup;
 			children = (
+				93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */,
+				93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */,
 				CA3A50302B2A4C7600241B3D /* UIViewExtensions */,
 				CA3A502C2B2A4B3600241B3D /* Scenes */,
 				CA3A50252B2A43C800241B3D /* RequestsStructs */,
@@ -269,6 +304,7 @@
 				CA3A50202B2A340500241B3D /* OnTapKeyboardHideable.swift */,
 				CA3A50282B2A452A00241B3D /* ooAutosNetworkEnvironment.swift */,
 				CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */,
+				93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */,
 			);
 			path = "ooAutos İş Ortağı";
 			sourceTree = "<group>";
@@ -289,13 +325,13 @@
 		CA3A50062B2A28E700241B3D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A50072B2A28FE00241B3D /* LoginPresenter.swift */,
+				93FC97762B72858300016C72 /* Composer */,
+				93FC97772B72859100016C72 /* UI */,
+				93FC97782B7285B000016C72 /* Presentation */,
 				CA3A50082B2A28FE00241B3D /* LoginWorker.swift */,
 				CA3A50092B2A28FE00241B3D /* LoginRouter.swift */,
 				CA3A500A2B2A28FE00241B3D /* LoginModels.swift */,
-				CA3A500B2B2A28FE00241B3D /* LoginViewController.swift */,
 				CA3A500C2B2A28FE00241B3D /* LoginInteractor.swift */,
-				CA3A50162B2A2C7D00241B3D /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -384,7 +420,7 @@
 			children = (
 				93E4B7042B66C743001E4C37 /* Composer */,
 				93E4B7182B66D3CC001E4C37 /* UI */,
-				93E4B7072B66CEBF001E4C37 /* ServicesListPresentation */,
+				93E4B7072B66CEBF001E4C37 /* Presentation */,
 				CA3A50502B2CBFB400241B3D /* ServicesListWorker.swift */,
 				CA3A50512B2CBFB400241B3D /* ServicesListRouter.swift */,
 				CA3A50522B2CBFB400241B3D /* ServicesListModels.swift */,
@@ -563,6 +599,7 @@
 				CA3A50022B2A257100241B3D /* SplashRouter.swift in Sources */,
 				CA3A50762B2CD91800241B3D /* ServiceProviderInfoRequest.swift in Sources */,
 				CA52493F2B61872F00CF054A /* RestoreServiceProviderRequest.swift in Sources */,
+				93FC97752B72855700016C72 /* LoginUIComposer.swift in Sources */,
 				CA3A50562B2CBFB400241B3D /* ServicesListWorker.swift in Sources */,
 				931242372B6954BD00889B60 /* ConsumptionDetailCell.swift in Sources */,
 				CA3A50492B2CBE0700241B3D /* MainPagePresenter.swift in Sources */,
@@ -572,6 +609,7 @@
 				CA3A502B2B2A470300241B3D /* UserDefaultsManager.swift in Sources */,
 				CA3A50652B2CC0B900241B3D /* QRViewController.swift in Sources */,
 				CA3A50702B2CC19100241B3D /* ProfileModels.swift in Sources */,
+				93FC976F2B7277BF00016C72 /* ooAutosErrorHandler.swift in Sources */,
 				CA3A50322B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift in Sources */,
 				CA3A50122B2A28FE00241B3D /* LoginInteractor.swift in Sources */,
 				CA5249412B61AA1200CF054A /* UIViewController+LoadingIndicator.swift in Sources */,
@@ -592,6 +630,7 @@
 				CA3A50042B2A257100241B3D /* SplashViewController.swift in Sources */,
 				93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */,
 				CA3A50592B2CBFB400241B3D /* ServicesListViewController.swift in Sources */,
+				93FC97712B72785900016C72 /* UIKitErrorPresenter.swift in Sources */,
 				CA3A502F2B2A4BE200241B3D /* TabBarController.swift in Sources */,
 				CA3A506E2B2CC19100241B3D /* ProfileWorker.swift in Sources */,
 				CA3A50662B2CC0B900241B3D /* QRInteractor.swift in Sources */,
@@ -601,6 +640,7 @@
 				CA3A50102B2A28FE00241B3D /* LoginModels.swift in Sources */,
 				CA3A504D2B2CBE0700241B3D /* MainPageViewController.swift in Sources */,
 				CA3A50212B2A340500241B3D /* OnTapKeyboardHideable.swift in Sources */,
+				93FC97732B727D1B00016C72 /* MainQueueDispatcher.swift in Sources */,
 				CA3A50002B2A257100241B3D /* SplashPresenter.swift in Sources */,
 				CA3A504C2B2CBE0700241B3D /* MainPageModels.swift in Sources */,
 				CA3A50112B2A28FE00241B3D /* LoginViewController.swift in Sources */,

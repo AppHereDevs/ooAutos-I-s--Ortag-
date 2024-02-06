@@ -27,7 +27,7 @@ class SplashRouter: NSObject, SplashRoutingLogic, SplashDataPassing {
     // MARK: - Routing
 
     func routeToLogin() {
-        let loginViewController = LoginViewController(worker: ApiClient.shared)
+        let loginViewController = LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared)
         viewController?.navigationController?.viewControllers = [loginViewController]
     }
 

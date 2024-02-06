@@ -13,12 +13,16 @@ final class ServicesListUIComposer {
 
     static func servicesListComposedWith(servicesListWorker: ServicesListWorkerLogic) -> ServicesListViewController {
         let interactor = ServicesListInteractor()
-        let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: servicesListWorker)
+        let servicesListController = ServicesListViewController(interactor: interactor)
+
+        let errorDisplayer = UIKitErrorPresenter(viewController: servicesListController)
+        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosErrorHandler(decoratee: servicesListWorker, errorDisplayer: errorDisplayer) // Decorator 1
+
+        let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
 
         let presenter = ServicesListPresenter()
         let router = ServicesListRouter()
 
-        let servicesListController = ServicesListViewController(interactor: interactor)
         let consumptionViewAdapter = ConsumptionViewAdapter(controller: servicesListController)
 
         servicesListController.router = router
@@ -26,7 +30,6 @@ final class ServicesListUIComposer {
         interactor.worker = workerMainQueueDispatcher
         presenter.consumptionView = consumptionViewAdapter
         presenter.loginDisplayer = servicesListController
-
 
         router.viewController = servicesListController
         return servicesListController
@@ -43,34 +46,6 @@ private final class ConsumptionViewAdapter: ConsumptionView {
     func displayConsumptionHistory(consumptionDetails: [ConsumptionDetail]) {
         controller.tableModel = consumptionDetails.map {
             ConsumptionDetailCellController(model: $0)
-        }
-    }
-}
-
-private final class MainQueueDispatchOperator<T> {
-    private let decoratee: T
-
-    init(decoratee: T) {
-        self.decoratee = decoratee
-    }
-
-    func dispatch(completion: @escaping () -> Void) {
-        if Thread.isMainThread {
-            completion()
-        } else {
-            DispatchQueue.main.async {
-                completion()
-            }
-        }
-    }
-}
-
-extension MainQueueDispatchOperator: ServicesListWorkerLogic where T == ServicesListWorkerLogic {
-    func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<ServicesListModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
-        decoratee.getConsumptionDetail(startDate: startDate, endDate: endDate) { result in
-            self.dispatch {
-                completion(result)
-            }
         }
     }
 }

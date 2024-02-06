@@ -26,8 +26,6 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
     }
 
     func authenticate(phoneNumber: String, password: String) {
-        print(phoneNumber)
-
         let requestModel = Login.AuthenticateUseCase.Request(phoneNumber: phoneNumber, password: password)
         worker?.authenticate(requestModel: requestModel) { [weak self] result in
             guard let self else { return }
