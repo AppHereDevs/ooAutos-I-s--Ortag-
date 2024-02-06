@@ -21,16 +21,14 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
         let requestModel = Login.AuthenticateUseCase.Request(phoneNumber: phoneNumber, password: password)
         worker?.authenticate(requestModel: requestModel) { [weak self] result in
             guard let self else { return }
-            switch result {
-            case let .success(response):
+
+            if case let .success(response) = result {
                 if let jwtToken = response.decodedResponse.details.jwtToken {
                     UserDefaultsManager.shared.jwtToken = jwtToken
                     UserDefaultsManager.shared.phoneNumber = phoneNumber
                     UserDefaultsManager.shared.loginStatus = true
                     self.presenter?.presentMainPage()
                 }
-            case let .failure(error):
-                print(error.localizedDescription)
             }
         }
     }

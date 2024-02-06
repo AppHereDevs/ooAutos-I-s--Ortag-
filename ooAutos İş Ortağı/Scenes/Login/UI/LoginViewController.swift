@@ -112,10 +112,10 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
 
     @IBAction func continueButtonPressed(_: Any) {
         checkUserInputs { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.interactor?.authenticate(
-                phoneNumber: phoneNumberInputView.inputTextField.text.valueOrEmpty.nonSpaceString,
-                password: passwordInputView.inputTextField.text.valueOrEmpty
+            guard let self else { return }
+            self.interactor?.authenticate(
+                phoneNumber: self.phoneNumberInputView.inputTextField.text.valueOrEmpty.nonSpaceString,
+                password: self.passwordInputView.inputTextField.text.valueOrEmpty
             )
         }
     }

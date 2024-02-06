@@ -86,3 +86,65 @@ extension ooAutosErrorHandler: LoginWorkerLogic where T == LoginWorkerLogic {
         }
     }
 }
+
+extension ooAutosErrorHandler: MainPageWorkerLogic where T == MainPageWorkerLogic {
+    func getProviderInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getProviderInfo { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func getConsumptionInfo(kind: String, completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.ConsumptionInformation.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getConsumptionInfo(kind: kind) { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func suspendProvider(completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.SuspendProvider.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.suspendProvider { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func restoreProvider(completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.SuspendProvider.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.restoreProvider { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<MainPageModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getConsumptionDetail(startDate: startDate, endDate: endDate) { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+}

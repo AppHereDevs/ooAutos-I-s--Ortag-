@@ -2,13 +2,8 @@ import UIKit
 
 protocol MainPageRoutingLogic {}
 
-protocol MainPageDataPassing {
-    var dataStore: MainPageDataStore? { get }
-}
-
-class MainPageRouter: NSObject, MainPageRoutingLogic, MainPageDataPassing {
+class MainPageRouter: NSObject, MainPageRoutingLogic {
     // MARK: - Properties
 
     weak var viewController: MainPageViewController?
-    var dataStore: MainPageDataStore?
 }

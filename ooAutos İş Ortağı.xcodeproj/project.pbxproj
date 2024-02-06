@@ -23,6 +23,7 @@
 		93FC97712B72785900016C72 /* UIKitErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */; };
 		93FC97732B727D1B00016C72 /* MainQueueDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */; };
 		93FC97752B72855700016C72 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97742B72855700016C72 /* LoginUIComposer.swift */; };
+		93FC977B2B72911A00016C72 /* MainPageUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC977A2B72911A00016C72 /* MainPageUIComposer.swift */; };
 		CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */; };
 		CA3A4FE02B2A1C4F00241B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */; };
 		CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */; };
@@ -109,6 +110,7 @@
 		93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitErrorPresenter.swift; sourceTree = "<group>"; };
 		93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatcher.swift; sourceTree = "<group>"; };
 		93FC97742B72855700016C72 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
+		93FC977A2B72911A00016C72 /* MainPageUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageUIComposer.swift; sourceTree = "<group>"; };
 		CA3A4FD32B2A1C4E00241B3D /* ooAutos İş Ortağı.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ooAutos İş Ortağı.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -269,6 +271,32 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		93FC97792B72910C00016C72 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				93FC977A2B72911A00016C72 /* MainPageUIComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		93FC977E2B7293A800016C72 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A50472B2CBE0700241B3D /* MainPageViewController.swift */,
+				CA5249382B60444400CF054A /* MainPageViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		93FC977F2B7293B800016C72 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */,
+				CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		CA3A4FCA2B2A1C4E00241B3D = {
 			isa = PBXGroup;
 			children = (
@@ -404,13 +432,12 @@
 		CA3A503F2B2CBBBF00241B3D /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A50472B2CBE0700241B3D /* MainPageViewController.swift */,
-				CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */,
+				93FC97792B72910C00016C72 /* Composer */,
+				93FC977E2B7293A800016C72 /* UI */,
+				93FC977F2B7293B800016C72 /* Presentation */,
 				CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */,
 				CA3A50452B2CBE0700241B3D /* MainPageRouter.swift */,
 				CA3A50462B2CBE0700241B3D /* MainPageModels.swift */,
-				CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */,
-				CA5249382B60444400CF054A /* MainPageViewController.xib */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -617,6 +644,7 @@
 				CA3A50582B2CBFB400241B3D /* ServicesListModels.swift in Sources */,
 				CA3A504A2B2CBE0700241B3D /* MainPageWorker.swift in Sources */,
 				CA3A50622B2CC0B900241B3D /* QRWorker.swift in Sources */,
+				93FC977B2B72911A00016C72 /* MainPageUIComposer.swift in Sources */,
 				CA3A506D2B2CC19100241B3D /* ProfilePresenter.swift in Sources */,
 				CA3A500D2B2A28FE00241B3D /* LoginPresenter.swift in Sources */,
 				CA3A50572B2CBFB400241B3D /* ServicesListRouter.swift in Sources */,
