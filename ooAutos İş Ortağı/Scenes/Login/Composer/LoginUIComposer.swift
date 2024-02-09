@@ -6,7 +6,8 @@ final class LoginUIComposer {
         let loginViewController = LoginViewController(interactor: interactor)
 
         let errorDisplayer = UIKitErrorPresenter(viewController: loginViewController)
-        let errorManagerDecorator: LoginWorkerLogic = ooAutosErrorHandler(decoratee: loginWorker, errorDisplayer: errorDisplayer) // Decorator 1
+        let errorLogger = OSErrorLogger()
+        let errorManagerDecorator: LoginWorkerLogic = ooAutosErrorHandler(decoratee: loginWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger) // Decorator 1
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
 

@@ -17,10 +17,8 @@ class ProfileInteractor: ProfileBusinessLogic, ProfileDataStore {
             guard let self else { return }
             switch result {
             case let .success(response):
-                print(response)
                 presenter?.presentData(response: response.decodedResponse.details)
             case let .failure(error):
-                print(error.localizedDescription)
                 if error.requestDetails()?.statusCode == 401 {
                     presenter?.presentLogin()
                 }

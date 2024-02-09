@@ -6,7 +6,8 @@ final class MainPageUIComposer {
         let mainPageViewController = MainPageViewController(interactor: interactor)
 
         let errorDisplayer = UIKitErrorPresenter(viewController: mainPageViewController)
-        let errorManagerDecorator: MainPageWorkerLogic = ooAutosErrorHandler(decoratee: mainPageWorker, errorDisplayer: errorDisplayer) // Decorator 1
+        let errorLogger = OSErrorLogger()
+        let errorManagerDecorator: MainPageWorkerLogic = ooAutosErrorHandler(decoratee: mainPageWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger) // Decorator 1
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
 

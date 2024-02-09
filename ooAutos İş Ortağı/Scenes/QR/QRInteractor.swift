@@ -17,10 +17,8 @@ class QRInteractor: QRBusinessLogic, QRDataStore {
             guard let self else { return }
             switch result {
             case let .success(response):
-                print(response)
                 generateQRCode(from: response.decodedResponse.details.qrCode)
             case let .failure(error):
-                print(error.localizedDescription)
                 if error.requestDetails()?.statusCode == 401 {
                     presenter?.presentLogin()
                 }

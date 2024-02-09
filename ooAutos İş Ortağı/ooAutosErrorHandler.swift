@@ -24,10 +24,12 @@ final class ooAutosErrorHandler<T> {
 
     private let decoratee: T
     private let errorDisplayer: LoginPageDisplayer & AlertDisplayer
+    private let errorLogger: ErrorLogger
 
-    init(decoratee: T, errorDisplayer: LoginPageDisplayer & AlertDisplayer) {
+    init(decoratee: T, errorDisplayer: LoginPageDisplayer & AlertDisplayer, errorLogger: ErrorLogger) {
         self.decoratee = decoratee
         self.errorDisplayer = errorDisplayer
+        self.errorLogger = errorLogger
     }
 
     func handleError(error: NetworkError) {
@@ -40,11 +42,21 @@ final class ooAutosErrorHandler<T> {
             {
                 if let validationError = response.validationErrors?.first?.error {
                     errorDisplayer.presentAlert(alertTitle: validationError)
+
+                    let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(validationError) "
+                    errorLogger.logError(errorMessage: errorLog)
                 } else if let errorText = response.errors?.first {
                     errorDisplayer.presentAlert(alertTitle: errorText)
+
+                    let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(errorText) "
+                    errorLogger.logError(errorMessage: errorLog)
                 } else {
                     errorDisplayer.presentAlert(alertTitle: "Bir hata olustu.")
+
+                    let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(response.message) "
+                    errorLogger.logError(errorMessage: errorLog)
                 }
+
             } else {
                 errorDisplayer.presentAlert(alertTitle: "Bir hata olustu.")
             }

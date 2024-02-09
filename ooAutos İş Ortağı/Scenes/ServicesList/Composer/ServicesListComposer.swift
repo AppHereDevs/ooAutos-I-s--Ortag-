@@ -9,7 +9,8 @@ final class ServicesListUIComposer {
         let servicesListController = ServicesListViewController(interactor: interactor)
 
         let errorDisplayer = UIKitErrorPresenter(viewController: servicesListController)
-        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosErrorHandler(decoratee: servicesListWorker, errorDisplayer: errorDisplayer) // Decorator 1
+        let errorLogger = OSErrorLogger()
+        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosErrorHandler(decoratee: servicesListWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger) // Decorator 1
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
 
