@@ -2,7 +2,6 @@ import AppHereComponents
 import UIKit
 
 protocol ProfileDisplayLogic: AnyObject {
-    func displayLogin()
     func displayPersonalInfo(viewModel: ProfileModels.ViewModel)
 }
 
@@ -23,6 +22,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
 
     var interactor: ProfileBusinessLogic?
     private var worker: ProfileWorkerLogic?
+    private var routeToStartingPage: (() -> Void)?
 
     // MARK: - Object lifecycle
 
@@ -35,9 +35,10 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
         super.init(nibName: nil, bundle: .main)
     }
 
-    convenience init(interactor: ProfileBusinessLogic) {
+    convenience init(interactor: ProfileBusinessLogic, routeToStartingPage: @escaping (() -> Void)) {
         self.init()
         self.interactor = interactor
+        self.routeToStartingPage = routeToStartingPage
     }
 
     // MARK: - View Lifecycle
@@ -158,10 +159,6 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
     }
 
     @IBAction func signOut(_: Any) {
-        restartFromLogin()
-    }
-
-    func displayLogin() {
-        restartFromLogin()
+        routeToStartingPage?()
     }
 }

@@ -1,15 +1,11 @@
 import SwiftMessages
 import UIKit
 
-final class UIKitErrorPresenter: LoginPageDisplayer, AlertDisplayer {
+final class UIKitErrorPresenter: AlertDisplayer {
     private let viewController: UIViewController
 
     init(viewController: UIViewController) {
         self.viewController = viewController
-    }
-
-    func presentLogin() {
-        viewController.restartFromLogin()
     }
 
     func presentAlert(alertTitle: String) {

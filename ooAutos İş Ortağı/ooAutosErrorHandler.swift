@@ -1,10 +1,6 @@
 import CoreModule
 import Foundation
 
-protocol LoginPageDisplayer {
-    func presentLogin()
-}
-
 protocol AlertDisplayer {
     func presentAlert(alertTitle: String)
 }
@@ -23,41 +19,44 @@ final class ooAutosErrorHandler<T> {
     }
 
     private let decoratee: T
-    private let errorDisplayer: LoginPageDisplayer & AlertDisplayer
+    private let alertDisplayer: AlertDisplayer
     private let errorLogger: ErrorLogger
+    private let tokenExpireCallback: (() -> Void)?
 
-    init(decoratee: T, errorDisplayer: LoginPageDisplayer & AlertDisplayer, errorLogger: ErrorLogger) {
+    init(decoratee: T, alertDisplayer: AlertDisplayer, errorLogger: ErrorLogger, tokenExpireCallback: (() -> Void)?) {
         self.decoratee = decoratee
-        self.errorDisplayer = errorDisplayer
+        self.alertDisplayer = alertDisplayer
         self.errorLogger = errorLogger
+        self.tokenExpireCallback = tokenExpireCallback
     }
 
     func handleError(error: NetworkError) {
         if error.requestDetails()?.statusCode == 401 {
-            errorDisplayer.presentLogin()
+            UserDefaultsManager.shared.resetData()
+            tokenExpireCallback?()
         } else {
             if
                 let erroredRequestDetail = error.requestDetails(),
                 let response = parseErrorResponse(responseData: erroredRequestDetail.errorResponseData!)
             {
                 if let validationError = response.validationErrors?.first?.error {
-                    errorDisplayer.presentAlert(alertTitle: validationError)
+                    alertDisplayer.presentAlert(alertTitle: validationError)
 
                     let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(validationError) "
                     errorLogger.logError(errorMessage: errorLog)
                 } else if let errorText = response.errors?.first {
-                    errorDisplayer.presentAlert(alertTitle: errorText)
+                    alertDisplayer.presentAlert(alertTitle: errorText)
 
                     let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(errorText) "
                     errorLogger.logError(errorMessage: errorLog)
                 } else {
-                    errorDisplayer.presentAlert(alertTitle: "Bir hata olustu.")
+                    alertDisplayer.presentAlert(alertTitle: "Bir hata olustu.")
 
                     let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(response.message) "
                     errorLogger.logError(errorMessage: errorLog)
                 }
             } else {
-                errorDisplayer.presentAlert(alertTitle: error.turkishErrorText)
+                alertDisplayer.presentAlert(alertTitle: error.turkishErrorText)
             }
         }
     }

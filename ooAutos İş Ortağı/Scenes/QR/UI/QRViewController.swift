@@ -3,7 +3,6 @@ import UIKit
 
 protocol QRDisplayLogic: AnyObject {
     func displayQRCode(image: UIImage, stringQR: String)
-    func displayLogin()
 }
 
 class QRViewController: UIViewController, QRDisplayLogic {
@@ -55,9 +54,5 @@ class QRViewController: UIViewController, QRDisplayLogic {
             self.qrLabel.isHidden = false
             self.qrLabel.text = stringQR.uppercased()
         }
-    }
-
-    func displayLogin() {
-        restartFromLogin()
     }
 }

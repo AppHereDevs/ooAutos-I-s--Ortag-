@@ -2,7 +2,6 @@ import UIKit
 
 protocol QRPresentationLogic {
     func generateQRCode(from text: String)
-    func presentLogin()
 }
 
 class QRPresenter: QRPresentationLogic {
@@ -22,9 +21,5 @@ class QRPresenter: QRPresentationLogic {
                 viewController?.displayQRCode(image: qrCodeImage, stringQR: text)
             }
         }
-    }
-
-    func presentLogin() {
-        viewController?.displayLogin()
     }
 }

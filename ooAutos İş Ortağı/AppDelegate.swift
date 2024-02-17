@@ -1,5 +1,5 @@
 import ApiClient
-import class AppHereComponents.AppHereThemeManager
+import AppHereComponents
 import UIKit
 
 @main
@@ -32,15 +32,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func startAppFlow() {
-        let splashRouter = SplashRouter()
-        splashRouter.routeToLoginCallback = { viewController in
-            let loginViewController = LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared)
-            viewController?.navigationController?.viewControllers = [loginViewController]
+        let routeToMainCallback = { [weak self] in
+            guard let self else { return }
+
+            let customTabBarController = CustomTabBarController.instantiate(viewControllers: createTabBarModules())
+            navigationController.viewControllers = [customTabBarController]
         }
 
-        splashRouter.routeToMainCallback = { viewController in
-            let mainViewController = CustomTabBarController.instantiate()
-            viewController?.navigationController?.viewControllers = [mainViewController]
+        let splashRouter = SplashRouter()
+        splashRouter.routeToLoginCallback = { [weak self] in
+            guard let self else { return }
+
+            let loginViewController = LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared, routeToMainCallback: routeToMainCallback)
+            navigationController.viewControllers = [loginViewController]
+        }
+        splashRouter.routeToMainCallback = { [weak self] in
+            guard let self else { return }
+
+            let customTabBarController = CustomTabBarController.instantiate(viewControllers:  createTabBarModules())
+            navigationController.viewControllers = [customTabBarController]
         }
 
         let splashViewController = SplashViewController(router: splashRouter)
@@ -48,5 +58,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashRouter.viewController = splashViewController
 
         navigationController.pushViewController(splashViewController, animated: true)
+    }
+
+    private func createTabBarModules() -> [UIViewController] {
+        let routeToMainCallback = { [weak self] in
+            guard let self else { return }
+
+            DispatchQueue.main.async {
+                let customTabBarController = CustomTabBarController.instantiate(viewControllers: self.createTabBarModules())
+                self.navigationController.viewControllers = [customTabBarController]
+            }
+        }
+
+        let routeToLoginCallBack = { [weak self] in
+            guard let self else { return }
+
+            DispatchQueue.main.async {
+                let loginViewController = LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared, routeToMainCallback: routeToMainCallback)
+                self.navigationController.viewControllers = [loginViewController]
+            }
+        }
+
+        let mainPage = MainPageUIComposer.mainPageComposedWith(mainPageWorker: ApiClient.shared, routeToLoginCallback: routeToLoginCallBack)
+        let qrPage = QRPageUIComposer.qrPageComposedWith(qrPageWorker: ApiClient.shared, routeToLoginCallback: routeToLoginCallBack)
+        let servicesList = ServicesListUIComposer.servicesListComposedWith(servicesListWorker: ApiClient.shared, routeToLoginCallback: routeToLoginCallBack)
+        let profile = ProfileUIComposer.profileComposedWith(profileWorker: ApiClient.shared, routeToLoginCallback: routeToLoginCallBack)
+
+        return [mainPage, qrPage, servicesList, profile]
     }
 }

@@ -15,13 +15,9 @@ class ProfileInteractor: ProfileBusinessLogic, ProfileDataStore {
     func getProfileInfo() {
         worker?.getProfileInformation(completion: { [weak self] result in
             guard let self else { return }
-            switch result {
-            case let .success(response):
+
+            if case let .success(response) = result {
                 presenter?.presentData(response: response.decodedResponse.details)
-            case let .failure(error):
-                if error.requestDetails()?.statusCode == 401 {
-                    presenter?.presentLogin()
-                }
             }
         })
     }

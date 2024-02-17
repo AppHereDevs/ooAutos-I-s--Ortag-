@@ -149,10 +149,3 @@ extension ServicesListViewController: UITableViewDelegate, UITableViewDataSource
         return tableModel.count
     }
 }
-
-extension ServicesListViewController: LoginDisplayer {
-    func displaylogin() {
-        hideLoadingIndicator(loadingIndicator: loadingIndicator)
-        restartFromLogin()
-    }
-}

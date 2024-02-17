@@ -18,7 +18,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, OnTapKeyboardHid
     @IBOutlet var continueButton: AppHereButton!
     @IBOutlet var continueButtonHeight: NSLayoutConstraint!
 
-    var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
+    var router: (NSObjectProtocol & LoginRoutingLogic)?
     private var interactor: LoginBusinessLogic?
 
     // MARK: - Object lifecycle

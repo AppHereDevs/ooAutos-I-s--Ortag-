@@ -4,13 +4,13 @@ import Foundation
 final class ServicesListUIComposer {
     private init() {}
 
-    static func servicesListComposedWith(servicesListWorker: ServicesListWorkerLogic) -> ServicesListViewController {
+    static func servicesListComposedWith(servicesListWorker: ServicesListWorkerLogic, routeToLoginCallback: @escaping (() -> Void)) -> ServicesListViewController {
         let interactor = ServicesListInteractor()
         let servicesListController = ServicesListViewController(interactor: interactor)
 
         let errorDisplayer = UIKitErrorPresenter(viewController: servicesListController)
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosErrorHandler(decoratee: servicesListWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger) // Decorator 1
+        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosErrorHandler(decoratee: servicesListWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback) // Decorator 1
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
 
@@ -23,7 +23,6 @@ final class ServicesListUIComposer {
         interactor.presenter = presenter
         interactor.worker = workerMainQueueDispatcher
         presenter.consumptionView = consumptionViewAdapter
-        presenter.loginDisplayer = servicesListController
 
         router.viewController = servicesListController
         return servicesListController

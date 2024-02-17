@@ -1,13 +1,13 @@
 final class ProfileUIComposer {
     private init() {}
 
-    static func profileComposedWith(profileWorker: ProfileWorkerLogic) -> ProfileViewController {
+    static func profileComposedWith(profileWorker: ProfileWorkerLogic, routeToLoginCallback: @escaping (() -> Void)) -> ProfileViewController {
         let interactor = ProfileInteractor()
-        let profileViewController = ProfileViewController(interactor: interactor)
+        let profileViewController = ProfileViewController(interactor: interactor, routeToStartingPage: routeToLoginCallback)
 
         let errorDisplayer = UIKitErrorPresenter(viewController: profileViewController)
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: ProfileWorkerLogic = ooAutosErrorHandler(decoratee: profileWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger)
+        let errorManagerDecorator: ProfileWorkerLogic = ooAutosErrorHandler(decoratee: profileWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator)
 

@@ -15,13 +15,9 @@ class QRInteractor: QRBusinessLogic, QRDataStore {
     func getQRInformation() {
         worker?.getInfo(completion: { [weak self] result in
             guard let self else { return }
-            switch result {
-            case let .success(response):
+
+            if case let .success(response) = result {
                 presenter?.generateQRCode(from: response.decodedResponse.details.qrCode)
-            case let .failure(error):
-                if error.requestDetails()?.statusCode == 401 {
-                    presenter?.presentLogin()
-                }
             }
         })
     }

@@ -9,18 +9,18 @@ protocol SplashRoutingLogic {
 class SplashRouter: NSObject, SplashRoutingLogic {
     // MARK: - Properties
 
-    var routeToLoginCallback: ((SplashViewController?) -> Void)?
-    var routeToMainCallback: ((SplashViewController?) -> Void)?
+    var routeToLoginCallback: (() -> Void)?
+    var routeToMainCallback: (() -> Void)?
 
     weak var viewController: SplashViewController?
 
     // MARK: - Routing
 
     func routeToLogin() {
-        routeToLoginCallback?(viewController)
+        routeToLoginCallback?()
     }
 
     func routeToMainPage() {
-        routeToMainCallback?(viewController)
+        routeToMainCallback?()
     }
 }

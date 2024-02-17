@@ -49,7 +49,6 @@
 		CA3A50292B2A452A00241B3D /* ooAutosNetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50282B2A452A00241B3D /* ooAutosNetworkEnvironment.swift */; };
 		CA3A502B2B2A470300241B3D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */; };
 		CA3A502F2B2A4BE200241B3D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A502E2B2A4BE200241B3D /* CustomTabBarController.swift */; };
-		CA3A50322B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50312B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift */; };
 		CA3A503A2B2A502400241B3D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A50392B2A502400241B3D /* TabBar.storyboard */; };
 		CA3A50492B2CBE0700241B3D /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */; };
 		CA3A504A2B2CBE0700241B3D /* MainPageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */; };
@@ -136,7 +135,6 @@
 		CA3A50282B2A452A00241B3D /* ooAutosNetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ooAutosNetworkEnvironment.swift; sourceTree = "<group>"; };
 		CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		CA3A502E2B2A4BE200241B3D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		CA3A50312B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationRestarting.swift"; sourceTree = "<group>"; };
 		CA3A50392B2A502400241B3D /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
 		CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageWorker.swift; sourceTree = "<group>"; };
@@ -464,7 +462,6 @@
 			isa = PBXGroup;
 			children = (
 				CA3A4FED2B2A244100241B3D /* UIViewController+BackgroundImage.swift */,
-				CA3A50312B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift */,
 				CA5249402B61AA1200CF054A /* UIViewController+LoadingIndicator.swift */,
 			);
 			path = UIViewExtensions;
@@ -671,7 +668,6 @@
 				CA3A50652B2CC0B900241B3D /* QRViewController.swift in Sources */,
 				CA3A50702B2CC19100241B3D /* ProfileModels.swift in Sources */,
 				93FC976F2B7277BF00016C72 /* ooAutosErrorHandler.swift in Sources */,
-				CA3A50322B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift in Sources */,
 				CA3A50122B2A28FE00241B3D /* LoginInteractor.swift in Sources */,
 				CA5249412B61AA1200CF054A /* UIViewController+LoadingIndicator.swift in Sources */,
 				CA3A4FEE2B2A244100241B3D /* UIViewController+BackgroundImage.swift in Sources */,

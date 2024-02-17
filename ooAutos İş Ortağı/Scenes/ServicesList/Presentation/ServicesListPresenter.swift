@@ -24,11 +24,6 @@ class ServicesListPresenter: ServicesListPresentationLogic {
     // MARK: - Properties
 
     var consumptionView: ConsumptionView?
-    var loginDisplayer: LoginDisplayer?
-
-    func presentLogin() {
-        loginDisplayer?.displaylogin()
-    }
 
     func presentConsumptionDetail(consumptionDetails: [ServicesListModels.ProviderConsumptionDetail.ConsumptionDetails]) {
         let presentableConsumptionDetails = consumptionDetails.map { ConsumptionDetail(plateNumber: $0.plateNumber ?? "-",

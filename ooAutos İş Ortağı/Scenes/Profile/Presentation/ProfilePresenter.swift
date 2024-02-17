@@ -1,7 +1,6 @@
 import UIKit
 
 protocol ProfilePresentationLogic {
-    func presentLogin()
     func presentData(response: ProfileModels.ServiceProviderInformation.ServiceProviderDetails)
 }
 
@@ -9,10 +8,6 @@ class ProfilePresenter: ProfilePresentationLogic {
     // MARK: - Properties
 
     weak var viewController: ProfileDisplayLogic?
-
-    func presentLogin() {
-        viewController?.displayLogin()
-    }
 
     func presentData(response: ProfileModels.ServiceProviderInformation.ServiceProviderDetails) {
         let viewModel = ProfileModels.ViewModel(name: response.name ?? "",

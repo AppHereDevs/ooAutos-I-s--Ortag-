@@ -1,4 +1,3 @@
-import ApiClient
 import Foundation
 import UIKit
 
@@ -8,7 +7,6 @@ final class CustomTabBarController: UITabBarController, UITabBarControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = false
-        setVc()
         setupNavigationBar(titleViewImageName: "ooAutos-icon")
         selectedIndex = initalIndex
 
@@ -37,21 +35,15 @@ final class CustomTabBarController: UITabBarController, UITabBarControllerDelega
         }
     }
 
-    static func instantiate() -> Self {
+    static func instantiate(viewControllers: [UIViewController]) -> Self {
         let bundle = Bundle(for: Self.self)
         let storyboard = UIStoryboard(name: "TabBar", bundle: bundle)
         if let vc = storyboard.instantiateViewController(withIdentifier: "CustomTabBar") as? Self {
+            vc.viewControllers = viewControllers
             return vc
+        } else {
+            fatalError("Developer error, create TabBar storyboard")
         }
-        return storyboard.instantiateInitialViewController() as! Self
-    }
-
-    func setVc() {
-        let mainPage = MainPageUIComposer.mainPageComposedWith(mainPageWorker: ApiClient.shared)
-        let qrPage = QRPageUIComposer.qrPageComposedWith(qrPageWorker: ApiClient.shared)
-        let servicesList = ServicesListUIComposer.servicesListComposedWith(servicesListWorker: ApiClient.shared)
-        let profile = ProfileUIComposer.profileComposedWith(profileWorker: ApiClient.shared)
-        viewControllers = [mainPage, qrPage, servicesList, profile]
     }
 
     func setupNavigationBar(titleViewImageName: String) {
