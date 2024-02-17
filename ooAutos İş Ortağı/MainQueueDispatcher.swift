@@ -80,3 +80,13 @@ extension MainQueueDispatchOperator: LoginWorkerLogic where T == LoginWorkerLogi
         }
     }
 }
+
+extension MainQueueDispatchOperator: QRWorkerLogic where T == QRWorkerLogic {
+    func getInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getInfo() { [weak self] result in
+            self?.dispatch {
+                completion(result)
+            }
+        }
+    }
+}

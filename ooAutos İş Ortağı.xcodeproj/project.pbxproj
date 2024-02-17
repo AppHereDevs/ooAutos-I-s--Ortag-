@@ -12,6 +12,7 @@
 		931242372B6954BD00889B60 /* ConsumptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */; };
 		937AE8F22B6942CC001E9AC6 /* ServicesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */; };
 		9387B4792B764847008CB420 /* ErrorLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387B4782B764847008CB420 /* ErrorLogger.swift */; };
+		9391634F2B81008C00459BD6 /* QRPageUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9391634E2B81008C00459BD6 /* QRPageUIComposer.swift */; };
 		93DF45E72B6EA71F00C295D7 /* Slate-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501B2B2A334700241B3D /* Slate-Bold.ttf */; };
 		93DF45E82B6EA72300C295D7 /* Slate-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501D2B2A334700241B3D /* Slate-Light.ttf */; };
 		93DF45E92B6EA72500C295D7 /* Slate-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3A501E2B2A334700241B3D /* Slate-Medium.ttf */; };
@@ -102,6 +103,7 @@
 		933CC8BB2B66E5E400FC9418 /* ooAutos İş OrtağıTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ooAutos İş OrtağıTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesListViewController.xib; sourceTree = "<group>"; };
 		9387B4782B764847008CB420 /* ErrorLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLogger.swift; sourceTree = "<group>"; };
+		9391634E2B81008C00459BD6 /* QRPageUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPageUIComposer.swift; sourceTree = "<group>"; };
 		93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListComposer.swift; sourceTree = "<group>"; };
 		93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 		93F643E22B6C593D002F3CB2 /* DateFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateFilterView.xib; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 				CA3A506C2B2CC19100241B3D /* ProfileInteractor.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		939163502B81027C00459BD6 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				9391634E2B81008C00459BD6 /* QRPageUIComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 		93E4B7042B66C743001E4C37 /* Composer */ = {
@@ -490,6 +500,7 @@
 		CA3A50412B2CBDE600241B3D /* QR */ = {
 			isa = PBXGroup;
 			children = (
+				939163502B81027C00459BD6 /* Composer */,
 				9391634A2B80FDE600459BD6 /* UI */,
 				9391634B2B80FDEF00459BD6 /* Presentation */,
 				CA3A505C2B2CC0B900241B3D /* QRWorker.swift */,
@@ -676,6 +687,7 @@
 				93F643DC2B6C4D2C002F3CB2 /* DateFilterView.swift in Sources */,
 				CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */,
 				CA52493D2B6174AC00CF054A /* SuspendServiceProviderRequest.swift in Sources */,
+				9391634F2B81008C00459BD6 /* QRPageUIComposer.swift in Sources */,
 				CA3A500E2B2A28FE00241B3D /* LoginWorker.swift in Sources */,
 				CA3A50012B2A257100241B3D /* SplashWorker.swift in Sources */,
 				CA3A50642B2CC0B900241B3D /* QRModels.swift in Sources */,

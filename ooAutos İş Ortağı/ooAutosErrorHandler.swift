@@ -168,3 +168,17 @@ extension ooAutosErrorHandler: MainPageWorkerLogic where T == MainPageWorkerLogi
         }
     }
 }
+
+extension ooAutosErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
+    func getInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getInfo() { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+}

@@ -27,23 +27,9 @@ class QRViewController: UIViewController, QRDisplayLogic {
         super.init(nibName: nil, bundle: .main)
     }
 
-    convenience init(worker: QRWorkerLogic) {
+    convenience init(interactor: QRBusinessLogic) {
         self.init()
-        self.worker = worker
-        setup()
-    }
-
-    // MARK: - Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = QRInteractor()
-        let presenter = QRPresenter()
-
-        viewController.interactor = interactor
-        interactor.presenter = presenter
-        interactor.worker = worker
-        presenter.viewController = viewController
+        self.interactor = interactor
     }
 
     // MARK: - View Lifecycle
