@@ -26,14 +26,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
 
-        // Override point for customization after application launch.
         startAppFlow()
 
         return true
     }
 
     private func startAppFlow() {
-        let splashViewController = SplashViewController()
+        let splashRouter = SplashRouter()
+        splashRouter.routeToLoginCallback = { viewController in
+            let loginViewController = LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared)
+            viewController?.navigationController?.viewControllers = [loginViewController]
+        }
+
+        splashRouter.routeToMainCallback = { viewController in
+            let mainViewController = CustomTabBarController.instantiate()
+            viewController?.navigationController?.viewControllers = [mainViewController]
+        }
+
+        let splashViewController = SplashViewController(router: splashRouter)
+
+        splashRouter.viewController = splashViewController
+
         navigationController.pushViewController(splashViewController, animated: true)
     }
 }

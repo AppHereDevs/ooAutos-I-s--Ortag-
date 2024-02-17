@@ -6,25 +6,21 @@ protocol SplashRoutingLogic {
     func routeToMainPage()
 }
 
-protocol SplashDataPassing {
-    var dataStore: SplashDataStore? { get }
-}
-
-class SplashRouter: NSObject, SplashRoutingLogic, SplashDataPassing {
+class SplashRouter: NSObject, SplashRoutingLogic {
     // MARK: - Properties
 
+    var routeToLoginCallback: ((SplashViewController?) -> Void)?
+    var routeToMainCallback: ((SplashViewController?) -> Void)?
+
     weak var viewController: SplashViewController?
-    var dataStore: SplashDataStore?
 
     // MARK: - Routing
 
     func routeToLogin() {
-        let loginViewController = LoginUIComposer.loginComposedWith(loginWorker: ApiClient.shared)
-        viewController?.navigationController?.viewControllers = [loginViewController]
+        routeToLoginCallback?(viewController)
     }
 
     func routeToMainPage() {
-        let mainViewController = CustomTabBarController.instantiate()
-        viewController?.navigationController?.viewControllers = [mainViewController]
+        routeToMainCallback?(viewController)
     }
 }

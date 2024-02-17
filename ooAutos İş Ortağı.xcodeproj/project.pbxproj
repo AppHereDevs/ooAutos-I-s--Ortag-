@@ -32,12 +32,8 @@
 		CA3A4FE32B2A1C4F00241B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */; };
 		CA3A4FEC2B2A1EC600241B3D /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = CA3A4FEB2B2A1EC600241B3D /* ApiClient */; };
 		CA3A4FEE2B2A244100241B3D /* UIViewController+BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FED2B2A244100241B3D /* UIViewController+BackgroundImage.swift */; };
-		CA3A50002B2A257100241B3D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FFA2B2A257100241B3D /* SplashPresenter.swift */; };
-		CA3A50012B2A257100241B3D /* SplashWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FFB2B2A257100241B3D /* SplashWorker.swift */; };
 		CA3A50022B2A257100241B3D /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FFC2B2A257100241B3D /* SplashRouter.swift */; };
-		CA3A50032B2A257100241B3D /* SplashModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FFD2B2A257100241B3D /* SplashModels.swift */; };
 		CA3A50042B2A257100241B3D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FFE2B2A257100241B3D /* SplashViewController.swift */; };
-		CA3A50052B2A257100241B3D /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A4FFF2B2A257100241B3D /* SplashInteractor.swift */; };
 		CA3A500D2B2A28FE00241B3D /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50072B2A28FE00241B3D /* LoginPresenter.swift */; };
 		CA3A500E2B2A28FE00241B3D /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50082B2A28FE00241B3D /* LoginWorker.swift */; };
 		CA3A500F2B2A28FE00241B3D /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50092B2A28FE00241B3D /* LoginRouter.swift */; };
@@ -120,12 +116,8 @@
 		CA3A4FE22B2A1C4F00241B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3A4FE42B2A1C4F00241B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA3A4FED2B2A244100241B3D /* UIViewController+BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackgroundImage.swift"; sourceTree = "<group>"; };
-		CA3A4FFA2B2A257100241B3D /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
-		CA3A4FFB2B2A257100241B3D /* SplashWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWorker.swift; sourceTree = "<group>"; };
 		CA3A4FFC2B2A257100241B3D /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
-		CA3A4FFD2B2A257100241B3D /* SplashModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModels.swift; sourceTree = "<group>"; };
 		CA3A4FFE2B2A257100241B3D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		CA3A4FFF2B2A257100241B3D /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		CA3A50072B2A28FE00241B3D /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		CA3A50082B2A28FE00241B3D /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		CA3A50092B2A28FE00241B3D /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -393,12 +385,8 @@
 		CA3A4FEF2B2A24BD00241B3D /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A4FFA2B2A257100241B3D /* SplashPresenter.swift */,
-				CA3A4FFB2B2A257100241B3D /* SplashWorker.swift */,
 				CA3A4FFC2B2A257100241B3D /* SplashRouter.swift */,
-				CA3A4FFD2B2A257100241B3D /* SplashModels.swift */,
 				CA3A4FFE2B2A257100241B3D /* SplashViewController.swift */,
-				CA3A4FFF2B2A257100241B3D /* SplashInteractor.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -661,7 +649,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA3A50032B2A257100241B3D /* SplashModels.swift in Sources */,
 				CA3A50292B2A452A00241B3D /* ooAutosNetworkEnvironment.swift in Sources */,
 				9387B4792B764847008CB420 /* ErrorLogger.swift in Sources */,
 				CA3A50612B2CC0B900241B3D /* QRPresenter.swift in Sources */,
@@ -701,7 +688,6 @@
 				CA52493D2B6174AC00CF054A /* SuspendServiceProviderRequest.swift in Sources */,
 				9391634F2B81008C00459BD6 /* QRPageUIComposer.swift in Sources */,
 				CA3A500E2B2A28FE00241B3D /* LoginWorker.swift in Sources */,
-				CA3A50012B2A257100241B3D /* SplashWorker.swift in Sources */,
 				CA3A50642B2CC0B900241B3D /* QRModels.swift in Sources */,
 				CA3A50042B2A257100241B3D /* SplashViewController.swift in Sources */,
 				93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */,
@@ -717,10 +703,8 @@
 				CA3A504D2B2CBE0700241B3D /* MainPageViewController.swift in Sources */,
 				CA3A50212B2A340500241B3D /* OnTapKeyboardHideable.swift in Sources */,
 				93FC97732B727D1B00016C72 /* MainQueueDispatcher.swift in Sources */,
-				CA3A50002B2A257100241B3D /* SplashPresenter.swift in Sources */,
 				CA3A504C2B2CBE0700241B3D /* MainPageModels.swift in Sources */,
 				CA3A50112B2A28FE00241B3D /* LoginViewController.swift in Sources */,
-				CA3A50052B2A257100241B3D /* SplashInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
