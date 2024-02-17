@@ -7,19 +7,16 @@ final class MainPageUIComposer {
 
         let errorDisplayer = UIKitErrorPresenter(viewController: mainPageViewController)
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: MainPageWorkerLogic = ooAutosErrorHandler(decoratee: mainPageWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger) // Decorator 1
+        let errorManagerDecorator: MainPageWorkerLogic = ooAutosErrorHandler(decoratee: mainPageWorker, errorDisplayer: errorDisplayer, errorLogger: errorLogger)
 
-        let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
+        let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator)
 
         let presenter = MainPagePresenter()
-        let router = MainPageRouter()
 
-        mainPageViewController.router = router
         interactor.presenter = presenter
         interactor.worker = workerMainQueueDispatcher
         presenter.viewController = mainPageViewController
 
-        router.viewController = mainPageViewController
         return mainPageViewController
     }
 }

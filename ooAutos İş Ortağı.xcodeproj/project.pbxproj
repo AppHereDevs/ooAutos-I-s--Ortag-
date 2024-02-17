@@ -55,7 +55,6 @@
 		CA3A503A2B2A502400241B3D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A50392B2A502400241B3D /* TabBar.storyboard */; };
 		CA3A50492B2CBE0700241B3D /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */; };
 		CA3A504A2B2CBE0700241B3D /* MainPageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */; };
-		CA3A504B2B2CBE0700241B3D /* MainPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50452B2CBE0700241B3D /* MainPageRouter.swift */; };
 		CA3A504C2B2CBE0700241B3D /* MainPageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50462B2CBE0700241B3D /* MainPageModels.swift */; };
 		CA3A504D2B2CBE0700241B3D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50472B2CBE0700241B3D /* MainPageViewController.swift */; };
 		CA3A504E2B2CBE0700241B3D /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */; };
@@ -147,7 +146,6 @@
 		CA3A50392B2A502400241B3D /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
 		CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageWorker.swift; sourceTree = "<group>"; };
-		CA3A50452B2CBE0700241B3D /* MainPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageRouter.swift; sourceTree = "<group>"; };
 		CA3A50462B2CBE0700241B3D /* MainPageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageModels.swift; sourceTree = "<group>"; };
 		CA3A50472B2CBE0700241B3D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
@@ -439,7 +437,6 @@
 				93FC977E2B7293A800016C72 /* UI */,
 				93FC977F2B7293B800016C72 /* Presentation */,
 				CA3A50442B2CBE0700241B3D /* MainPageWorker.swift */,
-				CA3A50452B2CBE0700241B3D /* MainPageRouter.swift */,
 				CA3A50462B2CBE0700241B3D /* MainPageModels.swift */,
 			);
 			path = MainPage;
@@ -618,7 +615,6 @@
 			files = (
 				CA3A50032B2A257100241B3D /* SplashModels.swift in Sources */,
 				CA3A50292B2A452A00241B3D /* ooAutosNetworkEnvironment.swift in Sources */,
-				CA3A504B2B2CBE0700241B3D /* MainPageRouter.swift in Sources */,
 				9387B4792B764847008CB420 /* ErrorLogger.swift in Sources */,
 				CA3A50612B2CC0B900241B3D /* QRPresenter.swift in Sources */,
 				CA3A50272B2A440100241B3D /* AuthenticationRequests.swift in Sources */,

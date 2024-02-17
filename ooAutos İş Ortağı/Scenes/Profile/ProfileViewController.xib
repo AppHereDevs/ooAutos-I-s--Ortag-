@@ -38,7 +38,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-Title-White"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="themeKey" value="AppHereLabel-White-20px-Bold"/>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AO1-Br-BHK">

@@ -64,6 +64,16 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
         super.viewDidLoad()
         setupBackgroundImage(imageName: "background")
         interactor?.getProfileInfo()
+
+        name.isHidden = true
+        typeDesc.isHidden = true
+        adress.isHidden = true
+        phoneNumber.isHidden = true
+        mobileNumber.isHidden = true
+        email.isHidden = true
+        ibanNo.isHidden = true
+        ibanAccountName.isHidden = true
+        workingHours.isHidden = true
     }
 
     func displayPersonalInfo(viewModel: ProfileModels.ViewModel) {
@@ -76,6 +86,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.name.inputTextField.text = viewModel.name
             self.name.isUserInteractionEnabled = false
+            self.name.isHidden = false
 
             self.typeDesc.viewModel = AppHereInputViewModel(
                 title: "TİPİ",
@@ -85,6 +96,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.typeDesc.inputTextField.text = viewModel.typeDesc
             self.typeDesc.isUserInteractionEnabled = false
+            self.typeDesc.isHidden = false
 
             self.adress.viewModel = AppHereInputViewModel(
                 title: "ADRES",
@@ -94,6 +106,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.adress.inputTextField.text = viewModel.address
             self.adress.isUserInteractionEnabled = false
+            self.adress.isHidden = false
 
             self.phoneNumber.viewModel = AppHereInputViewModel(
                 title: "TELEFON NUMARASI",
@@ -103,6 +116,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.phoneNumber.inputTextField.text = viewModel.telephoneNo
             self.phoneNumber.isUserInteractionEnabled = false
+            self.phoneNumber.isHidden = false
 
             self.mobileNumber.viewModel = AppHereInputViewModel(
                 title: "MOBİL NUMARASI",
@@ -112,6 +126,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.mobileNumber.inputTextField.text = viewModel.mobileNo
             self.mobileNumber.isUserInteractionEnabled = false
+            self.mobileNumber.isHidden = false
 
             self.email.viewModel = AppHereInputViewModel(
                 title: "EMAİL",
@@ -121,6 +136,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.email.inputTextField.text = viewModel.email
             self.email.isUserInteractionEnabled = false
+            self.email.isHidden = false
 
             self.ibanNo.viewModel = AppHereInputViewModel(
                 title: "IBAN NO",
@@ -130,6 +146,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.ibanNo.inputTextField.text = viewModel.ibanNo
             self.ibanNo.isUserInteractionEnabled = false
+            self.ibanNo.isHidden = false
 
             self.ibanAccountName.viewModel = AppHereInputViewModel(
                 title: "HESAP BİLGİSİ",
@@ -139,6 +156,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.ibanAccountName.inputTextField.text = viewModel.ibanName
             self.ibanAccountName.isUserInteractionEnabled = false
+            self.ibanAccountName.isHidden = false
 
             self.workingHours.viewModel = AppHereInputViewModel(
                 title: "ÇALIŞMA BİLGİSİ",
@@ -148,6 +166,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
             )
             self.workingHours.inputTextField.text = viewModel.workingHours
             self.workingHours.isUserInteractionEnabled = false
+            self.workingHours.isHidden = false
         }
     }
 

@@ -57,12 +57,22 @@ class QRViewController: UIViewController, QRDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundImage(imageName: "background")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        qrView.isHidden = true
+        qrLabel.isHidden = true
         interactor?.getQRInformation()
     }
 
     func displayQRCode(image: UIImage, stringQR: String) {
         DispatchQueue.main.async {
+            self.qrView.isHidden = false
             self.qrView.image = image
+
+            self.qrLabel.isHidden = false
             self.qrLabel.text = stringQR.uppercased()
         }
     }

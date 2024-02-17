@@ -15,7 +15,6 @@ protocol MainPageDisplayLogic: AnyObject {
 class MainPageViewController: UIViewController, MainPageDisplayLogic {
     // MARK: - Properties
 
-    var router: (NSObjectProtocol & MainPageRoutingLogic)?
     private var interactor: MainPageBusinessLogic?
 
     private let loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)

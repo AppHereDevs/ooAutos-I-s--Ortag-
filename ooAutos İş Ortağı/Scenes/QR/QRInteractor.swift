@@ -17,18 +17,12 @@ class QRInteractor: QRBusinessLogic, QRDataStore {
             guard let self else { return }
             switch result {
             case let .success(response):
-                generateQRCode(from: response.decodedResponse.details.qrCode)
+                presenter?.generateQRCode(from: response.decodedResponse.details.qrCode)
             case let .failure(error):
                 if error.requestDetails()?.statusCode == 401 {
                     presenter?.presentLogin()
                 }
             }
         })
-    }
-
-    private func generateQRCode(from text: String?) {
-        if let text {
-            presenter?.generateQRCode(from: text)
-        }
     }
 }

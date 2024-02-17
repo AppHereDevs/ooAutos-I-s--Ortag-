@@ -56,9 +56,8 @@ final class ooAutosErrorHandler<T> {
                     let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(response.message) "
                     errorLogger.logError(errorMessage: errorLog)
                 }
-
             } else {
-                errorDisplayer.presentAlert(alertTitle: "Bir hata olustu.")
+                errorDisplayer.presentAlert(alertTitle: error.turkishErrorText)
             }
         }
     }
@@ -68,6 +67,15 @@ final class ooAutosErrorHandler<T> {
             return nil
         }
         return decodedResponse
+    }
+}
+
+extension NetworkError {
+    var turkishErrorText: String {
+        switch self {
+        case .decodingFailed: "Sunucuda bir hata oluştu."
+        default: "Bir hata oluştu."
+        }
     }
 }
 
