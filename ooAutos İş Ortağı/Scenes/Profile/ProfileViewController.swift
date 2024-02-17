@@ -19,7 +19,8 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
     @IBOutlet var ibanAccountName: AppHereInputView!
     @IBOutlet var workingHours: AppHereInputView!
     @IBOutlet var scrollView: UIScrollView!
-
+    @IBOutlet weak var signOutButton: AppHereButton!
+    
     var router: (NSObjectProtocol & ProfileRoutingLogic & ProfileDataPassing)?
     var interactor: ProfileBusinessLogic?
     private var worker: ProfileWorkerLogic?
@@ -63,7 +64,10 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundImage(imageName: "background")
-        interactor?.getProfileInfo()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
         name.isHidden = true
         typeDesc.isHidden = true
@@ -74,6 +78,8 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
         ibanNo.isHidden = true
         ibanAccountName.isHidden = true
         workingHours.isHidden = true
+
+        interactor?.getProfileInfo()
     }
 
     func displayPersonalInfo(viewModel: ProfileModels.ViewModel) {

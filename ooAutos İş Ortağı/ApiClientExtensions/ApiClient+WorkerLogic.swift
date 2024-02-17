@@ -65,7 +65,7 @@ extension ApiClient: QRWorkerLogic {
 }
 
 extension ApiClient: ProfileWorkerLogic {
-    func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
+    func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<ProfileModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
         let request = ServiceProviderInfoRequest(request: .getInfo,
                                                  apiEnvironment: ApiEnvironment(environmentType: ooAutosNetworkEnvironment.rest))
         self.request(request, completion: completion)

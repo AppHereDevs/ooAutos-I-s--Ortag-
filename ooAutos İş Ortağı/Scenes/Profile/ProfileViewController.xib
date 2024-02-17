@@ -19,6 +19,7 @@
                 <outlet property="name" destination="qZC-hc-0Ys" id="OOL-Fc-13t"/>
                 <outlet property="phoneNumber" destination="OvM-zJ-d2v" id="6xX-aT-ODV"/>
                 <outlet property="scrollView" destination="dgy-CO-IdO" id="M7M-Km-jLS"/>
+                <outlet property="signOutButton" destination="lzj-3R-8hs" id="JHh-81-uOo"/>
                 <outlet property="typeDesc" destination="XxU-WW-axL" id="Yle-4Y-Zg5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HF7-wd-uvz"/>
                 <outlet property="workingHours" destination="nmy-k9-E9F" id="IHf-be-txK"/>

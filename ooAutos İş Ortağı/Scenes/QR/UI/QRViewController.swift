@@ -13,8 +13,6 @@ class QRViewController: UIViewController, QRDisplayLogic {
     @IBOutlet private var titleLabel: AppHereLabel!
 
     // MARK: - Properties
-
-    var router: (NSObjectProtocol & QRRoutingLogic & QRDataPassing)?
     var interactor: QRBusinessLogic?
     private var worker: QRWorkerLogic?
 
@@ -41,15 +39,11 @@ class QRViewController: UIViewController, QRDisplayLogic {
         let viewController = self
         let interactor = QRInteractor()
         let presenter = QRPresenter()
-        let router = QRRouter()
 
-        viewController.router = router
         viewController.interactor = interactor
         interactor.presenter = presenter
         interactor.worker = worker
         presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
     }
 
     // MARK: - View Lifecycle

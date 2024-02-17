@@ -2,7 +2,7 @@ import UIKit
 
 protocol ProfilePresentationLogic {
     func presentLogin()
-    func presentData(response: QRModels.ServiceProviderInformation.ServiceProviderDetails)
+    func presentData(response: ProfileModels.ServiceProviderInformation.ServiceProviderDetails)
 }
 
 class ProfilePresenter: ProfilePresentationLogic {
@@ -14,7 +14,7 @@ class ProfilePresenter: ProfilePresentationLogic {
         viewController?.displayLogin()
     }
 
-    func presentData(response: QRModels.ServiceProviderInformation.ServiceProviderDetails) {
+    func presentData(response: ProfileModels.ServiceProviderInformation.ServiceProviderDetails) {
         let viewModel = ProfileModels.ViewModel(name: response.name ?? "",
                                                 typeDesc: response.typeDescription ?? "",
                                                 address: response.address ?? "",

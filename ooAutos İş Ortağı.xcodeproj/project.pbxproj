@@ -66,7 +66,6 @@
 		CA3A505A2B2CBFB400241B3D /* ServicesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */; };
 		CA3A50612B2CC0B900241B3D /* QRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A505B2B2CC0B900241B3D /* QRPresenter.swift */; };
 		CA3A50622B2CC0B900241B3D /* QRWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A505C2B2CC0B900241B3D /* QRWorker.swift */; };
-		CA3A50632B2CC0B900241B3D /* QRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A505D2B2CC0B900241B3D /* QRRouter.swift */; };
 		CA3A50642B2CC0B900241B3D /* QRModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A505E2B2CC0B900241B3D /* QRModels.swift */; };
 		CA3A50652B2CC0B900241B3D /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A505F2B2CC0B900241B3D /* QRViewController.swift */; };
 		CA3A50662B2CC0B900241B3D /* QRInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50602B2CC0B900241B3D /* QRInteractor.swift */; };
@@ -157,7 +156,6 @@
 		CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListInteractor.swift; sourceTree = "<group>"; };
 		CA3A505B2B2CC0B900241B3D /* QRPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPresenter.swift; sourceTree = "<group>"; };
 		CA3A505C2B2CC0B900241B3D /* QRWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRWorker.swift; sourceTree = "<group>"; };
-		CA3A505D2B2CC0B900241B3D /* QRRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRRouter.swift; sourceTree = "<group>"; };
 		CA3A505E2B2CC0B900241B3D /* QRModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModels.swift; sourceTree = "<group>"; };
 		CA3A505F2B2CC0B900241B3D /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		CA3A50602B2CC0B900241B3D /* QRInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInteractor.swift; sourceTree = "<group>"; };
@@ -206,6 +204,24 @@
 				931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */,
 			);
 			path = ConsumptionDetailCell;
+			sourceTree = "<group>";
+		};
+		9391634A2B80FDE600459BD6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A505F2B2CC0B900241B3D /* QRViewController.swift */,
+				CA3A50732B2CD02B00241B3D /* QRViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9391634B2B80FDEF00459BD6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A505B2B2CC0B900241B3D /* QRPresenter.swift */,
+				CA3A50602B2CC0B900241B3D /* QRInteractor.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		93E4B7042B66C743001E4C37 /* Composer */ = {
@@ -458,13 +474,10 @@
 		CA3A50412B2CBDE600241B3D /* QR */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A505B2B2CC0B900241B3D /* QRPresenter.swift */,
+				9391634A2B80FDE600459BD6 /* UI */,
+				9391634B2B80FDEF00459BD6 /* Presentation */,
 				CA3A505C2B2CC0B900241B3D /* QRWorker.swift */,
-				CA3A505D2B2CC0B900241B3D /* QRRouter.swift */,
 				CA3A505E2B2CC0B900241B3D /* QRModels.swift */,
-				CA3A505F2B2CC0B900241B3D /* QRViewController.swift */,
-				CA3A50602B2CC0B900241B3D /* QRInteractor.swift */,
-				CA3A50732B2CD02B00241B3D /* QRViewController.xib */,
 			);
 			path = QR;
 			sourceTree = "<group>";
@@ -618,7 +631,6 @@
 				9387B4792B764847008CB420 /* ErrorLogger.swift in Sources */,
 				CA3A50612B2CC0B900241B3D /* QRPresenter.swift in Sources */,
 				CA3A50272B2A440100241B3D /* AuthenticationRequests.swift in Sources */,
-				CA3A50632B2CC0B900241B3D /* QRRouter.swift in Sources */,
 				CA3A50712B2CC19100241B3D /* ProfileViewController.swift in Sources */,
 				CA3A50722B2CC19100241B3D /* ProfileInteractor.swift in Sources */,
 				CA3A506F2B2CC19100241B3D /* ProfileRouter.swift in Sources */,
