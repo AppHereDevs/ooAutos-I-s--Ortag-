@@ -52,7 +52,7 @@
 		CA3A50272B2A440100241B3D /* AuthenticationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50262B2A440100241B3D /* AuthenticationRequests.swift */; };
 		CA3A50292B2A452A00241B3D /* ooAutosNetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50282B2A452A00241B3D /* ooAutosNetworkEnvironment.swift */; };
 		CA3A502B2B2A470300241B3D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */; };
-		CA3A502F2B2A4BE200241B3D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A502E2B2A4BE200241B3D /* TabBarController.swift */; };
+		CA3A502F2B2A4BE200241B3D /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A502E2B2A4BE200241B3D /* CustomTabBarController.swift */; };
 		CA3A50322B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50312B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift */; };
 		CA3A503A2B2A502400241B3D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3A50392B2A502400241B3D /* TabBar.storyboard */; };
 		CA3A50492B2CBE0700241B3D /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */; };
@@ -143,7 +143,7 @@
 		CA3A50262B2A440100241B3D /* AuthenticationRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequests.swift; sourceTree = "<group>"; };
 		CA3A50282B2A452A00241B3D /* ooAutosNetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ooAutosNetworkEnvironment.swift; sourceTree = "<group>"; };
 		CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		CA3A502E2B2A4BE200241B3D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CA3A502E2B2A4BE200241B3D /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		CA3A50312B2A4CAB00241B3D /* UIViewController+NavigationRestarting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationRestarting.swift"; sourceTree = "<group>"; };
 		CA3A50392B2A502400241B3D /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		CA3A50432B2CBE0700241B3D /* MainPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
@@ -466,7 +466,7 @@
 		CA3A502D2B2A4BCA00241B3D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A502E2B2A4BE200241B3D /* TabBarController.swift */,
+				CA3A502E2B2A4BE200241B3D /* CustomTabBarController.swift */,
 				CA3A50392B2A502400241B3D /* TabBar.storyboard */,
 			);
 			path = TabBar;
@@ -707,7 +707,7 @@
 				93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */,
 				CA3A50592B2CBFB400241B3D /* ServicesListViewController.swift in Sources */,
 				93FC97712B72785900016C72 /* UIKitErrorPresenter.swift in Sources */,
-				CA3A502F2B2A4BE200241B3D /* TabBarController.swift in Sources */,
+				CA3A502F2B2A4BE200241B3D /* CustomTabBarController.swift in Sources */,
 				CA3A506E2B2CC19100241B3D /* ProfileWorker.swift in Sources */,
 				CA3A50662B2CC0B900241B3D /* QRInteractor.swift in Sources */,
 				CA3A50552B2CBFB400241B3D /* ServicesListPresenter.swift in Sources */,

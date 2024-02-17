@@ -2,7 +2,7 @@ import ApiClient
 import Foundation
 import UIKit
 
-class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
+final class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
     @IBInspectable var initalIndex: Int = 0
 
     override func viewDidLoad() {
