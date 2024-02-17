@@ -20,8 +20,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
     @IBOutlet var workingHours: AppHereInputView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var signOutButton: AppHereButton!
-    
-    var router: (NSObjectProtocol & ProfileRoutingLogic & ProfileDataPassing)?
+
     var interactor: ProfileBusinessLogic?
     private var worker: ProfileWorkerLogic?
 
@@ -48,15 +47,11 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
         let viewController = self
         let interactor = ProfileInteractor()
         let presenter = ProfilePresenter()
-        let router = ProfileRouter()
 
-        viewController.router = router
         viewController.interactor = interactor
         interactor.presenter = presenter
         interactor.worker = worker
         presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
     }
 
     // MARK: - View Lifecycle

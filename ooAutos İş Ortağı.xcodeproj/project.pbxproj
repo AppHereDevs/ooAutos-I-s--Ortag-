@@ -71,7 +71,6 @@
 		CA3A50662B2CC0B900241B3D /* QRInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50602B2CC0B900241B3D /* QRInteractor.swift */; };
 		CA3A506D2B2CC19100241B3D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50672B2CC19100241B3D /* ProfilePresenter.swift */; };
 		CA3A506E2B2CC19100241B3D /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50682B2CC19100241B3D /* ProfileWorker.swift */; };
-		CA3A506F2B2CC19100241B3D /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50692B2CC19100241B3D /* ProfileRouter.swift */; };
 		CA3A50702B2CC19100241B3D /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A506A2B2CC19100241B3D /* ProfileModels.swift */; };
 		CA3A50712B2CC19100241B3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A506B2B2CC19100241B3D /* ProfileViewController.swift */; };
 		CA3A50722B2CC19100241B3D /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A506C2B2CC19100241B3D /* ProfileInteractor.swift */; };
@@ -161,7 +160,6 @@
 		CA3A50602B2CC0B900241B3D /* QRInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRInteractor.swift; sourceTree = "<group>"; };
 		CA3A50672B2CC19100241B3D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		CA3A50682B2CC19100241B3D /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
-		CA3A50692B2CC19100241B3D /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		CA3A506A2B2CC19100241B3D /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
 		CA3A506B2B2CC19100241B3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CA3A506C2B2CC19100241B3D /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
@@ -220,6 +218,24 @@
 			children = (
 				CA3A505B2B2CC0B900241B3D /* QRPresenter.swift */,
 				CA3A50602B2CC0B900241B3D /* QRInteractor.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9391634C2B81000800459BD6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A506B2B2CC19100241B3D /* ProfileViewController.swift */,
+				CAC4AF3A2B62E68A00ABD9A1 /* ProfileViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9391634D2B81001400459BD6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA3A50672B2CC19100241B3D /* ProfilePresenter.swift */,
+				CA3A506C2B2CC19100241B3D /* ProfileInteractor.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -485,13 +501,10 @@
 		CA3A50422B2CBDEE00241B3D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CA3A50672B2CC19100241B3D /* ProfilePresenter.swift */,
+				9391634C2B81000800459BD6 /* UI */,
+				9391634D2B81001400459BD6 /* Presentation */,
 				CA3A50682B2CC19100241B3D /* ProfileWorker.swift */,
-				CA3A50692B2CC19100241B3D /* ProfileRouter.swift */,
 				CA3A506A2B2CC19100241B3D /* ProfileModels.swift */,
-				CA3A506B2B2CC19100241B3D /* ProfileViewController.swift */,
-				CA3A506C2B2CC19100241B3D /* ProfileInteractor.swift */,
-				CAC4AF3A2B62E68A00ABD9A1 /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -633,7 +646,6 @@
 				CA3A50272B2A440100241B3D /* AuthenticationRequests.swift in Sources */,
 				CA3A50712B2CC19100241B3D /* ProfileViewController.swift in Sources */,
 				CA3A50722B2CC19100241B3D /* ProfileInteractor.swift in Sources */,
-				CA3A506F2B2CC19100241B3D /* ProfileRouter.swift in Sources */,
 				CA5249432B61AEED00CF054A /* ConsumptionDetailsRequest.swift in Sources */,
 				CA3A50022B2A257100241B3D /* SplashRouter.swift in Sources */,
 				CA3A50762B2CD91800241B3D /* ServiceProviderInfoRequest.swift in Sources */,
