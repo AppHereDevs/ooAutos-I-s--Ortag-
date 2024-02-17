@@ -24,13 +24,13 @@ enum ooAutosNetworkEnvironment: NetworkEnvironment {
     }
 }
 
-enum AppConfiguration {
+private enum AppConfiguration {
     case Debug
     case TestFlight
     case AppStore
 }
 
-enum Config {
+private enum Config {
     // This is private because the use of 'appConfiguration' is preferred.
     private static let isTestFlight = Bundle.main.appStoreReceiptURL?.lastPathComponent == "sandboxReceipt"
 
