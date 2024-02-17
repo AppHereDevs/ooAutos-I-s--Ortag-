@@ -35,23 +35,9 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
         super.init(nibName: nil, bundle: .main)
     }
 
-    convenience init(worker: ProfileWorkerLogic) {
+    convenience init(interactor: ProfileBusinessLogic) {
         self.init()
-        self.worker = worker
-        setup()
-    }
-
-    // MARK: - Setup
-
-    private func setup() {
-        let viewController = self
-        let interactor = ProfileInteractor()
-        let presenter = ProfilePresenter()
-
-        viewController.interactor = interactor
-        interactor.presenter = presenter
-        interactor.worker = worker
-        presenter.viewController = viewController
+        self.interactor = interactor
     }
 
     // MARK: - View Lifecycle

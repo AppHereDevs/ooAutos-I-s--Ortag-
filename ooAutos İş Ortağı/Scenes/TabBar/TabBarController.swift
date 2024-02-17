@@ -50,7 +50,7 @@ class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
         let mainPage = MainPageUIComposer.mainPageComposedWith(mainPageWorker: ApiClient.shared)
         let qrPage = QRPageUIComposer.qrPageComposedWith(qrPageWorker: ApiClient.shared)
         let servicesList = ServicesListUIComposer.servicesListComposedWith(servicesListWorker: ApiClient.shared)
-        let profile = ProfileViewController(worker: ApiClient.shared)
+        let profile = ProfileUIComposer.profileComposedWith(profileWorker: ApiClient.shared)
         viewControllers = [mainPage, qrPage, servicesList, profile]
     }
 

@@ -182,3 +182,17 @@ extension ooAutosErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
         }
     }
 }
+
+extension ooAutosErrorHandler: ProfileWorkerLogic where T == ProfileWorkerLogic {
+    func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<ProfileModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getProfileInformation() { [weak self] result in
+            switch result {
+            case let .success(response):
+                completion(.success(response))
+            case let .failure(error):
+                self?.handleError(error: error)
+                completion(.failure(error))
+            }
+        }
+    }
+}

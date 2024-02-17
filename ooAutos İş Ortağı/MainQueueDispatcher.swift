@@ -90,3 +90,13 @@ extension MainQueueDispatchOperator: QRWorkerLogic where T == QRWorkerLogic {
         }
     }
 }
+
+extension MainQueueDispatchOperator: ProfileWorkerLogic where T == ProfileWorkerLogic {
+    func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<ProfileModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
+        decoratee.getProfileInformation() { [weak self] result in
+            self?.dispatch {
+                completion(result)
+            }
+        }
+    }
+}
