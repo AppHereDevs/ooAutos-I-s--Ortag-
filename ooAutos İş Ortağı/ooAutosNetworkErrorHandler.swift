@@ -5,7 +5,7 @@ protocol AlertDisplayer {
     func presentAlert(alertTitle: String)
 }
 
-final class ooAutosErrorHandler<T> {
+final class ooAutosNetworkErrorHandler<T> {
     private struct ooAutosErrorResponse: Decodable {
         let statusCode: Int
         let message: String
@@ -78,7 +78,7 @@ extension NetworkError {
     }
 }
 
-extension ooAutosErrorHandler: ServicesListWorkerLogic where T == ServicesListWorkerLogic {
+extension ooAutosNetworkErrorHandler: ServicesListWorkerLogic where T == ServicesListWorkerLogic {
     func getConsumptionDetail(startDate: String?, endDate: String?, completion: @escaping (Result<CoreModule.SuccessResult<ServicesListModels.ProviderConsumptionDetail.Response>, CoreModule.NetworkError>) -> Void) {
         decoratee.getConsumptionDetail(startDate: startDate, endDate: endDate) { [weak self] result in
             switch result {
@@ -92,7 +92,7 @@ extension ooAutosErrorHandler: ServicesListWorkerLogic where T == ServicesListWo
     }
 }
 
-extension ooAutosErrorHandler: LoginWorkerLogic where T == LoginWorkerLogic {
+extension ooAutosNetworkErrorHandler: LoginWorkerLogic where T == LoginWorkerLogic {
     func authenticate(requestModel: Login.AuthenticateUseCase.Request, completion: @escaping (Result<CoreModule.SuccessResult<Login.AuthenticateUseCase.Response>, CoreModule.NetworkError>) -> Void) {
         decoratee.authenticate(requestModel: requestModel) { [weak self] result in
             switch result {
@@ -106,7 +106,7 @@ extension ooAutosErrorHandler: LoginWorkerLogic where T == LoginWorkerLogic {
     }
 }
 
-extension ooAutosErrorHandler: MainPageWorkerLogic where T == MainPageWorkerLogic {
+extension ooAutosNetworkErrorHandler: MainPageWorkerLogic where T == MainPageWorkerLogic {
     func getProviderInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
         decoratee.getProviderInfo { [weak self] result in
             switch result {
@@ -168,7 +168,7 @@ extension ooAutosErrorHandler: MainPageWorkerLogic where T == MainPageWorkerLogi
     }
 }
 
-extension ooAutosErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
+extension ooAutosNetworkErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
     func getInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
         decoratee.getInfo() { [weak self] result in
             switch result {
@@ -182,7 +182,7 @@ extension ooAutosErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
     }
 }
 
-extension ooAutosErrorHandler: ProfileWorkerLogic where T == ProfileWorkerLogic {
+extension ooAutosNetworkErrorHandler: ProfileWorkerLogic where T == ProfileWorkerLogic {
     func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<ProfileModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
         decoratee.getProfileInformation() { [weak self] result in
             switch result {

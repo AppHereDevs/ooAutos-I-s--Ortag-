@@ -1,8 +1,6 @@
 import UIKit
 
-protocol SplashDisplayLogic: AnyObject {}
-
-class SplashViewController: UIViewController, SplashDisplayLogic {
+class SplashViewController: UIViewController {
     // MARK: - Properties
 
     var router: SplashRoutingLogic?

@@ -22,8 +22,8 @@
 		93F643DC2B6C4D2C002F3CB2 /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */; };
 		93F643DF2B6C4E3D002F3CB2 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 93F643DE2B6C4E3D002F3CB2 /* SwiftMessages */; };
 		93F643E32B6C593D002F3CB2 /* DateFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F643E22B6C593D002F3CB2 /* DateFilterView.xib */; };
-		93FC976F2B7277BF00016C72 /* ooAutosErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */; };
-		93FC97712B72785900016C72 /* UIKitErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */; };
+		93FC976F2B7277BF00016C72 /* ooAutosNetworkErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC976E2B7277BF00016C72 /* ooAutosNetworkErrorHandler.swift */; };
+		93FC97712B72785900016C72 /* SwiftMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97702B72785900016C72 /* SwiftMessagesManager.swift */; };
 		93FC97732B727D1B00016C72 /* MainQueueDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */; };
 		93FC97752B72855700016C72 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC97742B72855700016C72 /* LoginUIComposer.swift */; };
 		93FC977B2B72911A00016C72 /* MainPageUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC977A2B72911A00016C72 /* MainPageUIComposer.swift */; };
@@ -104,8 +104,8 @@
 		93E4B7052B66C74D001E4C37 /* ServicesListComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListComposer.swift; sourceTree = "<group>"; };
 		93F643DB2B6C4D2C002F3CB2 /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 		93F643E22B6C593D002F3CB2 /* DateFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateFilterView.xib; sourceTree = "<group>"; };
-		93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ooAutosErrorHandler.swift; sourceTree = "<group>"; };
-		93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitErrorPresenter.swift; sourceTree = "<group>"; };
+		93FC976E2B7277BF00016C72 /* ooAutosNetworkErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ooAutosNetworkErrorHandler.swift; sourceTree = "<group>"; };
+		93FC97702B72785900016C72 /* SwiftMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesManager.swift; sourceTree = "<group>"; };
 		93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatcher.swift; sourceTree = "<group>"; };
 		93FC97742B72855700016C72 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		93FC977A2B72911A00016C72 /* MainPageUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageUIComposer.swift; sourceTree = "<group>"; };
@@ -359,16 +359,16 @@
 		CA3A4FD52B2A1C4E00241B3D /* ooAutos İş Ortağı */ = {
 			isa = PBXGroup;
 			children = (
+				CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */,
 				CA3A502A2B2A470300241B3D /* UserDefaultsManager.swift */,
 				93FC97722B727D1B00016C72 /* MainQueueDispatcher.swift */,
-				93FC976E2B7277BF00016C72 /* ooAutosErrorHandler.swift */,
-				93FC97702B72785900016C72 /* UIKitErrorPresenter.swift */,
+				93FC976E2B7277BF00016C72 /* ooAutosNetworkErrorHandler.swift */,
+				93FC97702B72785900016C72 /* SwiftMessagesManager.swift */,
 				CA3A50302B2A4C7600241B3D /* UIViewExtensions */,
 				CA3A502C2B2A4B3600241B3D /* Scenes */,
 				CA3A50252B2A43C800241B3D /* RequestsStructs */,
 				CA3A50222B2A42DC00241B3D /* ApiClientExtensions */,
 				CA3A501A2B2A332E00241B3D /* fonts */,
-				CA3A4FD62B2A1C4E00241B3D /* AppDelegate.swift */,
 				CA3A4FDF2B2A1C4F00241B3D /* Assets.xcassets */,
 				CA3A4FE12B2A1C4F00241B3D /* LaunchScreen.storyboard */,
 				CA3A4FE42B2A1C4F00241B3D /* Info.plist */,
@@ -439,8 +439,8 @@
 			isa = PBXGroup;
 			children = (
 				CA3A4FEF2B2A24BD00241B3D /* Splash */,
-				CA3A502D2B2A4BCA00241B3D /* TabBar */,
 				CA3A50062B2A28E700241B3D /* Login */,
+				CA3A502D2B2A4BCA00241B3D /* TabBar */,
 				CA3A503F2B2CBBBF00241B3D /* MainPage */,
 				CA3A50412B2CBDE600241B3D /* QR */,
 				CA3A50402B2CBDC800241B3D /* ServicesList */,
@@ -667,7 +667,7 @@
 				CA3A502B2B2A470300241B3D /* UserDefaultsManager.swift in Sources */,
 				CA3A50652B2CC0B900241B3D /* QRViewController.swift in Sources */,
 				CA3A50702B2CC19100241B3D /* ProfileModels.swift in Sources */,
-				93FC976F2B7277BF00016C72 /* ooAutosErrorHandler.swift in Sources */,
+				93FC976F2B7277BF00016C72 /* ooAutosNetworkErrorHandler.swift in Sources */,
 				CA3A50122B2A28FE00241B3D /* LoginInteractor.swift in Sources */,
 				CA5249412B61AA1200CF054A /* UIViewController+LoadingIndicator.swift in Sources */,
 				CA3A4FEE2B2A244100241B3D /* UIViewController+BackgroundImage.swift in Sources */,
@@ -688,7 +688,7 @@
 				CA3A50042B2A257100241B3D /* SplashViewController.swift in Sources */,
 				93E4B7062B66C74D001E4C37 /* ServicesListComposer.swift in Sources */,
 				CA3A50592B2CBFB400241B3D /* ServicesListViewController.swift in Sources */,
-				93FC97712B72785900016C72 /* UIKitErrorPresenter.swift in Sources */,
+				93FC97712B72785900016C72 /* SwiftMessagesManager.swift in Sources */,
 				CA3A502F2B2A4BE200241B3D /* CustomTabBarController.swift in Sources */,
 				CA3A506E2B2CC19100241B3D /* ProfileWorker.swift in Sources */,
 				CA3A50662B2CC0B900241B3D /* QRInteractor.swift in Sources */,

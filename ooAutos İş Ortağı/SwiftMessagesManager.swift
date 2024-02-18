@@ -1,12 +1,7 @@
 import SwiftMessages
-import UIKit
 
-final class UIKitErrorPresenter: AlertDisplayer {
-    private let viewController: UIViewController
-
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+final class SwiftMessagesManager: AlertDisplayer {
+    init() {}
 
     func presentAlert(alertTitle: String) {
         var config = SwiftMessages.Config()

@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashRouter.routeToMainCallback = { [weak self] in
             guard let self else { return }
 
-            let customTabBarController = CustomTabBarController.instantiate(viewControllers:  createTabBarModules())
+            let customTabBarController = CustomTabBarController.instantiate(viewControllers: createTabBarModules())
             navigationController.viewControllers = [customTabBarController]
         }
 

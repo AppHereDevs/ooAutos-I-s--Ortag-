@@ -1,5 +1,4 @@
-import ApiClient
-import UIKit
+import Foundation
 
 protocol SplashRoutingLogic {
     func routeToLogin()

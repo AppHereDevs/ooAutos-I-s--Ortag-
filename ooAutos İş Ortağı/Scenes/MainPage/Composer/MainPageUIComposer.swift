@@ -5,9 +5,9 @@ final class MainPageUIComposer {
         let interactor = MainPageInteractor()
         let mainPageViewController = MainPageViewController(interactor: interactor)
 
-        let errorDisplayer = UIKitErrorPresenter(viewController: mainPageViewController)
+        let errorDisplayer = SwiftMessagesManager()
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: MainPageWorkerLogic = ooAutosErrorHandler(decoratee: mainPageWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
+        let errorManagerDecorator: MainPageWorkerLogic = ooAutosNetworkErrorHandler(decoratee: mainPageWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator)
 

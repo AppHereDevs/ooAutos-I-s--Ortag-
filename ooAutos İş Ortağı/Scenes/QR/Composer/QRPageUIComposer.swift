@@ -5,9 +5,9 @@ final class QRPageUIComposer {
         let interactor = QRInteractor()
         let mainPageViewController = QRViewController(interactor: interactor)
 
-        let errorDisplayer = UIKitErrorPresenter(viewController: mainPageViewController)
+        let errorDisplayer = SwiftMessagesManager()
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: QRWorkerLogic = ooAutosErrorHandler(decoratee: qrPageWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
+        let errorManagerDecorator: QRWorkerLogic = ooAutosNetworkErrorHandler(decoratee: qrPageWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator)
 

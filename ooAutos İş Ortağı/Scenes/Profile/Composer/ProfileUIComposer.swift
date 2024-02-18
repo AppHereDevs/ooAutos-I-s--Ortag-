@@ -5,9 +5,9 @@ final class ProfileUIComposer {
         let interactor = ProfileInteractor()
         let profileViewController = ProfileViewController(interactor: interactor, routeToStartingPage: routeToLoginCallback)
 
-        let errorDisplayer = UIKitErrorPresenter(viewController: profileViewController)
+        let errorDisplayer = SwiftMessagesManager()
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: ProfileWorkerLogic = ooAutosErrorHandler(decoratee: profileWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
+        let errorManagerDecorator: ProfileWorkerLogic = ooAutosNetworkErrorHandler(decoratee: profileWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
 
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator)
 
