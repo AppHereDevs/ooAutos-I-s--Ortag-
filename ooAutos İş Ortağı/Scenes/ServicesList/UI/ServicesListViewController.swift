@@ -6,7 +6,6 @@ import UIKit
 public final class ServicesListViewController: UIViewController {
     // MARK: - Properties
 
-    var router: ServicesListRoutingLogic?
     private var interactor: ServicesListBusinessLogic?
 
     @IBOutlet private var informationLabel: AppHereLabel!

@@ -15,16 +15,13 @@ final class ServicesListUIComposer {
         let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
 
         let presenter = ServicesListPresenter()
-        let router = ServicesListRouter()
 
         let consumptionViewAdapter = ConsumptionViewAdapter(controller: servicesListController)
 
-        servicesListController.router = router
         interactor.presenter = presenter
         interactor.worker = workerMainQueueDispatcher
         presenter.consumptionView = consumptionViewAdapter
 
-        router.viewController = servicesListController
         return servicesListController
     }
 }

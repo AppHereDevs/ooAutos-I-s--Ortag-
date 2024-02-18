@@ -57,7 +57,6 @@
 		CA3A504E2B2CBE0700241B3D /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */; };
 		CA3A50552B2CBFB400241B3D /* ServicesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A504F2B2CBFB400241B3D /* ServicesListPresenter.swift */; };
 		CA3A50562B2CBFB400241B3D /* ServicesListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50502B2CBFB400241B3D /* ServicesListWorker.swift */; };
-		CA3A50572B2CBFB400241B3D /* ServicesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50512B2CBFB400241B3D /* ServicesListRouter.swift */; };
 		CA3A50582B2CBFB400241B3D /* ServicesListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50522B2CBFB400241B3D /* ServicesListModels.swift */; };
 		CA3A50592B2CBFB400241B3D /* ServicesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */; };
 		CA3A505A2B2CBFB400241B3D /* ServicesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */; };
@@ -143,7 +142,6 @@
 		CA3A50482B2CBE0700241B3D /* MainPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
 		CA3A504F2B2CBFB400241B3D /* ServicesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListPresenter.swift; sourceTree = "<group>"; };
 		CA3A50502B2CBFB400241B3D /* ServicesListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListWorker.swift; sourceTree = "<group>"; };
-		CA3A50512B2CBFB400241B3D /* ServicesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListRouter.swift; sourceTree = "<group>"; };
 		CA3A50522B2CBFB400241B3D /* ServicesListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListModels.swift; sourceTree = "<group>"; };
 		CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListViewController.swift; sourceTree = "<group>"; };
 		CA3A50542B2CBFB400241B3D /* ServicesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListInteractor.swift; sourceTree = "<group>"; };
@@ -309,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				CA3A50072B2A28FE00241B3D /* LoginPresenter.swift */,
+				CA3A500C2B2A28FE00241B3D /* LoginInteractor.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -398,7 +397,6 @@
 				CA3A50082B2A28FE00241B3D /* LoginWorker.swift */,
 				CA3A50092B2A28FE00241B3D /* LoginRouter.swift */,
 				CA3A500A2B2A28FE00241B3D /* LoginModels.swift */,
-				CA3A500C2B2A28FE00241B3D /* LoginInteractor.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -486,7 +484,6 @@
 				93E4B7182B66D3CC001E4C37 /* UI */,
 				93E4B7072B66CEBF001E4C37 /* Presentation */,
 				CA3A50502B2CBFB400241B3D /* ServicesListWorker.swift */,
-				CA3A50512B2CBFB400241B3D /* ServicesListRouter.swift */,
 				CA3A50522B2CBFB400241B3D /* ServicesListModels.swift */,
 			);
 			path = ServicesList;
@@ -677,7 +674,6 @@
 				93FC977B2B72911A00016C72 /* MainPageUIComposer.swift in Sources */,
 				CA3A506D2B2CC19100241B3D /* ProfilePresenter.swift in Sources */,
 				CA3A500D2B2A28FE00241B3D /* LoginPresenter.swift in Sources */,
-				CA3A50572B2CBFB400241B3D /* ServicesListRouter.swift in Sources */,
 				CA3A505A2B2CBFB400241B3D /* ServicesListInteractor.swift in Sources */,
 				93F643DC2B6C4D2C002F3CB2 /* DateFilterView.swift in Sources */,
 				CA3A4FD72B2A1C4E00241B3D /* AppDelegate.swift in Sources */,
