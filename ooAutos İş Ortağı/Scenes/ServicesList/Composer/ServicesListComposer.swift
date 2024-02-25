@@ -10,9 +10,9 @@ final class ServicesListUIComposer {
 
         let errorDisplayer = SwiftMessagesManager()
         let errorLogger = OSErrorLogger()
-        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosNetworkErrorHandler(decoratee: servicesListWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback) // Decorator 1
+        let errorManagerDecorator: ServicesListWorkerLogic = ooAutosNetworkErrorHandler(decoratee: servicesListWorker, alertDisplayer: errorDisplayer, errorLogger: errorLogger, tokenExpireCallback: routeToLoginCallback)
 
-        let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator) // Decorator 2
+        let workerMainQueueDispatcher = MainQueueDispatchOperator(decoratee: errorManagerDecorator)
 
         let presenter = ServicesListPresenter()
 

@@ -121,9 +121,9 @@ extension ServicesListViewController: UITableViewDelegate, UITableViewDataSource
     }
 
     private func cellController(forRowAt indexPath: IndexPath) -> ConsumptionDetailCellController {
-        return tableModel[indexPath.row]
+        return tableModel[indexPath.section]
     }
-
+    
     public func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return 87
     }
