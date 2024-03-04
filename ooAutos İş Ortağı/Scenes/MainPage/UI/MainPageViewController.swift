@@ -91,6 +91,14 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
         isActiveSwitch.isOn = status
     }
 
+    @IBAction func switchValueChanged(_: Any) {
+        if !isActiveSwitch.isOn {
+            interactor?.suspendServiceProvider()
+        } else {
+            interactor?.restoreServiceProvider()
+        }
+    }
+
     // MARK: Consumption History
 
     func displayConsumptionDetail(consumptionDetailViewModel: MainPageModels.ConsumptionDetailViewModel) {
@@ -144,13 +152,5 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
 
     func hideLoadingIndicator() {
         hideLoadingIndicator(loadingIndicator: loadingIndicator)
-    }
-
-    @IBAction func switchValueChanged(_: Any) {
-        if !isActiveSwitch.isOn {
-            interactor?.suspendServiceProvider()
-        } else {
-            interactor?.restoreServiceProvider()
-        }
     }
 }
