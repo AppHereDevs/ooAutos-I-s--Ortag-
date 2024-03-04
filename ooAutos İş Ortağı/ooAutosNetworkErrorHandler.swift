@@ -42,17 +42,17 @@ final class ooAutosNetworkErrorHandler<T> {
                 if let validationError = response.validationErrors?.first?.error {
                     alertDisplayer.presentAlert(alertTitle: validationError)
 
-                    let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(validationError) "
+                    let errorLog = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(validationError) "
                     errorLogger.logError(errorMessage: errorLog)
                 } else if let errorText = response.errors?.first {
                     alertDisplayer.presentAlert(alertTitle: errorText)
 
-                    let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(errorText) "
+                    let errorLog = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(errorText) "
                     errorLogger.logError(errorMessage: errorLog)
                 } else {
                     alertDisplayer.presentAlert(alertTitle: "Bir hata olustu.")
 
-                    let errorLog: String = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(response.message) "
+                    let errorLog = "Request to \(erroredRequestDetail.request.path) failed | Status Code: \(erroredRequestDetail.statusCode) | Error message: \(response.message) "
                     errorLogger.logError(errorMessage: errorLog)
                 }
             } else {
@@ -170,7 +170,7 @@ extension ooAutosNetworkErrorHandler: MainPageWorkerLogic where T == MainPageWor
 
 extension ooAutosNetworkErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
     func getInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
-        decoratee.getInfo() { [weak self] result in
+        decoratee.getInfo { [weak self] result in
             switch result {
             case let .success(response):
                 completion(.success(response))
@@ -184,7 +184,7 @@ extension ooAutosNetworkErrorHandler: QRWorkerLogic where T == QRWorkerLogic {
 
 extension ooAutosNetworkErrorHandler: ProfileWorkerLogic where T == ProfileWorkerLogic {
     func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<ProfileModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
-        decoratee.getProfileInformation() { [weak self] result in
+        decoratee.getProfileInformation { [weak self] result in
             switch result {
             case let .success(response):
                 completion(.success(response))

@@ -25,7 +25,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         setupBackgroundImage(imageName: "background")
         setupCenterIcon()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             if UserDefaultsManager.shared.loginStatus {
                 debugPrint("JWTToken \(UserDefaultsManager.shared.jwtToken.valueOrEmpty)")

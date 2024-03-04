@@ -9,7 +9,6 @@ protocol MainPageBusinessLogic: AnyObject {
 }
 
 class MainPageInteractor: MainPageBusinessLogic {
-    
     // MARK: - Properties
 
     var worker: MainPageWorkerLogic?

@@ -53,7 +53,6 @@ class MainPagePresenter: MainPagePresentationLogic {
     }
 
     func presentConsumptionDetail(details: [MainPageModels.ProviderConsumptionDetail.ConsumptionDetails]) {
-
         if let lastConsumptionDetail = details.first {
             var formattedDate = ""
             var formattedTime = ""

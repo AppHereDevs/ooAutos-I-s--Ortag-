@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var navigationController = UINavigationController()
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         guard window != nil else { return false }
 
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITextView.appearance().backgroundColor = .white
         UITextView.appearance().textColor = .black
 
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
 
         startAppFlow()
 

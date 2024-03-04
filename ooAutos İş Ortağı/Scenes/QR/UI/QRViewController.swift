@@ -12,6 +12,7 @@ class QRViewController: UIViewController, QRDisplayLogic {
     @IBOutlet private var titleLabel: AppHereLabel!
 
     // MARK: - Properties
+
     var interactor: QRBusinessLogic?
     private var worker: QRWorkerLogic?
 

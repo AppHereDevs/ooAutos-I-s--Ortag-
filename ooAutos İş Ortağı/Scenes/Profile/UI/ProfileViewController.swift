@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController, ProfileDisplayLogic {
     @IBOutlet var ibanAccountName: AppHereInputView!
     @IBOutlet var workingHours: AppHereInputView!
     @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet weak var signOutButton: AppHereButton!
+    @IBOutlet var signOutButton: AppHereButton!
 
     var interactor: ProfileBusinessLogic?
     private var worker: ProfileWorkerLogic?

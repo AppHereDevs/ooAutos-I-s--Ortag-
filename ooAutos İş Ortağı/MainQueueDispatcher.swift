@@ -83,7 +83,7 @@ extension MainQueueDispatchOperator: LoginWorkerLogic where T == LoginWorkerLogi
 
 extension MainQueueDispatchOperator: QRWorkerLogic where T == QRWorkerLogic {
     func getInfo(completion: @escaping (Result<CoreModule.SuccessResult<QRModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
-        decoratee.getInfo() { [weak self] result in
+        decoratee.getInfo { [weak self] result in
             self?.dispatch {
                 completion(result)
             }
@@ -93,7 +93,7 @@ extension MainQueueDispatchOperator: QRWorkerLogic where T == QRWorkerLogic {
 
 extension MainQueueDispatchOperator: ProfileWorkerLogic where T == ProfileWorkerLogic {
     func getProfileInformation(completion: @escaping (Result<CoreModule.SuccessResult<ProfileModels.ServiceProviderInformation.Response>, CoreModule.NetworkError>) -> Void) {
-        decoratee.getProfileInformation() { [weak self] result in
+        decoratee.getProfileInformation { [weak self] result in
             self?.dispatch {
                 completion(result)
             }
