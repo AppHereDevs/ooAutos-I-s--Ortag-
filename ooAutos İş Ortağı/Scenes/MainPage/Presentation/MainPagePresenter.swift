@@ -3,7 +3,7 @@ import UIKit
 protocol MainPagePresentationLogic {
     func presentProviderInfo(response: QRModels.ServiceProviderInformation.ServiceProviderDetails)
     func presentProviderStatus(with status: Bool)
-    func presentConsumptionDetail(response: MainPageModels.ProviderConsumptionDetail.ConsumptionDetails)
+    func presentConsumptionDetail(details: [MainPageModels.ProviderConsumptionDetail.ConsumptionDetails])
 
     func presentDailyConsumption(consumptionAmount: Int?)
     func presentMonthlyConsumption(consumptionAmount: Int?)
@@ -52,26 +52,31 @@ class MainPagePresenter: MainPagePresentationLogic {
         viewController?.displayProviderStatus(with: status)
     }
 
-    func presentConsumptionDetail(response: MainPageModels.ProviderConsumptionDetail.ConsumptionDetails) {
-        var formattedDate = ""
-        var formattedTime = ""
-        if let dateString = response.consumedAt {
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "TR")
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    func presentConsumptionDetail(details: [MainPageModels.ProviderConsumptionDetail.ConsumptionDetails]) {
 
-            if let date = dateFormatter.date(from: dateString) {
-                let newDateFormatter = DateFormatter()
-                newDateFormatter.locale = Locale(identifier: "TR")
-                newDateFormatter.dateFormat = "dd/MM/yyyy"
-                formattedDate = newDateFormatter.string(from: date)
-                newDateFormatter.dateFormat = "HH:mm"
-                formattedTime = newDateFormatter.string(from: date)
+        if let lastConsumptionDetail = details.first {
+            var formattedDate = ""
+            var formattedTime = ""
+            if let dateString = lastConsumptionDetail.consumedAt {
+                let dateFormatter = DateFormatter()
+                dateFormatter.locale = Locale(identifier: "TR")
+                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+
+                if let date = dateFormatter.date(from: dateString) {
+                    let newDateFormatter = DateFormatter()
+                    newDateFormatter.locale = Locale(identifier: "TR")
+                    newDateFormatter.dateFormat = "dd/MM/yyyy"
+                    formattedDate = newDateFormatter.string(from: date)
+                    newDateFormatter.dateFormat = "HH:mm"
+                    formattedTime = newDateFormatter.string(from: date)
+                }
             }
+            viewController?.displayConsumptionDetail(consumptionDetailViewModel: MainPageModels.ConsumptionDetailViewModel(plate: lastConsumptionDetail.plateNumber ?? "",
+                                                                                                                           time: formattedTime,
+                                                                                                                           date: formattedDate))
+        } else {
+            viewController?.displayConsumptionHistoryNotAvailable(errorText: "Yıkama hareketi bilgisi bulunmuyor.")
         }
-        viewController?.displayConsumptionDetail(consumptionDetailViewModel: MainPageModels.ConsumptionDetailViewModel(plate: response.plateNumber ?? "",
-                                                                                                                       time: formattedTime,
-                                                                                                                       date: formattedDate))
     }
 
     func hideLoadingIndicator() {

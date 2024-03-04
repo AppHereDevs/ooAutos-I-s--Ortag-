@@ -7,7 +7,9 @@ protocol MainPageDisplayLogic: AnyObject {
 
     func displayDailyConsumption(consumptionAmount: String)
     func displayMonthlyConsumption(consumptionAmount: String)
+
     func displayYearlyConsumption(consumptionAmount: String)
+    func displayConsumptionHistoryNotAvailable(errorText: String)
 
     func hideLoadingIndicator()
 }
@@ -19,15 +21,24 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
 
     private let loadingIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
 
-    @IBOutlet private var scoreLabel: UILabel!
-    @IBOutlet private var serviceProviderNameLabel: UILabel!
+    @IBOutlet var serviceProviderStatus: UIView!
+    @IBOutlet private var isActiveSwitch: UISwitch!
+
+    @IBOutlet private var consumptionHistory: UIView!
+    @IBOutlet private var consumptionDetailTitleLabel: UILabel!
+    @IBOutlet private var consumptionDetailView: UIView!
+    @IBOutlet private var plateLabel: UILabel!
+    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
+
+    @IBOutlet private var consumptionInformation: UIView!
     @IBOutlet private var yearlyCountLabel: UILabel!
     @IBOutlet private var monthlyCountLabel: UILabel!
     @IBOutlet private var dailyCountLabel: UILabel!
-    @IBOutlet private var dateLabel: UILabel!
-    @IBOutlet private var timeLabel: UILabel!
-    @IBOutlet private var plateLabel: UILabel!
-    @IBOutlet private var isActiveSwitch: UISwitch!
+
+    @IBOutlet private var serviceProviderInformation: UIView!
+    @IBOutlet private var serviceProviderNameLabel: UILabel!
+    @IBOutlet private var scoreLabel: UILabel!
 
     // MARK: - Object lifecycle
 
@@ -72,32 +83,63 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
         hideLoadingIndicator(loadingIndicator: loadingIndicator)
     }
 
-    func displayProviderInfo(providerViewModel: MainPageModels.ProviderViewModel) {
-        scoreLabel.text = providerViewModel.rating
-        isActiveSwitch.isOn = providerViewModel.isOpenNow
-        serviceProviderNameLabel.text = providerViewModel.name
+    // MARK: Consumption Information
+
+    func displayProviderStatus(with status: Bool) {
+        serviceProviderStatus.isHidden = false
+
+        isActiveSwitch.isOn = status
     }
 
-    func displayDailyConsumption(consumptionAmount: String) {
-        dailyCountLabel.text = consumptionAmount
-    }
-
-    func displayMonthlyConsumption(consumptionAmount: String) {
-        monthlyCountLabel.text = consumptionAmount
-    }
-
-    func displayYearlyConsumption(consumptionAmount: String) {
-        yearlyCountLabel.text = consumptionAmount
-    }
+    // MARK: Consumption History
 
     func displayConsumptionDetail(consumptionDetailViewModel: MainPageModels.ConsumptionDetailViewModel) {
+        consumptionHistory.isHidden = false
+
+        plateLabel.isHidden = false
+        dateLabel.isHidden = false
+
         plateLabel.text = consumptionDetailViewModel.plate
         timeLabel.text = consumptionDetailViewModel.time
         dateLabel.text = consumptionDetailViewModel.date
     }
 
-    func displayProviderStatus(with status: Bool) {
-        isActiveSwitch.isOn = status
+    func displayConsumptionHistoryNotAvailable(errorText: String) {
+        consumptionHistory.isHidden = false
+        plateLabel.isHidden = true
+        dateLabel.isHidden = true
+
+        timeLabel.text = errorText
+    }
+
+    // MARK: Consumption Information
+
+    func displayDailyConsumption(consumptionAmount: String) {
+        consumptionInformation.isHidden = false
+
+        dailyCountLabel.text = consumptionAmount
+    }
+
+    func displayMonthlyConsumption(consumptionAmount: String) {
+        consumptionInformation.isHidden = false
+
+        monthlyCountLabel.text = consumptionAmount
+    }
+
+    func displayYearlyConsumption(consumptionAmount: String) {
+        consumptionInformation.isHidden = false
+
+        yearlyCountLabel.text = consumptionAmount
+    }
+
+    // MARK: Service Provider Information
+
+    func displayProviderInfo(providerViewModel: MainPageModels.ProviderViewModel) {
+        serviceProviderInformation.isHidden = false
+
+        scoreLabel.text = providerViewModel.rating
+        isActiveSwitch.isOn = providerViewModel.isOpenNow
+        serviceProviderNameLabel.text = providerViewModel.name
     }
 
     func hideLoadingIndicator() {

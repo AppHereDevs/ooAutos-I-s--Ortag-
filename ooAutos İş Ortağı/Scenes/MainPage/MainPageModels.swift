@@ -46,7 +46,6 @@ enum MainPageModels {
         struct Response: Decodable {
             let statusCode: Int
             let message: String
-            let count: Int
             let details: [ConsumptionDetails]
         }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,13 +11,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainPageViewController" customModule="ooAutos_I_s__Ortag_ı" customModuleProvider="target">
             <connections>
+                <outlet property="consumptionDetailTitleLabel" destination="oSr-i7-sgH" id="nkP-07-CxS"/>
+                <outlet property="consumptionDetailView" destination="3aS-iF-gAe" id="qFv-H8-CTx"/>
+                <outlet property="consumptionHistory" destination="0zF-Z3-W2A" id="XPt-kT-2TQ"/>
+                <outlet property="consumptionInformation" destination="gqq-qX-5CV" id="wu7-LY-0Nx"/>
                 <outlet property="dailyCountLabel" destination="lVw-cj-6Y2" id="N7z-tq-Ih2"/>
                 <outlet property="dateLabel" destination="SfE-c3-ROH" id="trv-K2-s4R"/>
                 <outlet property="isActiveSwitch" destination="5Qn-6y-rdd" id="Tyb-nL-K8i"/>
                 <outlet property="monthlyCountLabel" destination="wnw-Ap-2O2" id="7Py-1h-j76"/>
                 <outlet property="plateLabel" destination="Y6b-wf-nhf" id="obD-T2-T1n"/>
                 <outlet property="scoreLabel" destination="Ip0-gi-cIp" id="2Jq-UQ-Y9B"/>
+                <outlet property="serviceProviderInformation" destination="skl-Nz-HSi" id="tnJ-q3-Pqi"/>
                 <outlet property="serviceProviderNameLabel" destination="i92-LN-acd" id="roe-ja-LhO"/>
+                <outlet property="serviceProviderStatus" destination="J0x-a4-txC" id="wqU-e2-MiM"/>
                 <outlet property="timeLabel" destination="qI0-MH-IW4" id="Kcp-8i-kyG"/>
                 <outlet property="view" destination="iN0-l3-epB" id="F0d-2F-w68"/>
                 <outlet property="yearlyCountLabel" destination="HRB-ug-RCs" id="j0W-Q9-XXP"/>
@@ -28,7 +34,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="825"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0x-a4-txC" userLabel="Hizmet durumu">
+                <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0x-a4-txC" userLabel="Service Provider Status">
                     <rect key="frame" x="20" y="40" width="353" height="44"/>
                     <subviews>
                         <switch opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Qn-6y-rdd">
@@ -65,7 +71,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zF-Z3-W2A" userLabel="Yikama hareketleri">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zF-Z3-W2A" userLabel="Consumption History">
                     <rect key="frame" x="20" y="100" width="353" height="96"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yıkama Hareketleri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSr-i7-sgH">
@@ -80,19 +86,19 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sZt-cr-nez">
                                     <rect key="frame" x="8" y="8" width="337" height="35"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35 SDF 456" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-wf-nhf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6b-wf-nhf">
                                             <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-MH-IW4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-MH-IW4">
                                             <rect key="frame" x="113.66666666666666" y="0.0" width="109.66666666666666" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.05.2023" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfE-c3-ROH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfE-c3-ROH">
                                             <rect key="frame" x="227.33333333333334" y="0.0" width="109.66666666666666" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -128,7 +134,7 @@
                         <constraint firstAttribute="trailing" secondItem="oSr-i7-sgH" secondAttribute="trailing" id="zQ4-ja-pnv"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqq-qX-5CV" userLabel="Yikama sayilari">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqq-qX-5CV" userLabel="Consumption Information">
                     <rect key="frame" x="20" y="204" width="353" height="66"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpw-wp-XFp" userLabel="Gunluk">
@@ -289,7 +295,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skl-Nz-HSi" userLabel="Isletme puani">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skl-Nz-HSi" userLabel="Service Provider Information">
                     <rect key="frame" x="20" y="286" width="353" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yildiz oto yikama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i92-LN-acd">
@@ -326,7 +332,6 @@
                                 <constraint firstAttribute="height" constant="12" id="fmE-1v-0Mb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -378,7 +383,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

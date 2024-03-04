@@ -90,9 +90,8 @@ class MainPageInteractor: MainPageBusinessLogic {
 
             switch result {
             case let .success(response):
-                if let firstItem = response.decodedResponse.details.first {
-                    presenter?.presentConsumptionDetail(response: firstItem)
-                }
+                presenter?.presentProviderStatus(with: true)
+                presenter?.presentConsumptionDetail(details: response.decodedResponse.details)
             case .failure:
                 presenter?.presentProviderStatus(with: false)
             }
