@@ -14,6 +14,7 @@
                 <outlet property="consumptionDetailTitleLabel" destination="oSr-i7-sgH" id="nkP-07-CxS"/>
                 <outlet property="consumptionDetailView" destination="3aS-iF-gAe" id="qFv-H8-CTx"/>
                 <outlet property="consumptionHistory" destination="0zF-Z3-W2A" id="XPt-kT-2TQ"/>
+                <outlet property="consumptionHistoryError" destination="81Z-2R-Sn6" id="oAd-OV-KxV"/>
                 <outlet property="consumptionInformation" destination="gqq-qX-5CV" id="wu7-LY-0Nx"/>
                 <outlet property="dailyCountLabel" destination="lVw-cj-6Y2" id="N7z-tq-Ih2"/>
                 <outlet property="dateLabel" destination="SfE-c3-ROH" id="trv-K2-s4R"/>
@@ -83,6 +84,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aS-iF-gAe">
                             <rect key="frame" x="0.0" y="37" width="353" height="51"/>
                             <subviews>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81Z-2R-Sn6">
+                                    <rect key="frame" x="16" y="25.666666666666657" width="321" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sZt-cr-nez">
                                     <rect key="frame" x="8" y="8" width="337" height="35"/>
                                     <subviews>
@@ -110,9 +117,13 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="sZt-cr-nez" secondAttribute="trailing" constant="8" id="12F-D9-McL"/>
+                                <constraint firstItem="81Z-2R-Sn6" firstAttribute="leading" secondItem="3aS-iF-gAe" secondAttribute="leading" constant="16" id="1KH-UV-rxQ"/>
                                 <constraint firstItem="sZt-cr-nez" firstAttribute="leading" secondItem="3aS-iF-gAe" secondAttribute="leading" constant="8" id="1bh-Ym-wpg"/>
                                 <constraint firstAttribute="height" constant="51" id="9oj-eJ-xvn"/>
                                 <constraint firstAttribute="bottom" secondItem="sZt-cr-nez" secondAttribute="bottom" constant="8" id="Co0-a2-bF3"/>
+                                <constraint firstItem="81Z-2R-Sn6" firstAttribute="centerX" secondItem="3aS-iF-gAe" secondAttribute="centerX" id="hmb-cU-P7J"/>
+                                <constraint firstAttribute="trailing" secondItem="81Z-2R-Sn6" secondAttribute="trailing" constant="16" id="iZa-yZ-erh"/>
+                                <constraint firstItem="81Z-2R-Sn6" firstAttribute="centerY" secondItem="3aS-iF-gAe" secondAttribute="centerY" id="kGA-VN-zCP"/>
                                 <constraint firstItem="sZt-cr-nez" firstAttribute="top" secondItem="3aS-iF-gAe" secondAttribute="top" constant="8" id="r0k-fy-KEH"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>

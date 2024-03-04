@@ -35,6 +35,7 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
     @IBOutlet private var yearlyCountLabel: UILabel!
     @IBOutlet private var monthlyCountLabel: UILabel!
     @IBOutlet private var dailyCountLabel: UILabel!
+    @IBOutlet private var consumptionHistoryError: UILabel!
 
     @IBOutlet private var serviceProviderInformation: UIView!
     @IBOutlet private var serviceProviderNameLabel: UILabel!
@@ -104,8 +105,11 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
     func displayConsumptionDetail(consumptionDetailViewModel: MainPageModels.ConsumptionDetailViewModel) {
         consumptionHistory.isHidden = false
 
+        consumptionHistoryError.isHidden = true
+
         plateLabel.isHidden = false
         dateLabel.isHidden = false
+        timeLabel.isHidden = false
 
         plateLabel.text = consumptionDetailViewModel.plate
         timeLabel.text = consumptionDetailViewModel.time
@@ -116,8 +120,10 @@ class MainPageViewController: UIViewController, MainPageDisplayLogic {
         consumptionHistory.isHidden = false
         plateLabel.isHidden = true
         dateLabel.isHidden = true
+        timeLabel.isHidden = true
 
-        timeLabel.text = errorText
+        consumptionHistoryError.isHidden = false
+        consumptionHistoryError.text = errorText
     }
 
     // MARK: Consumption Information
