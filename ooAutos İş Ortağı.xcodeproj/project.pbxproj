@@ -190,8 +190,8 @@
 		9305169B2B6AEA3700F652FC /* ConsumptionDetailCell */ = {
 			isa = PBXGroup;
 			children = (
-				9305169C2B6AEA5C00F652FC /* ConsumptionDetailCell.xib */,
 				931242362B6954BD00889B60 /* ConsumptionDetailCell.swift */,
+				9305169C2B6AEA5C00F652FC /* ConsumptionDetailCell.xib */,
 			);
 			path = ConsumptionDetailCell;
 			sourceTree = "<group>";
@@ -270,9 +270,9 @@
 			children = (
 				93F643DA2B6C4D20002F3CB2 /* DateFilter */,
 				9305169B2B6AEA3700F652FC /* ConsumptionDetailCell */,
-				937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */,
 				CA3A50532B2CBFB400241B3D /* ServicesListViewController.swift */,
 				931242342B6951BA00889B60 /* ServicesCellController.swift */,
+				937AE8F12B6942CC001E9AC6 /* ServicesListViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
